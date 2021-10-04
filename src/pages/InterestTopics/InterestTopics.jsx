@@ -44,18 +44,18 @@ const InterestTopics = () => {
     ]
 
     const headings = [
-        'art',
-        'business',
-        'education',
-        'entertainment',
-        'fashion',
-        'health',
-        'politics',
-        'realEstate',
-        'science',
-        'sports',
-        'technology',
-        'travel',
+        'Art',
+        'Business',
+        'Education',
+        'Entertainment',
+        'Fashion',
+        'Health',
+        'Politics',
+        'Real Estate',
+        'Science',
+        'Sports',
+        'Technology',
+        'Travel',
     ]
 
     return (

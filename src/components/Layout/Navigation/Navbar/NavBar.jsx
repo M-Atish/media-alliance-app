@@ -2,8 +2,8 @@ import { logoImg, locationIconImg } from '../../../../assets'
 
 import './navbar.scss'
 
-import NavItem from './NavItem'
-import NavSubItem from './NavSubItem'
+import NavItem from '../NavItem/NavItem'
+import NavSubItem from '../NavSubItem/NavSubItem'
 
 const NavBar = () => {
     return (
