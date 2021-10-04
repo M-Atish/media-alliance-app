@@ -1,0 +1,35 @@
+%language-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 9px;
+
+    width: 100px;
+    height: 35px;
+
+    background: var(--clr-background);
+
+    border: 1px solid var(--clr-primary-500);
+    box-sizing: border-box;
+    border-radius: 6px;
+
+    cursor: pointer;
+    color: var(--clr-primary-500);
+}
+
+.option-button {
+    @extend %language-btn;
+    margin-right: 10px;
+
+    &.active {
+        background: #505565;
+        border: 1px solid #505565;
+        color: white;
+    }
+}
+
+.flag-icon {
+    height: 23px;
+    width: 23px;
+    margin-right: 10px;
+}

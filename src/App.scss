@@ -1,0 +1,48 @@
+// Implement this block of code after everything finished.
+// This takes into account the user's theme preference and if it is dark, implements a dark // color scheme.
+
+// @media (prefers-color-scheme: dark) {
+//   :root {*
+//     --clr-theme-primary: #1d1d1f;
+//     --clr-primary-500: #eee;
+//     --clr-primary-900: #fff;
+//   }
+// }
+
+body {
+  font-family: "Mukta", sans-serif;
+  background: var(--clr-background);
+  color: var(--clr-primary-500);
+}
+
+.loading-curent {
+  opacity: 1;
+  transition: all 500ms ease-in-out;
+}
+
+.loaded {
+  opacity: 0;
+  transition: all 500ms ease-in-out 1s;
+}
+
+.loading {
+  height: 100px;
+  width: 100px;
+}
+
+// CSS transitions
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in-out;
+}

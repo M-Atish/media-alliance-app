@@ -1,0 +1,5 @@
+{
+  "files.autoSave": "afterDelay",
+  "prettier.jsxSingleQuote": true,
+  "prettier.jsxBracketSameLine": true
+}

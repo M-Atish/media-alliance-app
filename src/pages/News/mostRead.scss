@@ -1,0 +1,40 @@
+.item-container {
+  position: relative;
+  margin-right: 20px;
+
+  .rank-number {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    font-size: 28px;
+
+    color: var(--clr-theme-primary);
+  }
+
+  .item-details {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 0 30px;
+
+    .item-bottom-section {
+      display: flex;
+      line-height: 1;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+
+      .item-bottom-section-desc {
+        display: flex;
+        color: var(--clr-theme-primary);
+
+        .item-bottom-section-icon {
+          height: 16px;
+          width: 16px;
+        }
+      }
+      .option-ellipse {
+        cursor: pointer;
+      }
+    }
+  }
+}

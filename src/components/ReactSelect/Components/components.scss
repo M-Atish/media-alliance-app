@@ -1,0 +1,14 @@
+.selector-flag {
+    height: 13px;
+    width: 18px;
+    margin-right: 10px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px var(--clr-theme-primary);
+}
+
+.input-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}

@@ -1,0 +1,11 @@
+.sub-menu-item {
+  display: block;
+  text-decoration: none;
+  background-color: var(--clr-theme-primary);
+  border-top: 1px solid var(--clr-primary-900);
+  color: var(--clr-primary-500);
+
+  &:hover {
+    background-color: var(--clr-background);
+  }
+}
