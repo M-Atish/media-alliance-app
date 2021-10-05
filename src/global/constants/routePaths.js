@@ -12,6 +12,10 @@ export const routePaths = {
     },
     forex: '/forex',
     shareCalculator: '/share-calculator',
-
-    // Param Query paths:
+    shareMarket: '/share-market',
+    calendar: '/calendar',
+    dateConverter: '/date-converter',
+    gold: '/gold',
+    unicode: '/unicode',
+    emiCalculator: '/emi-calculator',
 }

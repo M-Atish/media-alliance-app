@@ -12,6 +12,12 @@ import NotFirstTime from '../../../utils/helpers/notFirstTime/NotFirstTime'
 import NavBar from '../../Layout/Navigation/Navbar/NavBar'
 
 import { routePaths } from '../../../global/constants/routePaths'
+import ShareMarket from './../../../pages/ShareMarket/ShareMarket'
+import Calendar from './../../../pages/Calendar/Calendar'
+import DateConverter from './../../../pages/DateConverter/DateConverter'
+import Gold from './../../../pages/Gold/Gold'
+import Unicode from './../../../pages/Unicode/Unicode'
+import EMICalculator from './../../../pages/EmiCalculator/EMICalculator'
 
 const Routes = ({ firstTime }) => {
     const dummyData = [
@@ -95,10 +101,24 @@ const Routes = ({ firstTime }) => {
                 />
                 <Route path={routePaths.news.base} component={News} />
                 <Route path={routePaths.forex} component={Forex} />
+                <Route path={routePaths.shareMarket} component={ShareMarket} />
                 <Route
                     path={routePaths.shareCalculator}
                     component={ShareCalculator}
                 />
+                <Route path={routePaths.shareMarket} component={ShareMarket} />
+                <Route path={routePaths.calendar} component={Calendar} />
+                <Route
+                    path={routePaths.dateConverter}
+                    component={DateConverter}
+                />
+                <Route path={routePaths.gold} component={Gold} />
+                <Route path={routePaths.unicode} component={Unicode} />
+                <Route
+                    path={routePaths.emiCalculator}
+                    component={EMICalculator}
+                />
+
                 <Route path="*" component={NotFirstTime} />
             </Switch>
         </>
