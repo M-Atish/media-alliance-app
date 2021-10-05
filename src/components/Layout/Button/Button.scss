@@ -1,0 +1,20 @@
+.button-container {
+    .button-submit {
+        cursor: pointer;
+
+        color: var(--clr-background);
+        background-color: var(--clr-primary-900);
+
+        border: none;
+        border-radius: 6px;
+
+        height: 43px;
+        width: 374px;
+
+        margin-bottom: 20px;
+
+        .button-description {
+            font-size: 16px;
+        }
+    }
+}

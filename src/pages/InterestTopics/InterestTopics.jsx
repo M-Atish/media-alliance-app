@@ -1,7 +1,11 @@
 import { useHistory } from 'react-router'
 
+import { useDispatch } from 'react-redux'
+
+import { firstTimePressed } from '../../store/firstTime'
+
 import GridImage from './GridImage'
-import TopicsButton from './TopicsButton'
+import Button from '../../components/Layout/Button/Button'
 
 import './interestedTopics.scss'
 
@@ -23,10 +27,7 @@ import {
 const InterestTopics = () => {
     const history = useHistory()
 
-    function handleTopicButtonClick(e) {
-        e.preventDefault()
-        history.push('/')
-    }
+    const dispatch = useDispatch()
 
     const images = [
         artImg,
@@ -58,6 +59,12 @@ const InterestTopics = () => {
         'Travel',
     ]
 
+    const handleButtonClick = (e) => {
+        e.preventDefault()
+        dispatch(firstTimePressed())
+        history.push('/')
+    }
+
     return (
         <div className="interested-topics-container">
             <div className="topics-header">
@@ -71,9 +78,10 @@ const InterestTopics = () => {
                     <GridImage image={image} title={headings[index]} />
                 ))}
             </div>
-            <div onClick={handleTopicButtonClick}>
-                <TopicsButton description="पेस गर्नुहोस्" />
-            </div>
+            <Button
+                description="पेस गर्नुहोस्"
+                handleButtonClick={handleButtonClick}
+            />
         </div>
     )
 }
