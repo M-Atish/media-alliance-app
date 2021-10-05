@@ -22,11 +22,11 @@ const News = () => {
         if (location.pathname === '/news') {
             history.push('?modules=all&sub-category=all')
         }
-        if (searchQuery.get('module') === null) {
-            history.push(
-                `?modules=all&sub-category=${searchQuery.get('sub-category')}`
-            )
-        }
+        // if (searchQuery.get('module') === null) {
+        //     history.push(
+        //         `?modules=all&sub-category=${searchQuery.get('sub-category')}`
+        //     )
+        // }
 
         // eslint-disable-next-line
     }, [])
@@ -261,6 +261,8 @@ const News = () => {
         },
     ]
 
+    console.log(`${searchQuery.get('module')}`, 'module')
+
     return (
         <div className="container">
             <section className="news-topic-container">
@@ -284,7 +286,7 @@ const News = () => {
                     {topicFilter.map((topic, index) => (
                         <NavLink
                             to={`/news?module=${searchQuery.get(
-                                'module'
+                                'modules'
                             )}&sub-category=${topic.path}`}
                             className="news-topic"
                             activeClassName={

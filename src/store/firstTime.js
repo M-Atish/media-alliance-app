@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const firstTimeSlice = createSlice({
     name: 'firstTime',
     initialState: {
-        firstTime: true,
+        firstTime: false,
     },
     reducers: {
         firstTimePressed: (state) => {

@@ -1,18 +1,18 @@
-@import "../../assets/globalCSS/global.scss";
+@import '../../global/globalCSS/global.scss';
 
 .interested-topics-container {
-  @extend %container;
+    @extend %container;
 }
 
 .header {
-  @extend %header;
-  &-span {
-    @extend %header-span;
-  }
+    @extend %header;
+    &-span {
+        @extend %header-span;
+    }
 }
 
 .grid {
-  margin: 50px 20%;
-  columns: auto 300px;
-  column-gap: 10px;
+    margin: 50px 20%;
+    columns: auto 300px;
+    column-gap: 10px;
 }
