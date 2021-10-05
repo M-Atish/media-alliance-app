@@ -4,6 +4,7 @@ import '../../App.scss'
 import { logoImg } from '../../assets'
 
 import NavBar from '../../components/Layout/Navigation/Navbar/NavBar'
+import { routePaths } from '../../global/constants/routePaths'
 
 const Dashboard = () => {
     const dummyData = [
@@ -16,7 +17,7 @@ const Dashboard = () => {
         {
             item: 'समाचार',
             type: 'text',
-            urlLink: '/news',
+            urlLink: routePaths.news.moduleSubCategory,
             picture: '',
         },
         {

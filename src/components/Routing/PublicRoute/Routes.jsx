@@ -11,6 +11,8 @@ import Dashboard from '../../../pages/Dashboard/Dashboard'
 import NotFirstTime from '../../../utils/helpers/notFirstTime/NotFirstTime'
 import NavBar from '../../Layout/Navigation/Navbar/NavBar'
 
+import { routePaths } from '../../../global/constants/routePaths'
+
 const Routes = ({ firstTime }) => {
     const dummyData = [
         {
@@ -76,17 +78,27 @@ const Routes = ({ firstTime }) => {
     ]
     return firstTime ? (
         <Switch>
-            <Route exact path="/" component={Language} />
-            <Route path="/interested-topics" component={InterestTopics} />
+            <Route exact path={routePaths.language} component={Language} />
+            <Route
+                path={routePaths.interestTopics}
+                component={InterestTopics}
+            />
         </Switch>
     ) : (
         <>
             <NavBar dummyData={dummyData} />
             <Switch>
-                <Route exact path="/" component={Dashboard} />
-                <Route path="/news" component={News} />
-                <Route path="/forex" component={Forex} />
-                <Route path="/share-calculator" component={ShareCalculator} />
+                <Route
+                    exact
+                    path={routePaths.dashboard}
+                    component={Dashboard}
+                />
+                <Route path={routePaths.news.base} component={News} />
+                <Route path={routePaths.forex} component={Forex} />
+                <Route
+                    path={routePaths.shareCalculator}
+                    component={ShareCalculator}
+                />
                 <Route path="*" component={NotFirstTime} />
             </Switch>
         </>

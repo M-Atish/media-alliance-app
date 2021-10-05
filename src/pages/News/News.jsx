@@ -1,5 +1,4 @@
-import { useEffect } from 'react'
-import { NavLink, useHistory, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import { adOneImg } from '../../assets'
 import { annapurnaTimesImg } from '../../assets'
@@ -8,28 +7,14 @@ import VideoCarousel from '../../utils/carousel/VideoCarousel'
 
 import { useParamsQuery } from '../../utils/helpers/URLLocation'
 
+import { routePaths } from '../../global/constants/routePaths'
+
 import MostRead from './MostRead'
 import './news.scss'
 import NewsArticle from './NewsArticle'
 
 const News = () => {
     const searchQuery = useParamsQuery()
-
-    let location = useLocation()
-    const history = useHistory()
-
-    useEffect(() => {
-        if (location.pathname === '/news') {
-            history.push('?modules=all&sub-category=all')
-        }
-        // if (searchQuery.get('module') === null) {
-        //     history.push(
-        //         `?modules=all&sub-category=${searchQuery.get('sub-category')}`
-        //     )
-        // }
-
-        // eslint-disable-next-line
-    }, [])
 
     const topicFilter = [
         { path: 'all', label: 'सबै' },
@@ -261,15 +246,15 @@ const News = () => {
         },
     ]
 
-    console.log(`${searchQuery.get('module')}`, 'module')
-
     return (
         <div className="container">
             <section className="news-topic-container">
                 <div className="news-topic-selector">
                     {topics.map((topic, index) => (
                         <NavLink
-                            to={`/news?module=${topic.path}&sub-category=all`}
+                            to={routePaths.news.moduleSubCategory
+                                .replace('{moduleName}', topic.path)
+                                .replace('{subCategoryName}', 'all')}
                             activeClassName={
                                 searchQuery.get('module') === topic.path
                                     ? `is-active`
@@ -285,9 +270,12 @@ const News = () => {
                 <div className="news-topic-filter">
                     {topicFilter.map((topic, index) => (
                         <NavLink
-                            to={`/news?module=${searchQuery.get(
-                                'modules'
-                            )}&sub-category=${topic.path}`}
+                            to={routePaths.news.moduleSubCategory
+                                .replace(
+                                    '{moduleName}',
+                                    searchQuery.get('module') || 'all'
+                                )
+                                .replace('{subCategoryName}', topic.path)}
                             className="news-topic"
                             activeClassName={
                                 searchQuery.get('sub-category') === topic.path
@@ -321,10 +309,10 @@ const News = () => {
                     सबैभन्दा धेरै हेरिएको भिडियो
                 </h2>
                 <VideoCarousel>
-                    {sampleNews.map((article) => (
-                        <div className="video-item">
+                    {sampleNews.map((article, index) => (
+                        <div className="video-item" key={index}>
                             <img
-                                src={annapurnaTimesImg}
+                                src={article.image}
                                 alt=""
                                 className="carousel-thumbnail"
                             />
@@ -334,7 +322,7 @@ const News = () => {
                             <p className="video-channel-description">
                                 <span>
                                     <img
-                                        src={annapurnaTimesImg}
+                                        src={article.image}
                                         className="video-channel-icon"
                                         alt=""
                                     />
