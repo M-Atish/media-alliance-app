@@ -104,6 +104,13 @@ import mountainTvImg from './images/partners/tv/mountainTV.png'
 import primeHdImg from './images/partners/tv/primeHD.png'
 import sagarmathaTvImg from './images/partners/tv/sagarmathaTV.png'
 
+// Options menu icons:
+
+import bookmarkIconImg from './images/optionsMenu/bookmarkIcon.svg'
+import commentIconImg from './images/optionsMenu/commentIcon.svg'
+import likeIconImg from './images/optionsMenu/likeIcon.svg'
+import shareIconImg from './images/optionsMenu/shareIcon.svg'
+
 export {
     // Global images export
     adOneImg,
@@ -199,4 +206,9 @@ export {
     primeHdImg,
     sagarmathaTvImg,
     yohoTvImg,
+    // Options Menu
+    bookmarkIconImg,
+    commentIconImg,
+    likeIconImg,
+    shareIconImg,
 }

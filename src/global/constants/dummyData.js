@@ -36,6 +36,10 @@ import {
     travelImg,
     annapurnaTimesImg,
     adOneImg,
+    commentIconImg,
+    shareIconImg,
+    bookmarkIconImg,
+    likeIconImg,
 } from '../../assets'
 
 const dummyData = [
@@ -537,12 +541,37 @@ const sampleNews = [
     },
 ]
 
-// Make a data sample set for the ellipse: like, share, mark as fav and add comment
 const ellipseMenuItems = [
     {
-        
-    }
+        icon: likeIconImg,
+        desc: 'Like this news',
+    },
+    {
+        icon: shareIconImg,
+        desc: 'Share this news',
+    },
+    {
+        icon: bookmarkIconImg,
+        desc: 'Mark as Favorite',
+    },
+    {
+        icon: commentIconImg,
+        desc: 'Add Comment',
+    },
 ]
+
+const nepaliEnglishNumerals = {
+    1: '१',
+    2: '२',
+    3: '३',
+    4: '४',
+    5: '५',
+    6: '६',
+    7: '७',
+    8: '८',
+    9: '९',
+    0: '०',
+}
 
 export {
     dummyData,
@@ -553,4 +582,6 @@ export {
     newsTopicFilter,
     newsTopics,
     sampleNews,
+    ellipseMenuItems,
+    nepaliEnglishNumerals,
 }

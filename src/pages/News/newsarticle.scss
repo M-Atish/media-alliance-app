@@ -6,10 +6,6 @@
     flex-direction: column;
     cursor: pointer;
 
-    &:hover {
-        background: var(--clr-off-white);
-    }
-
     .news-article-image {
         border-radius: 12px;
         max-height: 220px;

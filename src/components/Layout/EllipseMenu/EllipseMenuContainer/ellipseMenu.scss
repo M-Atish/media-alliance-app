@@ -1,0 +1,12 @@
+.ellipse-menu-container {
+    position: absolute;
+    right: 20px;
+    // bottom: -110px;
+    top: calc(100% - 20px);
+    background-color: var(--clr-background);
+    border-radius: 6px;
+    z-index: 1;
+}
+.inactive {
+    display: none;
+}

@@ -1,0 +1,19 @@
+.option-container {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    color: var(--clr-primary-500);
+    font-weight: 400;
+    padding: 7px;
+    cursor: pointer;
+    overflow-y: auto;
+
+    &:hover {
+        color: var(--clr-primary-900);
+        background-color: var(--clr-off-white);
+    }
+
+    .icon {
+        margin-right: 5px;
+    }
+}
