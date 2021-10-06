@@ -9,6 +9,7 @@ export const routePaths = {
         base: '/news',
         moduleSubCategory:
             '/news?module={moduleName}&sub-category={subCategoryName}',
+        details: '/news/details?id={idNumber}',
     },
     forex: '/forex',
     shareCalculator: '/share-calculator',

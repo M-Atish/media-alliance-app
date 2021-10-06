@@ -8,6 +8,9 @@ import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'
 import EllipseMenu from '../../components/Layout/EllipseMenu/EllipseMenuContainer/EllipseMenu'
 
 import { ClickOutside } from '../../utils/helpers/clickOutside/ClickOutside'
+import { nanoid } from '@reduxjs/toolkit'
+import { Link } from 'react-router-dom'
+import { routePaths } from '../../global/constants/routePaths'
 
 const NewsArticle = ({
     newsAgency,
@@ -16,6 +19,7 @@ const NewsArticle = ({
     tags,
     date,
     image,
+    key,
 }) => {
     const [optionMenuClicked, setOptionMenuClicked] = useState(false)
 
@@ -31,25 +35,36 @@ const NewsArticle = ({
 
     return (
         <div className="news-article-container">
-            {image && (
-                <img
-                    src={image}
-                    alt="particular news"
-                    className="news-article-image"
-                />
-            )}
+            <Link
+                to={routePaths.news.details.replace('{idNumber}', nanoid())}
+                style={{ textDecoration: 'none' }}
+            >
+                {image && (
+                    <img
+                        src={image}
+                        alt="particular news"
+                        className="news-article-image"
+                    />
+                )}
+            </Link>
+
             <div className="news-article-text-container">
-                <div className="news-agency-text">
-                    <span>
-                        <img
-                            src={newsAgencyIcon}
-                            alt="Logo of the news agency"
-                            className="news-agency-icon"
-                        />
-                    </span>
-                    {newsAgency} <p className="news-date">{date}</p>
-                </div>
-                <div className="news-article-title">{title}</div>
+                <Link
+                    to={routePaths.news.details.replace('{idNumber}', nanoid())}
+                    style={{ textDecoration: 'none' }}
+                >
+                    <div className="news-agency-text">
+                        <span>
+                            <img
+                                src={newsAgencyIcon}
+                                alt="Logo of the news agency"
+                                className="news-agency-icon"
+                            />
+                        </span>
+                        {newsAgency} <p className="news-date">{date}</p>
+                    </div>
+                    <div className="news-article-title">{title}</div>
+                </Link>
                 <div className="news-article-bottom-container">
                     <div className="news-article-tags">
                         <span>

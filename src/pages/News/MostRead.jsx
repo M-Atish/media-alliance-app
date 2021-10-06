@@ -13,7 +13,7 @@ import { EnglishToNepaliConverter } from '../../utils/helpers/englishToNepaliCon
 const MostRead = ({ title, newsAgency, newsAgencyIcon, rank }) => {
     const [ellipseClicked, setEllipseClicked] = useState(false)
 
-    const handleClickEllipse = (event) => {
+    const handleClickEllipse = (e) => {
         setEllipseClicked(!ellipseClicked)
     }
 

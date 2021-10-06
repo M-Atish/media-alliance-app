@@ -135,6 +135,7 @@ const News = () => {
                                     newsAgency={article.newsAgency}
                                     newsAgencyIcon={article.newsAgencyIcon}
                                     rank={index + 1}
+                                    key={index}
                                 />
                             )
                     )}

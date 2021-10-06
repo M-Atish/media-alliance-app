@@ -19,6 +19,7 @@ import EMICalculator from './../../../pages/EmiCalculator/EMICalculator'
 // Constants
 import { routePaths } from '../../../global/constants/routePaths'
 import { dummyData } from '../../../global/constants/dummyData'
+import NewsSinglePage from './../../../pages/News/NewsSinglePage/NewsSinglePage'
 
 const Routes = ({ firstTime }) => {
     return firstTime ? (
@@ -38,6 +39,7 @@ const Routes = ({ firstTime }) => {
                     path={routePaths.dashboard}
                     component={Dashboard}
                 />
+                <Route path="/news/details" component={NewsSinglePage} />
                 <Route path={routePaths.news.base} component={News} />
                 <Route path={routePaths.forex} component={Forex} />
                 <Route path={routePaths.shareMarket} component={ShareMarket} />
@@ -57,7 +59,6 @@ const Routes = ({ firstTime }) => {
                     path={routePaths.emiCalculator}
                     component={EMICalculator}
                 />
-
                 <Route path="*" component={ErrorPage} />
             </Switch>
         </>
