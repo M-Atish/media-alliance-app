@@ -9,55 +9,17 @@ import Button from '../../components/Layout/Button/Button'
 
 import './interestedTopics.scss'
 
+// Constants
+
 import {
-    artImg,
-    businessImg,
-    educationImg,
-    entertainmentImg,
-    fashionImg,
-    healthImg,
-    politicsImg,
-    realEstateImg,
-    scienceImg,
-    sportsImg,
-    technologyImg,
-    travelImg,
-} from '../../assets'
+    interestTopicsHeadings,
+    interestTopicsImages,
+} from '../../global/constants/dummyData'
 
 const InterestTopics = () => {
     const history = useHistory()
 
     const dispatch = useDispatch()
-
-    const images = [
-        artImg,
-        businessImg,
-        educationImg,
-        entertainmentImg,
-        fashionImg,
-        healthImg,
-        politicsImg,
-        realEstateImg,
-        scienceImg,
-        sportsImg,
-        technologyImg,
-        travelImg,
-    ]
-
-    const headings = [
-        'Art',
-        'Business',
-        'Education',
-        'Entertainment',
-        'Fashion',
-        'Health',
-        'Politics',
-        'Real Estate',
-        'Science',
-        'Sports',
-        'Technology',
-        'Travel',
-    ]
 
     const handleButtonClick = (e) => {
         e.preventDefault()
@@ -74,8 +36,11 @@ const InterestTopics = () => {
                 </span>
             </div>
             <div className="grid">
-                {images.map((image, index) => (
-                    <GridImage image={image} title={headings[index]} />
+                {interestTopicsImages.map((image, index) => (
+                    <GridImage
+                        image={image}
+                        title={interestTopicsHeadings[index]}
+                    />
                 ))}
             </div>
             <Button

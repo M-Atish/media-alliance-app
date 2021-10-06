@@ -59,7 +59,7 @@ const Dashboard = () => {
         {
             item: 'ईएमआई क्यालकुलेटर',
             type: 'text',
-            urlLink: '/emi',
+            urlLink: '/emi-calculator',
             picture: '',
         },
         {

@@ -37,41 +37,4 @@ const App = () => {
     )
 }
 
-// function AnimationApp() {
-//     let location = useLocation()
-//     const firstTime = useSelector(selectFirstTimePressed)
-
-//     return (
-//         <>
-//             {!firstTime && <NavBar />}
-//             <Switch location={location}>
-//                 {firstTime ? (
-//                     <>
-//                         <Route exact path="/" component={Language} />
-//                         <Route
-//                             path="/interested-topics"
-//                             component={InterestTopics}
-//                         />
-//                     </>
-//                 ) : (
-//                     <>
-//                         <Route exact path="/" component={Dashboard} />
-//                         <Route path="/news" component={News} />
-//                         <Route path="/forex" component={Forex} />
-//                         <Route
-//                             path="/interested-topics"
-//                             component={NotFirstTime}
-//                         />
-//                         <Route
-//                             path="/share-calculator"
-//                             component={ShareCalculator}
-//                         />
-//                     </>
-//                 )}
-//                 <Route path="*" component={NotFirstTime} />
-//             </Switch>
-//         </>
-//     )
-// }
-
 export default App

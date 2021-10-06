@@ -1,256 +1,47 @@
 import { NavLink } from 'react-router-dom'
 
-import { adOneImg } from '../../assets'
-import { annapurnaTimesImg } from '../../assets'
+import { useEffect } from 'react'
 
 import VideoCarousel from '../../utils/carousel/VideoCarousel'
 
 import { useParamsQuery } from '../../utils/helpers/URLLocation'
 
-import { routePaths } from '../../global/constants/routePaths'
-
 import MostRead from './MostRead'
 import './news.scss'
 import NewsArticle from './NewsArticle'
 
+import { useLocation, useHistory } from 'react-router'
+
+// Constants
+import { routePaths } from '../../global/constants/routePaths'
+import {
+    newsTopicFilter,
+    newsTopics,
+    sampleNews,
+} from '../../global/constants/dummyData'
+
 const News = () => {
     const searchQuery = useParamsQuery()
 
-    const topicFilter = [
-        { path: 'all', label: 'सबै' },
-        { path: 'nepal', label: 'नेपालको राजनीति' },
-        {
-            path: 'world',
-            label: 'विश्व राजनीति',
-        },
-        {
-            path: 'asia',
-            label: 'एशिया',
-        },
-    ]
+    let location = useLocation()
+    let history = useHistory()
 
-    const topics = [
-        {
-            path: 'sports',
-            label: 'खेलकुद',
-        },
-        {
-            path: 'politics',
-            label: 'राजनीति',
-        },
-        {
-            path: 'technology',
-            label: 'प्रविधि',
-        },
-        {
-            path: 'business',
-            label: 'व्यापार',
-        },
-        {
-            path: 'health',
-            label: 'स्वास्थ्य',
-        },
-        {
-            path: 'education',
-            label: 'शिक्षा',
-        },
-        {
-            path: 'travel',
-            label: 'यात्रा',
-        },
-        {
-            path: 'lifestyle',
-            label: 'जीवनशैली',
-        },
-        {
-            path: 'entertainment',
-            label: 'मनोरञ्जन',
-        },
-        {
-            path: 'art',
-            label: 'कला',
-        },
-    ]
-
-    const sampleNews = [
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-        {
-            newsAgency: 'अन्नपूर्ण पोस्ट',
-            newsAgencyIcon: annapurnaTimesImg,
-            title: 'चीनले तालिबानमाथि लगाएको प्रतिबन्ध हटाउन माग गरेको छ',
-            content: 'Some random shit',
-            tags: ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल'],
-            date: '१४ घण्टा अगाडी',
-            image: adOneImg,
-        },
-    ]
+    useEffect(() => {
+        if (location.pathname === routePaths.news.base) {
+            history.push(
+                routePaths.news.moduleSubCategory
+                    .replace('{moduleName}', 'all')
+                    .replace('{subCategoryName}', 'all')
+            )
+        }
+        // eslint-disable-next-line
+    }, [])
 
     return (
         <div className="container">
             <section className="news-topic-container">
                 <div className="news-topic-selector">
-                    {topics.map((topic, index) => (
+                    {newsTopics.map((topic, index) => (
                         <NavLink
                             to={routePaths.news.moduleSubCategory
                                 .replace('{moduleName}', topic.path)
@@ -268,7 +59,7 @@ const News = () => {
                     ))}
                 </div>
                 <div className="news-topic-filter">
-                    {topicFilter.map((topic, index) => (
+                    {newsTopicFilter.map((topic, index) => (
                         <NavLink
                             to={routePaths.news.moduleSubCategory
                                 .replace(

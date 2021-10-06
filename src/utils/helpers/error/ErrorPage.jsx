@@ -1,9 +1,9 @@
-import './notFirstTime.scss'
+import './errorPage.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSadCry } from '@fortawesome/free-solid-svg-icons'
 
-const NotFirstTime = () => {
+const ErrorPage = () => {
     return (
         <div className="warning-message">
             <p>
@@ -16,4 +16,4 @@ const NotFirstTime = () => {
     )
 }
 
-export default NotFirstTime
+export default ErrorPage
