@@ -96,11 +96,11 @@ const NewsSinglePage = () => {
                         </p>
                         <p className="comment-sub-heading">प्रतिक्रिया - १ </p>
                         <form action="" className="comment-form">
-                            <input
-                                type="text"
+                            <textarea
                                 className="comment-input"
                                 onChange={handleInputTextChange}
-                            />
+                                value={commentText}
+                            ></textarea>
                             <Button
                                 description="कमेन्ट गर्नुहोस्"
                                 handleButtonClick={handleButtonSubmit}
