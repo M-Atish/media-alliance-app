@@ -1,3 +1,100 @@
 .container {
-    margin-top: 50px;
+    .single-news-container {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .top-container {
+            width: 43.75em;
+
+            .title-container {
+                .title-heading {
+                    color: var(--clr-primary-900);
+                    text-align: center;
+                    font-size: 2em;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .image-tag-container {
+                .picture-container {
+                    .news-picture {
+                        border-radius: 6px;
+                        width: 100%;
+                    }
+                }
+
+                .tag-na-date-container {
+                    color: var(--clr-theme-primary);
+                    display: flex;
+                    flex-direction: column;
+
+                    .na-date {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .news-agency {
+                            .na-logo {
+                                height: 11px;
+                                width: 16px;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+
+                    .tags-container {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 10px;
+
+                        .news-article-tag {
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+
+            .content-container {
+                font-size: 1.25em;
+                text-align: justify;
+            }
+        }
+
+        .body-container {
+            width: 43.75em;
+
+            .comment-box-container {
+                font-size: 1.25em;
+                font-weight: 700;
+                color: var(--clr-primary-900);
+                text-align: left;
+                margin-bottom: 20px;
+
+                .comment-heading {
+                    margin-bottom: 20px;
+                }
+
+                .comment-sub-heading {
+                    font-weight: 700;
+                }
+
+                .comment-input {
+                    width: 100%;
+                    box-shadow: 0px 2px 12px rgba(2, 2, 2, 0.15);
+                    border-radius: 4px;
+                    outline: none;
+                    border: none;
+
+                    font-size: 1em;
+                    font-family: inherit !important;
+
+                    // To increase the size of the input text field
+                    padding-left: 0.4em;
+                    padding-top: 0.4em;
+                    padding-bottom: 11.25em;
+                }
+            }
+        }
+    }
 }
