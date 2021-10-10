@@ -4,7 +4,7 @@ const Button = ({ description, handleButtonClick }) => {
     return (
         <div className="button-container">
             <button
-                type="button"
+                type="submit"
                 className="button-submit"
                 onClick={handleButtonClick}
             >

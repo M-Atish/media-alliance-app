@@ -54,18 +54,22 @@ const NewsArticle = ({
                     style={{ textDecoration: 'none' }}
                 >
                     <div className="news-agency-text">
-                        <span>
-                            <img
-                                src={newsAgencyIcon}
-                                alt="Logo of the news agency"
-                                className="news-agency-icon"
-                            />
-                        </span>
-                        {newsAgency} <p className="news-date">{date}</p>
+                        {/* na means News Agency */}
+                        <div className="top-na-date">
+                            <span>
+                                <img
+                                    src={newsAgencyIcon}
+                                    alt="Logo of the news agency"
+                                    className="news-agency-icon"
+                                />
+                            </span>
+                            {newsAgency}
+                        </div>
+                        <p className="news-date">{date}</p>
                     </div>
                     <div className="news-article-title">{title}</div>
                 </Link>
-                <div className="news-article-bottom-container">
+                <div className="tags-ellipse-option">
                     <div className="news-article-tags">
                         <span>
                             <img src={tagIconImg} alt="Icon of tags" />

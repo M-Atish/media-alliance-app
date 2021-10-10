@@ -27,6 +27,13 @@ const NewsSinglePage = () => {
         // While submitting the text value, make sure to trim the beginning and trailing whitespaces
     }
 
+    const handleButtonSubmit = (e) => {
+        e.preventDefault()
+        setCommentText(commentText.trim())
+
+        // Put the http post logic here
+    }
+
     return (
         <section className="container">
             <div className="single-news-container">
@@ -82,19 +89,26 @@ const NewsSinglePage = () => {
                     <Button description="पूरा समाचार पढनुहोस" />
                 </a>
                 <div className="body-container">
+                    <form action=""></form>
                     <div className="comment-box-container">
                         <p className="comment-heading">
                             यसमा तपाईंको प्रतिक्रिया के छ?
                         </p>
                         <p className="comment-sub-heading">प्रतिक्रिया - १ </p>
-                        <input
-                            type="text"
-                            className="comment-input"
-                            onChange={handleInputTextChange}
-                        />
+                        <form action="" className="comment-form">
+                            <input
+                                type="text"
+                                className="comment-input"
+                                onChange={handleInputTextChange}
+                            />
+                            <Button
+                                description="कमेन्ट गर्नुहोस्"
+                                handleButtonClick={handleButtonSubmit}
+                            />
+                        </form>
                     </div>
                 </div>
-                <Button description="कमेन्ट गर्नुहोस्" />
+
                 <CommentSection />
             </div>
         </section>

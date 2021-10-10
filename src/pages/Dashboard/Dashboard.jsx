@@ -69,11 +69,7 @@ const Dashboard = () => {
             picture: '',
         },
     ]
-    return (
-        <>
-            <NavBar dummyData={dummyData} />
-        </>
-    )
+    return <div className="container">This is the dashboard component</div>
 }
 
 export default Dashboard
