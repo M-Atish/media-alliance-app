@@ -38,7 +38,6 @@ const Language = () => {
                 </span>
             </div>
             <div className="language-center-buttons">
-                {/* The reason that we use div containers to encapsulate the react components is to handle DOM events. React components return a bunch of DOM elements thus, DOM events do not work with them. */}
                 <div onClick={handleNepaliClick}>
                     <LanguageButton
                         icon={NEPImg}

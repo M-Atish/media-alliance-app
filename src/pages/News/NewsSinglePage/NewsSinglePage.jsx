@@ -10,6 +10,7 @@ import {
 } from '../../../assets'
 
 import { useState } from 'react'
+import { commentData } from '../../../global/constants/dummyData'
 
 const NewsSinglePage = () => {
     const [commentText, setCommentText] = useState('')
@@ -108,8 +109,9 @@ const NewsSinglePage = () => {
                         </form>
                     </div>
                 </div>
-
-                <CommentSection />
+                {commentData.map((comment, index) => (
+                    <CommentSection commentData={comment} key={index} />
+                ))}
             </div>
         </section>
     )

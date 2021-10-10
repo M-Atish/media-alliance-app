@@ -40,7 +40,7 @@ const MostRead = ({ title, newsAgency, newsAgencyIcon, rank }) => {
                         {newsAgency}
                     </p>
                     <div ref={wrapperRef}>
-                        <EllipseMenu active={ellipseClicked} />
+                        <EllipseMenu active={ellipseClicked} className=""/>
                     </div>
                     <FontAwesomeIcon
                         icon={faEllipsisV}

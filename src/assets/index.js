@@ -111,6 +111,9 @@ import commentIconImg from './images/optionsMenu/commentIcon.svg'
 import likeIconImg from './images/optionsMenu/likeIcon.svg'
 import shareIconImg from './images/optionsMenu/shareIcon.svg'
 
+// Person
+import personImg from './images/person.png'
+
 export {
     // Global images export
     adOneImg,
@@ -211,4 +214,6 @@ export {
     commentIconImg,
     likeIconImg,
     shareIconImg,
+    // Person
+    personImg,
 }
