@@ -5,7 +5,7 @@
         align-items: center;
 
         .top-container {
-            width: 43.75em;
+            width: var(--singlePageWidth);
 
             .title-container {
                 .title-heading {
@@ -61,7 +61,7 @@
         }
 
         .body-container {
-            width: 43.75em;
+            width: var(--singlePageWidth);
 
             .comment-box-container {
                 font-size: 1.25em;

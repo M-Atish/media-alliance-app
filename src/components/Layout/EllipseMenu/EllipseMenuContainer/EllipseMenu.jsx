@@ -5,12 +5,13 @@ import classNames from 'classnames'
 
 import './ellipseMenu.scss'
 
-const EllipseMenu = ({ active }) => {
+const EllipseMenu = ({ active, top }) => {
     return (
         <div
             className={classNames('ellipse-menu-container', {
                 inactive: !active,
             })}
+            style={{ top: top }}
         >
             {ellipseMenuItems.map((item, index) => (
                 <EllipseMenuItem

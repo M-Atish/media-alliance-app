@@ -39,7 +39,7 @@ import {
     commentIconImg,
     shareIconImg,
     bookmarkIconImg,
-    likeIconImg,
+    likeIconDarkImg,
     personImg,
 } from '../../assets'
 
@@ -544,7 +544,7 @@ const sampleNews = [
 
 const ellipseMenuItems = [
     {
-        icon: likeIconImg,
+        icon: likeIconDarkImg,
         desc: 'Like this news',
     },
     {

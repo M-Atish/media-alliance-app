@@ -108,11 +108,14 @@ import sagarmathaTvImg from './images/partners/tv/sagarmathaTV.png'
 
 import bookmarkIconImg from './images/optionsMenu/bookmarkIcon.svg'
 import commentIconImg from './images/optionsMenu/commentIcon.svg'
-import likeIconImg from './images/optionsMenu/likeIcon.svg'
+import likeIconDarkImg from './images/optionsMenu/likeIconDark.svg'
 import shareIconImg from './images/optionsMenu/shareIcon.svg'
 
 // Person
 import personImg from './images/person.png'
+
+// Comment Section
+import likeIconLightImg from './images/commentSection/likeIconLight.svg'
 
 export {
     // Global images export
@@ -212,8 +215,10 @@ export {
     // Options Menu
     bookmarkIconImg,
     commentIconImg,
-    likeIconImg,
+    likeIconDarkImg,
     shareIconImg,
     // Person
     personImg,
+    // Comment Section
+    likeIconLightImg,
 }

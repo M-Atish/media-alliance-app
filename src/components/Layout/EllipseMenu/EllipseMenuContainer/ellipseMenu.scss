@@ -1,11 +1,10 @@
 .ellipse-menu-container {
     position: absolute;
     right: 20px;
-    // bottom: -110px;
     top: calc(100% - 20px);
     background-color: var(--clr-background);
     border-radius: 6px;
-    z-index: 1;
+    z-index: 10;
     box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.1);
 }
 .inactive {

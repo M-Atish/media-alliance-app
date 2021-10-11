@@ -16,8 +16,10 @@
     --radius: 2px;
     --baseFg: dimgray;
     --baseBg: white;
-    --accentFg: #006fc2;
+    --clr-theme-blue: #006fc2;
     --accentBg: #bae1ff;
+
+    --singlePageWidth: 43.75em;
 
     &.dark {
         // Dark mode colors
