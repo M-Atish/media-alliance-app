@@ -13,17 +13,23 @@
         position: absolute;
         margin: 0 !important;
         top: 0;
-        height: 10.625em;
-        width: 2.5em;
+        height: 100%;
+        width: 1.25em;
         font-size: 2.8125em !important;
         border-radius: 0 !important;
+
+        &:hover {
+            background-color: black !important;
+            opacity: 0.4;
+            border-radius: 0.2em !important;
+        }
     }
 
     .owl-prev {
-        left: 0;
+        left: 0.09em;
     }
 
     .owl-next {
-        right: 0;
+        right: 0.09em;
     }
 }
