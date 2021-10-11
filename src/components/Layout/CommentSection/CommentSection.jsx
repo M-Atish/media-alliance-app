@@ -13,6 +13,20 @@ const CommentSection = ({ commentData }) => {
     const [likeButtonClicked, setLikeButtonClicked] = useState(false)
     const [dislikeButtonClicked, setDislikeButtonClicked] = useState(false)
 
+    const handleLikeButtonClicked = (e) => {
+        if (dislikeButtonClicked === true) {
+            setDislikeButtonClicked(false)
+        }
+        setLikeButtonClicked(!likeButtonClicked)
+    }
+
+    const handleDislikeButtonClicked = (e) => {
+        if (likeButtonClicked === true) {
+            setLikeButtonClicked(false)
+        }
+        setDislikeButtonClicked(!dislikeButtonClicked)
+    }
+
     return (
         <section className="comment-section">
             <div className="person-credentials">
@@ -41,8 +55,13 @@ const CommentSection = ({ commentData }) => {
                         className={classNames('like-container', {
                             active: likeButtonClicked,
                         })}
+                        onClick={handleLikeButtonClicked}
                     >
-                        <div className="like-button">
+                        <div
+                            className={classNames('like-button', {
+                                active: likeButtonClicked,
+                            })}
+                        >
                             <img
                                 src={likeIconLightImg}
                                 alt="Da bong"
@@ -55,8 +74,13 @@ const CommentSection = ({ commentData }) => {
                         className={classNames('dislike-container', {
                             active: dislikeButtonClicked,
                         })}
+                        onClick={handleDislikeButtonClicked}
                     >
-                        <div className="dislike-button">
+                        <div
+                            className={classNames('dislike-button', {
+                                active: dislikeButtonClicked,
+                            })}
+                        >
                             <img
                                 src={likeIconLightImg}
                                 alt="Da bong -180 degrees"

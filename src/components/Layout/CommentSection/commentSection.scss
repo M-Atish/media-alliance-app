@@ -53,7 +53,7 @@
                 cursor: pointer;
 
                 &.active {
-                    background-color: var(--clr-theme-blue);
+                    color: var(--clr-theme-blue);
                 }
 
                 .like-button,
@@ -69,6 +69,10 @@
                     justify-content: center;
 
                     margin-right: 0.3125em;
+
+                    &.active {
+                        background-color: var(--clr-theme-blue);
+                    }
 
                     .like-icon,
                     .dislike-icon {
