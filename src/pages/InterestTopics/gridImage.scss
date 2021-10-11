@@ -1,82 +1,82 @@
 .grid-image {
-  margin: 0;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  margin-bottom: 10px;
-  break-inside: avoid;
-  isolation: isolate;
-  position: relative;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 0.625em;
+    break-inside: avoid;
+    isolation: isolate;
+    position: relative;
 
-  figure {
-    line-height: 1;
-    cursor: pointer;
+    figure {
+        line-height: 1;
+        cursor: pointer;
 
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: "";
-      background: linear-gradient(
-        180deg,
-        rgba(196, 196, 196, 0) 0%,
-        #000000 100%
-      );
-      opacity: 0.8;
-      border-radius: 1rem;
-    }
-  }
-
-  img {
-    line-height: 1;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 1rem;
-  }
-
-  figcaption {
-    position: absolute;
-    bottom: 20px;
-    left: 10px;
-    font-size: 27px;
-    color: var(--clr-background);
-  }
-
-  input {
-    opacity: 0;
-    position: absolute;
-    &:checked {
-      & ~ figure {
         &::before {
-          background: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: linear-gradient(
+                180deg,
+                rgba(196, 196, 196, 0) 0%,
+                #000000 100%
+            );
+            opacity: 0.8;
+            border-radius: 1rem;
         }
-      }
-
-      & ~ .checked-icon {
-        opacity: 1;
-      }
     }
-  }
 
-  .checked-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: var(--clr-background);
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    opacity: 0;
-    border-radius: 50%;
-
-    & .las.la-check {
-      color: var(--clr-primary-900);
-      font-size: 30px;
-      font-weight: 800;
+    img {
+        line-height: 1;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
     }
-  }
+
+    figcaption {
+        position: absolute;
+        bottom: 1.25em;
+        left: 0.625em;
+        font-size: 1.6875em;
+        color: var(--clr-background);
+    }
+
+    input {
+        opacity: 0;
+        position: absolute;
+        &:checked {
+            & ~ figure {
+                &::before {
+                    background: black;
+                }
+            }
+
+            & ~ .checked-icon {
+                opacity: 1;
+            }
+        }
+    }
+
+    .checked-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5em;
+        height: 2.5em;
+        background: var(--clr-background);
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        opacity: 0;
+        border-radius: 50%;
+
+        & .las.la-check {
+            color: var(--clr-primary-900);
+            font-size: 1.875em;
+            font-weight: 800;
+        }
+    }
 }

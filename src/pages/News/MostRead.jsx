@@ -43,7 +43,7 @@ const MostRead = ({ title, newsAgency, newsAgencyIcon, rank }) => {
                         <EllipseMenu
                             active={ellipseClicked}
                             className=""
-                            top="-50px"
+                            top="-3.125em"
                         />
                     </div>
                     <FontAwesomeIcon

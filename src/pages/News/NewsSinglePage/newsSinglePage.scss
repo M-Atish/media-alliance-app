@@ -12,14 +12,14 @@
                     color: var(--clr-primary-900);
                     text-align: center;
                     font-size: 2em;
-                    margin-bottom: 10px;
+                    margin-bottom: 0.625em;
                 }
             }
 
             .image-tag-container {
                 .picture-container {
                     .news-picture {
-                        border-radius: 6px;
+                        border-radius: 0.375em;
                         width: 100%;
                     }
                 }
@@ -35,9 +35,9 @@
 
                         .news-agency {
                             .na-logo {
-                                height: 11px;
-                                width: 16px;
-                                margin-right: 10px;
+                                height: 0.6875em;
+                                width: 1em;
+                                margin-right: 0.625em;
                             }
                         }
                     }
@@ -45,10 +45,10 @@
                     .tags-container {
                         display: flex;
                         align-items: center;
-                        margin-bottom: 10px;
+                        margin-bottom: 0.625em;
 
                         .news-article-tag {
-                            margin-left: 15px;
+                            margin-left: 0.9375em;
                         }
                     }
                 }
@@ -68,10 +68,10 @@
                 font-weight: 700;
                 color: var(--clr-primary-900);
                 text-align: left;
-                margin-bottom: 20px;
+                margin-bottom: 1.25em;
 
                 .comment-heading {
-                    margin-bottom: 20px;
+                    margin-bottom: 1.25em;
                 }
 
                 .comment-sub-heading {
@@ -83,8 +83,8 @@
 
                     .comment-input {
                         width: 100%;
-                        box-shadow: 0px 2px 12px rgba(2, 2, 2, 0.15);
-                        border-radius: 4px;
+                        box-shadow: 0 0.125em 0.75em rgba(2, 2, 2, 0.15);
+                        border-radius: 0.25em;
                         outline: none;
                         border: none;
 
@@ -96,7 +96,7 @@
                         padding-top: 0.4em;
                         padding-bottom: 11.25em;
 
-                        margin-bottom: 20px;
+                        margin-bottom: 1.25em;
 
                         resize: none;
                     }

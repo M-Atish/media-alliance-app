@@ -46,8 +46,8 @@ const CommentSection = ({ commentData }) => {
                         <Button
                             bgColor={COLORS.redTheme}
                             description="Reply"
-                            height="32px"
-                            width="88.55px"
+                            height="2em"
+                            width="5.534375em"
                             margin="0"
                         />
                     </div>

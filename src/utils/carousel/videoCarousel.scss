@@ -1,29 +1,29 @@
 .carousel-thumbnail {
-  object-fit: cover;
-  border-radius: 6px;
-  height: 170px;
-  box-shadow: 1px 1px 1px var(--clr-theme-primary);
+    object-fit: cover;
+    border-radius: 0.375em;
+    height: 10.625em;
+    box-shadow: 0.0625em 0.0625em 0.0625em var(--clr-theme-primary);
 }
 
 .owl-carousel {
-  position: relative;
+    position: relative;
 
-  .owl-prev,
-  .owl-next {
-    position: absolute;
-    margin: 0 !important;
-    top: 0;
-    height: 170px;
-    width: 40px;
-    font-size: 45px !important;
-    border-radius: 0 !important;
-  }
+    .owl-prev,
+    .owl-next {
+        position: absolute;
+        margin: 0 !important;
+        top: 0;
+        height: 10.625em;
+        width: 2.5em;
+        font-size: 2.8125em !important;
+        border-radius: 0 !important;
+    }
 
-  .owl-prev {
-    left: 0;
-  }
+    .owl-prev {
+        left: 0;
+    }
 
-  .owl-next {
-    right: 0;
-  }
+    .owl-next {
+        right: 0;
+    }
 }

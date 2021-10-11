@@ -8,12 +8,12 @@
     --clr-theme-red: #a31e28;
     --clr-off-white: #f1f1f1;
 
-    --navbar-height: 50px;
+    --navbar-height: 3.125em;
     --navbar-background: #b4b8c6;
     --navbar-font-weight: 700;
 
     // Selector styling variables
-    --radius: 2px;
+    --radius: 0.125em;
     --baseFg: dimgray;
     --baseBg: white;
     --clr-theme-blue: #006fc2;
@@ -54,6 +54,6 @@ i[class*='la'] {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 75em;
     margin: 0 auto;
 }

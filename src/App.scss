@@ -10,39 +10,39 @@
 // }
 
 body {
-  font-family: "Mukta", sans-serif;
-  background: var(--clr-background);
-  color: var(--clr-primary-500);
+    font-family: 'Mukta', sans-serif;
+    background: var(--clr-background);
+    color: var(--clr-primary-500);
 }
 
 .loading-curent {
-  opacity: 1;
-  transition: all 500ms ease-in-out;
+    opacity: 1;
+    transition: all 500ms ease-in-out;
 }
 
 .loaded {
-  opacity: 0;
-  transition: all 500ms ease-in-out 1s;
+    opacity: 0;
+    transition: all 500ms ease-in-out 1s;
 }
 
 .loading {
-  height: 100px;
-  width: 100px;
+    height: 6.25em;
+    width: 6.25em;
 }
 
 // CSS transitions
 .fade-enter {
-  opacity: 0.01;
+    opacity: 0.01;
 }
 
 .fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in-out;
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
 }
 .fade-exit {
-  opacity: 1;
+    opacity: 1;
 }
 .fade-exit.fade-exit-active {
-  opacity: 0.01;
-  transition: opacity 500ms ease-in-out;
+    opacity: 0.01;
+    transition: opacity 500ms ease-in-out;
 }

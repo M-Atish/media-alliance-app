@@ -1,6 +1,6 @@
 %container {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 3.125em;
 }
 
 %header {
@@ -35,16 +35,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6px 9px;
+    padding: 0.375em 0.5625em;
 
-    width: 100px;
-    height: 35px;
+    width: 6.25em;
+    height: 2.1875em;
 
     background: var(--clr-background);
 
-    border: 1px solid var(--clr-primary-500);
+    border: 0.0625em solid var(--clr-primary-500);
     box-sizing: border-box;
-    border-radius: 6px;
+    border-radius: 0.375em;
 
     cursor: pointer;
     color: var(--clr-primary-500);
@@ -52,11 +52,11 @@
 
 .option-nepali-button {
     @extend %language-btn;
-    margin-right: 10px;
+    margin-right: 0.625em;
 
     &.active {
         background: #505565;
-        border: 1px solid #505565;
+        border: 0.0625em solid #505565;
         color: white;
     }
 }
@@ -66,12 +66,12 @@
 }
 
 .nepal-flag {
-    height: 23px;
-    width: 23px;
-    margin-right: 10px;
+    height: 1.4375em;
+    width: 1.4375em;
+    margin-right: 0.625em;
 }
 
 .us-flag {
     @extend .nepal-flag;
-    height: 20px !important;
+    height: 1.25em !important;
 }
