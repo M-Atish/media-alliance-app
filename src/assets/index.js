@@ -117,6 +117,9 @@ import personImg from './images/person.png'
 // Comment Section
 import likeIconLightImg from './images/commentSection/likeIconLight.svg'
 
+// Share market
+import shareMarketTriangleImg from './images/shareMarket/shareMarketCardTriangle.svg'
+
 export {
     // Global images export
     adOneImg,
@@ -221,4 +224,6 @@ export {
     personImg,
     // Comment Section
     likeIconLightImg,
+    // Share Market
+    shareMarketTriangleImg,
 }

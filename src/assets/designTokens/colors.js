@@ -6,6 +6,8 @@ export const COLORS = {
 
     singlePageWidth: '43.75em',
 
+    cardThemeGreen: '#45A48E',
+
     light: {
         background: '#fff',
         bodyText: '#505565',

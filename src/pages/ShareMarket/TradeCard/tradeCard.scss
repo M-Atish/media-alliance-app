@@ -1,0 +1,55 @@
+.trade-card {
+    width: 20em;
+    height: 12em;
+    border-radius: 0.625em;
+
+    & .trade-card-container {
+        margin: 1em;
+
+        & .trade-card-top-container {
+            display: flex;
+            justify-content: space-between;
+
+            & .organization-name {
+                color: var(--clr-white);
+                opacity: 0.75;
+                font-weight: 200;
+                font-size: 1.2em;
+            }
+
+            & .triangle-right-container {
+                height: 2em;
+                width: 2em;
+                border-radius: 50%;
+                // The rgba is the same as saying var(--clr-primary-900) with opacity 0.3
+                background-color: rgba(29, 29, 31, 0.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                & .triangle-right {
+                    height: 0.6em;
+                    width: 0.6em;
+                }
+            }
+        }
+
+        & .trade-card-middle-container {
+            text-align: left;
+            & .share-data {
+                font-size: 2.5em;
+                color: var(--clr-white);
+                font-weight: 700;
+            }
+        }
+
+        & .trade-card-bottom-container {
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+            color: var(--clr-white);
+            font-weight: 400;
+            font-size: 1.5em;
+        }
+    }
+}

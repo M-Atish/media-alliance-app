@@ -8,7 +8,7 @@ const Forex = () => {
         <div className="container">
             <div className="forex-container">
                 <div className="forex-title-container">
-                    <h3 className="forex-title">विदेशी मुद्रा</h3>
+                    <h2 className="forex-title">विदेशी मुद्रा</h2>
                 </div>
                 <CurrencyConverter />
                 <ExchangeRates />

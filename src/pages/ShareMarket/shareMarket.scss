@@ -1,0 +1,41 @@
+.container {
+    & .share-market-container {
+        margin-top: 1em;
+        & .share-market-heading {
+            & .share-market-title {
+                width: 100%;
+                text-align: center;
+                color: var(--clr-primary-900);
+                font-size: 1.6em;
+            }
+        }
+
+        & .share-market-todays-trades {
+            margin-top: 1em;
+            text-align: center;
+
+            & .share-market-todays-trades-headings {
+                & .share-market-todays-trades-title {
+                    color: var(--clr-primary-500);
+                    font-size: 1.2em;
+                    margin-bottom: 1em;
+                }
+            }
+
+            & .increment-decrement-cards-container {
+                display: flex;
+                justify-content: center;
+            }
+
+            & .share-values-container {
+                display: flex;
+                justify-content: center;
+                font-size: 1.1em;
+
+                & .share-value-positive {
+                    margin-right: 10em;
+                }
+            }
+        }
+    }
+}

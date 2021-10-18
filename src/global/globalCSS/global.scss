@@ -1,6 +1,6 @@
 :root {
     // Light mode colors
-    --clr-background: #fff;
+    --clr-white: #fff;
     --clr-primary-500: #505565;
     --clr-primary-900: #1d1d1f;
     --clr-theme-primary: #b4b8c6;
@@ -20,6 +20,7 @@
     --baseFg: dimgray;
     --baseBg: white;
     --clr-theme-blue: #006fc2;
+    --clr-theme-green: #45a48e;
     --accentBg: #bae1ff;
 
     --singlePageWidth: 43.75em;
@@ -31,7 +32,7 @@
         --clr-primary-900: #fff;
         --clr-off-white: #b4b8c6;
 
-        --clr-background: #1d1d1f;
+        --clr-white: #1d1d1f;
 
         --navbar-background: #1d1d1f;
     }
