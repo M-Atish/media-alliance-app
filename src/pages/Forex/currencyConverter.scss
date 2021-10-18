@@ -2,6 +2,35 @@
     display: flex;
 }
 
-.selector-one {
+.selector-one,
+.selector-two {
+    display: flex;
+    line-height: 1;
+    border: 0.0625em solid var(--clr-theme-primary);
+    position: relative;
+    border-radius: 0.375em;
+
+    & .react-select-one,
+    .react-select-two {
+        border-right: 0.0625em solid var(--clr-theme-primary);
+        margin-right: 0.3125em;
+    }
+
+    & .currency-input-number-field {
+        font-size: 1em !important;
+        font-family: var(--font-family-primary);
+        outline: none;
+        border: none;
+    }
+
+    & input[type='number']::-webkit-inner-spin-button,
+    input[type='number']::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+
+    & input[type='number'] {
+        -moz-appearance: textfield;
+    }
+
     margin-right: 6.25em;
 }

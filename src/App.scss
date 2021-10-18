@@ -10,7 +10,7 @@
 // }
 
 body {
-    font-family: 'Mukta', sans-serif;
+    font-family: var(--font-family-primary);
     background: var(--clr-background);
     color: var(--clr-primary-500);
 }

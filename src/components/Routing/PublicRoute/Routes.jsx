@@ -29,6 +29,7 @@ const Routes = ({ firstTime }) => {
                 path={routePaths.interestTopics}
                 component={InterestTopics}
             />
+            <Route path="*" component={ErrorPage} />
         </Switch>
     ) : (
         <>
