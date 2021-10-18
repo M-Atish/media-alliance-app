@@ -8,13 +8,31 @@ import { EnglishToNepaliConverter } from '../../utils/helpers/englishToNepaliCon
 // Constants
 import { countryDetails, countryFlags } from '../../global/constants/dummyData'
 import { NepaliNumberValidator } from './../../utils/helpers/nepaliNumberValidator/NepaliNumberValidator'
+import { IsItemDuplicate } from '../../utils/helpers/isItemDuplicate/IsItemDuplicate'
 
 const CurrencyConverter = () => {
+    // Please do note that the state values will be stored in string data type, so to feed it to the api, you have to convert it to float (number) type.
     const [currencyInputNumberOne, setCurrencyInputNumberOne] = useState('')
     const [currencyInputNumberTwo, setCurrencyInputNumberTwo] = useState('')
     const countryOptions = []
 
     const handleOnChangeCurrencyNumberOne = (e) => {
+        const newValueArrOne = e.target.value.split('')
+
+        if (IsItemDuplicate(newValueArrOne, '.')) return
+
+        // Validates whether a comma is there after a decimal point or not
+
+        try {
+            let firstHalf = e.target.value.split('.')[0]
+
+            let secondHalf = e.target.value.split('.')[1].replaceAll(',', '')
+
+            e.target.value = firstHalf + '.' + secondHalf
+        } catch (error) {
+            // do nothing
+        }
+
         setCurrencyInputNumberOne(
             currencyInputNumberOne.replace(
                 currencyInputNumberOne,
@@ -24,12 +42,28 @@ const CurrencyConverter = () => {
     }
 
     const handleOnChangeCurrencyNumberTwo = (e) => {
-        setCurrencyInputNumberTwo(
-            currencyInputNumberTwo.replace(
+        const newValueArrTwo = e.target.value.split('')
+
+        if (IsItemDuplicate(newValueArrTwo, '.')) return
+
+        // Validates whether a comma is there after a decimal point or not
+
+        try {
+            let firstHalf = e.target.value.split('.')[0]
+
+            let secondHalf = e.target.value.split('.')[1].replaceAll(',', '')
+
+            e.target.value = firstHalf + '.' + secondHalf
+        } catch (error) {
+            // do nothing
+        }
+
+        setCurrencyInputNumberTwo(() => {
+            return currencyInputNumberTwo.replace(
                 currencyInputNumberTwo,
                 NepaliNumberValidator(EnglishToNepaliConverter(e.target.value))
             )
-        )
+        })
     }
 
     countryDetails.map((country, index) =>
@@ -67,7 +101,6 @@ const CurrencyConverter = () => {
                     }}
                     className="react-select-two"
                 />
-                {/* Make the input field's state different from the above input field's state */}
                 <input
                     type="text"
                     className="currency-input-number-field"

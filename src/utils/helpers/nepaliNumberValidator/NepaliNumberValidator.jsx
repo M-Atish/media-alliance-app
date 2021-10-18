@@ -12,7 +12,6 @@ export function NepaliNumberValidator(item) {
 
     item = String(item)
 
-    // why the fuck is this not working
     try {
         item.match(regex).forEach(
             (matchedExpression) => (result += matchedExpression)
