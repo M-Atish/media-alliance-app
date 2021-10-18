@@ -119,6 +119,7 @@ import likeIconLightImg from './images/commentSection/likeIconLight.svg'
 
 // Share market
 import shareMarketTriangleImg from './images/shareMarket/shareMarketCardTriangle.svg'
+import shareMarketCalendarImg from './images/shareMarket/shareMarketCalendar.svg'
 
 export {
     // Global images export
@@ -226,4 +227,5 @@ export {
     likeIconLightImg,
     // Share Market
     shareMarketTriangleImg,
+    shareMarketCalendarImg,
 }

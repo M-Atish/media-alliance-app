@@ -1,18 +1,17 @@
 .container {
     & .share-market-container {
         margin-top: 1em;
-        & .share-market-heading {
-            & .share-market-title {
-                width: 100%;
-                text-align: center;
-                color: var(--clr-primary-900);
-                font-size: 1.6em;
-            }
+        margin: 1em 15em 0 15em;
+
+        & .share-market-title {
+            width: 100%;
+            text-align: center;
+            color: var(--clr-primary-900);
+            font-size: 1.6em;
         }
 
         & .share-market-todays-trades {
             margin-top: 1em;
-            text-align: center;
 
             & .share-market-todays-trades-headings {
                 & .share-market-todays-trades-title {
@@ -24,16 +23,20 @@
 
             & .increment-decrement-cards-container {
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
             }
 
             & .share-values-container {
                 display: flex;
-                justify-content: center;
+                justify-content: space-around;
                 font-size: 1.1em;
+                margin-top: 0.5em;
+                margin-bottom: 1em;
+                color: var(--clr-theme-primary);
+                font-weight: 500;
 
                 & .share-value-positive {
-                    margin-right: 10em;
+                    margin-right: 7em;
                 }
             }
         }

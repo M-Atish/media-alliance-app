@@ -20,14 +20,14 @@ const ShareMarket = () => {
     return (
         <div className="container">
             <div className="share-market-container">
-                <div className="share-market-heading">
-                    <h3 className="share-market-title">शेयर बजार</h3>
-                </div>
-                <div className="share-market-todays-trades">
+                {/* Title section */}
+                <h2 className="share-market-title">शेयर बजार</h2>
+                {/* Today's trades section */}
+                <section className="share-market-todays-trades">
                     <div className="share-market-todays-trades-headings">
-                        <h4 className="share-market-todays-trades-title">
+                        <h3 className="share-market-todays-trades-title">
                             नियमित ट्रेडिंग
-                        </h4>
+                        </h3>
                     </div>
                     <div className="increment-decrement-cards-container">
                         <TradeCard
@@ -58,7 +58,12 @@ const ShareMarket = () => {
                             CurrencyFormatter(6156690780)
                         )}`}</p>
                     </div>
-                </div>
+                </section>
+                {/* NEPSE index section */}
+                <section className="nepse-index-section">
+                    <h3 className="nepse-index-heading">नेप्से सूचकांक</h3>
+                    
+                </section>
             </div>
         </div>
     )
