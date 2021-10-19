@@ -2,8 +2,6 @@ import Button from '../Button/Button'
 
 import './commentSection.scss'
 
-import { COLORS } from '../../../assets/designTokens/colors'
-
 import { likeIconLightImg } from '../../../assets'
 import classNames from 'classnames'
 

@@ -2,22 +2,11 @@ import './shareMarket.scss'
 
 import TradeCard from './TradeCard/TradeCard'
 
-import { COLORS } from './../../assets/designTokens/colors'
-
 import { CurrencyFormatter } from '../../utils/helpers/CurrencyFormatter'
 import { EnglishToNepaliConverter } from '../../utils/helpers/englishToNepaliConverter/EnglishToNepaliConverter'
 import DateField from './DateField/DateField'
 
 const ShareMarket = () => {
-    const stylesOne = {
-        backgroundColor: COLORS.cardThemeGreen,
-        margin: '0 1em 0 0',
-    }
-
-    const stylesTwo = {
-        backgroundColor: COLORS.redTheme,
-    }
-
     return (
         <div className="container">
             <div className="share-market-container">

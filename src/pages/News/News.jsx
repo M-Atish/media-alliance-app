@@ -20,6 +20,8 @@ import {
     sampleNews,
 } from '../../global/constants/dummyData'
 
+import http from './../../utils/http'
+
 const News = () => {
     const searchQuery = useParamsQuery()
 
@@ -34,6 +36,14 @@ const News = () => {
                     .replace('{subCategoryName}', 'all')
             )
         }
+
+        const fetchNewsData = () => {
+            return http()
+                .get('https://demo.soanitech.com/api/v1/news')
+                .then((data) => console.log(data))
+        }
+
+        fetchNewsData()
         // eslint-disable-next-line
     }, [])
 
