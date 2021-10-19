@@ -10,8 +10,8 @@ const EllipseMenu = ({ active, top }) => {
         <div
             className={classNames('ellipse-menu-container', {
                 inactive: !active,
+                top: top,
             })}
-            style={{ top: top }}
         >
             {ellipseMenuItems.map((item, index) => (
                 <EllipseMenuItem

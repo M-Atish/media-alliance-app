@@ -87,7 +87,11 @@ const NewsSinglePage = () => {
                 </div>
                 {/* Link this button to the target website */}
                 <a href={targetWebsite} target="_blank" rel="noreferrer">
-                    <Button description="पूरा समाचार पढनुहोस" />
+                    <Button
+                        description="पूरा समाचार पढनुहोस"
+                        size="large"
+                        bgColor="grey"
+                    />
                 </a>
                 <div className="body-container">
                     <form action=""></form>
@@ -105,6 +109,8 @@ const NewsSinglePage = () => {
                             <Button
                                 description="कमेन्ट गर्नुहोस्"
                                 handleButtonClick={handleButtonSubmit}
+                                bgColor="grey"
+                                size="large"
                             />
                         </form>
                     </div>

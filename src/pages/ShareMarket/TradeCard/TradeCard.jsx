@@ -2,6 +2,8 @@ import './tradeCard.scss'
 
 import { shareMarketTriangleImg } from '../../../assets'
 
+import classNames from 'classnames'
+
 const TradeCard = ({
     styles,
     organizationName,
@@ -9,9 +11,16 @@ const TradeCard = ({
     numericalData,
     percentageData,
     rotateTriangle,
+    isRed,
 }) => {
     return (
-        <div className="trade-card" style={{ ...styles }}>
+        <div
+            className={classNames('trade-card js', {
+                red: isRed,
+                green: !isRed,
+            })}
+            style={{ ...styles }}
+        >
             <div className="trade-card-container">
                 <div className="trade-card-top-container">
                     <div className="organization-name">{organizationName}</div>

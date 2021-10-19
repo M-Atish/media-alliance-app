@@ -1,25 +1,18 @@
 import './Button.scss'
+import classNames from 'classnames'
 
-const Button = ({
-    description,
-    handleButtonClick,
-    height,
-    width,
-    bgColor,
-    margin,
-}) => {
+const Button = ({ description, handleButtonClick, bgColor, size }) => {
     return (
         <div className="button-container">
             <button
                 type="submit"
-                className="button-submit"
+                className={classNames('button-submit', {
+                    small: size === 'small',
+                    large: size === 'large',
+                    red: bgColor === 'red',
+                    grey: bgColor === 'grey',
+                })}
                 onClick={handleButtonClick}
-                style={{
-                    height: height,
-                    width: width,
-                    backgroundColor: bgColor,
-                    margin: margin,
-                }}
             >
                 <p className="button-description">{description}</p>
             </button>

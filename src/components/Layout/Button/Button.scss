@@ -3,18 +3,31 @@
         cursor: pointer;
 
         color: var(--clr-white);
-        background-color: var(--clr-primary-500);
 
         border: none;
         border-radius: 0.375em;
 
-        height: 3em;
-        width: 23.375em;
-
         margin-bottom: 1.25em;
+        font-size: 1rem;
 
-        .button-description {
-            font-size: 1.25em;
+        &.small {
+            height: 2em;
+            width: 5.54em;
+            margin: 0;
+        }
+
+        &.large {
+            height: 3em;
+            width: 23.375em;
+        }
+
+        &.red {
+            background-color: var(--clr-theme-red);
+            font-size: 0.9rem;
+        }
+
+        &.grey {
+            background-color: var(--clr-primary-900);
         }
     }
 }

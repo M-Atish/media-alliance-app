@@ -46,6 +46,8 @@ const InterestTopics = () => {
             <Button
                 description="पेस गर्नुहोस्"
                 handleButtonClick={handleButtonClick}
+                bgColor="grey"
+                size="large"
             />
         </div>
     )

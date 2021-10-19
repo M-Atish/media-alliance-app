@@ -7,7 +7,7 @@
             width: 100%;
             text-align: center;
             color: var(--clr-primary-900);
-            font-size: 1.6em;
+            font-size: 1.6rem;
         }
 
         & .share-market-todays-trades {
@@ -16,7 +16,7 @@
             & .share-market-todays-trades-headings {
                 & .share-market-todays-trades-title {
                     color: var(--clr-primary-500);
-                    font-size: 1.2em;
+                    font-size: 1.2rem;
                     margin-bottom: 1em;
                 }
             }
@@ -29,7 +29,7 @@
             & .share-values-container {
                 display: flex;
                 justify-content: space-around;
-                font-size: 1.1em;
+                font-size: 1.1rem;
                 margin-top: 0.5em;
                 margin-bottom: 1em;
                 color: var(--clr-theme-primary);
@@ -38,6 +38,13 @@
                 & .share-value-positive {
                     margin-right: 7em;
                 }
+            }
+        }
+
+        & .nepse-index-section {
+            & .date-field-container {
+                display: flex;
+                justify-content: space-around;
             }
         }
     }

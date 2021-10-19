@@ -44,11 +44,9 @@ const CommentSection = ({ commentData }) => {
                 <div className="reply-reaction-container">
                     <div className="reply-button">
                         <Button
-                            bgColor={COLORS.redTheme}
+                            bgColor="red"
                             description="Reply"
-                            height="2em"
-                            width="5.534375em"
-                            margin="0"
+                            size="small"
                         />
                     </div>
                     <div

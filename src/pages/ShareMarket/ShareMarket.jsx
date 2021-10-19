@@ -6,6 +6,7 @@ import { COLORS } from './../../assets/designTokens/colors'
 
 import { CurrencyFormatter } from '../../utils/helpers/CurrencyFormatter'
 import { EnglishToNepaliConverter } from '../../utils/helpers/englishToNepaliConverter/EnglishToNepaliConverter'
+import DateField from './DateField/DateField'
 
 const ShareMarket = () => {
     const stylesOne = {
@@ -31,7 +32,8 @@ const ShareMarket = () => {
                     </div>
                     <div className="increment-decrement-cards-container">
                         <TradeCard
-                            styles={stylesOne}
+                            // styles={stylesOne}
+                            isRed={true}
                             organizationName="नेप्से"
                             shareData={EnglishToNepaliConverter(
                                 CurrencyFormatter(2878.46)
@@ -40,7 +42,8 @@ const ShareMarket = () => {
                             percentageData={EnglishToNepaliConverter('+0.07%')}
                         />
                         <TradeCard
-                            styles={stylesTwo}
+                            // styles={stylesTwo}
+                            isRed={false}
                             organizationName="SENSITIVE"
                             shareData={EnglishToNepaliConverter(
                                 CurrencyFormatter(573.63)
@@ -62,7 +65,10 @@ const ShareMarket = () => {
                 {/* NEPSE index section */}
                 <section className="nepse-index-section">
                     <h3 className="nepse-index-heading">नेप्से सूचकांक</h3>
-                    
+                    <div className="date-field-container">
+                        <DateField date="भदौ २३, २०७८" />
+                        <DateField date="भदौ २३, २०७८" />
+                    </div>
                 </section>
             </div>
         </div>

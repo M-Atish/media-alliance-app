@@ -37,7 +37,7 @@ const NewsArticle = ({
         <div className="news-article-container">
             <Link
                 to={routePaths.news.details.replace('{idNumber}', nanoid())}
-                style={{ textDecoration: 'none' }}
+                className="news-article-image-link"
             >
                 {image && (
                     <img
@@ -51,7 +51,7 @@ const NewsArticle = ({
             <div className="news-article-text-container">
                 <Link
                     to={routePaths.news.details.replace('{idNumber}', nanoid())}
-                    style={{ textDecoration: 'none' }}
+                    className="news-article-text-link"
                 >
                     <div className="news-agency-text">
                         {/* na means News Agency */}
