@@ -110,6 +110,7 @@ import bookmarkIconImg from './images/optionsMenu/bookmarkIcon.svg'
 import commentIconImg from './images/optionsMenu/commentIcon.svg'
 import likeIconDarkImg from './images/optionsMenu/likeIconDark.svg'
 import shareIconImg from './images/optionsMenu/shareIcon.svg'
+import tripleEllipseImg from './images/optionsMenu/tripleEllipseDots.svg'
 
 // Person
 import personImg from './images/person.png'
@@ -221,6 +222,7 @@ export {
     commentIconImg,
     likeIconDarkImg,
     shareIconImg,
+    tripleEllipseImg,
     // Person
     personImg,
     // Comment Section

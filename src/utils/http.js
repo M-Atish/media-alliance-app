@@ -3,6 +3,8 @@ import { getHeader } from './header'
 
 // Default API will be in your root, to check the root, check out the .env file. You can access the .env file in the main folder. Just make sure to never ever upload the .env file to github as it will contain all the vital information such as the port number, ids, and the root api
 
+// When calling the fucking api, please do remember to disable CORS, you can do this via the extension on CORs at google chrome.
+
 const API_ROOT = process.env.REACT_APP_API_ENDPOINT || ''
 const TIMEOUT = 20000
 

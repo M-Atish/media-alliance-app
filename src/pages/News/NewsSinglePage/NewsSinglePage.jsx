@@ -9,13 +9,28 @@ import {
     annapurnaMediaNetworkImg,
 } from '../../../assets'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { commentData } from '../../../global/constants/dummyData'
+
+import { useParamsQuery } from '../../../utils/helpers/URLLocation'
+import http from './../../../utils/http'
 
 const NewsSinglePage = () => {
     const [commentText, setCommentText] = useState('')
+    const [newsArticleData, setNewsArticleData] = useState({})
 
-    console.log(commentText)
+    const searchQuery = useParamsQuery()
+
+    const newsArticleId = searchQuery.get('id')
+
+    useEffect(() => {
+        const fetchNewsDataViaId = () => {
+            return http()
+                .get(`https://demo.soanitech.com/api/v1/news/${newsArticleId}`)
+                .then((data) => setNewsArticleData(data))
+        }
+        fetchNewsDataViaId(newsArticleId)
+    }, [newsArticleId])
 
     // Change this url to the target website in question for that specific news source
     const targetWebsite =

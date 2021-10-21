@@ -10,11 +10,11 @@ import Dashboard from '../../../pages/Dashboard/Dashboard'
 import ErrorPage from '../../../utils/helpers/error/ErrorPage'
 import NavBar from '../../Layout/Navigation/Navbar/NavBar'
 import ShareMarket from './../../../pages/ShareMarket/ShareMarket'
-import Calendar from './../../../pages/Calendar/Calendar'
+import Calendar from '../../../pages/Calendar/Calendar'
 import DateConverter from './../../../pages/DateConverter/DateConverter'
 import Gold from './../../../pages/Gold/Gold'
 import Unicode from './../../../pages/Unicode/Unicode'
-import EMICalculator from './../../../pages/EmiCalculator/EMICalculator'
+import EMICalculator from '../../../pages/EmiCalculator/EMICalculator'
 
 // Constants
 import { routePaths } from '../../../global/constants/routePaths'

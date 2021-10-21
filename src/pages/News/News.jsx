@@ -1,32 +1,27 @@
-import { NavLink } from 'react-router-dom'
-
 import { useEffect } from 'react'
+import { NavLink, useLocation, useHistory } from 'react-router-dom'
 
-import VideoCarousel from '../../utils/carousel/VideoCarousel'
-
-import { useParamsQuery } from '../../utils/helpers/URLLocation'
-
-import MostRead from './MostRead'
-import './news.scss'
-import NewsArticle from './NewsArticle'
-
-import { useLocation, useHistory } from 'react-router'
-
-// Constants
-import { routePaths } from '../../global/constants/routePaths'
+import VideoCarousel from 'utils/carousel/VideoCarousel'
+import { useParamsQuery } from 'utils/helpers/URLLocation'
+import { routePaths } from 'global/constants/routePaths'
 import {
     newsTopicFilter,
     newsTopics,
     sampleNews,
-} from '../../global/constants/dummyData'
+} from 'global/constants/dummyData'
 
-import http from './../../utils/http'
+import NewsArticle from './NewsArticle/NewsArticle'
+import MostRead from './MostRead/MostRead'
+import './news.scss'
+import { useFetchNews } from './../../hooks/news/useFetchNews'
+import Spinner from 'components/Spinner/Spinner'
 
 const News = () => {
     const searchQuery = useParamsQuery()
+    const location = useLocation()
+    const history = useHistory()
 
-    let location = useLocation()
-    let history = useHistory()
+    const { status, data: newsData } = useFetchNews()
 
     useEffect(() => {
         if (location.pathname === routePaths.news.base) {
@@ -37,13 +32,6 @@ const News = () => {
             )
         }
 
-        const fetchNewsData = () => {
-            return http()
-                .get('https://demo.soanitech.com/api/v1/news')
-                .then((data) => console.log(data))
-        }
-
-        fetchNewsData()
         // eslint-disable-next-line
     }, [])
 
@@ -91,18 +79,27 @@ const News = () => {
                 </div>
                 <h2 className="news-articles-heading">आजको समाचार</h2>
                 <div className="news-articles">
-                    {sampleNews.map((article, index) => (
-                        <NewsArticle
-                            key={index}
-                            newsAgency={article.newsAgency}
-                            newsAgencyIcon={article.newsAgencyIcon}
-                            title={article.title}
-                            content={article.content}
-                            tags={article.tags}
-                            date={article.date}
-                            image={article.image}
-                        />
-                    ))}
+                    {status === 'loading' ? (
+                        <div className="spinner">
+                            <Spinner />
+                        </div>
+                    ) : Array.isArray(newsData?.payload) &&
+                      newsData?.payload.length ? (
+                        newsData.payload.map((article) => (
+                            <NewsArticle
+                                id={article.id}
+                                key={article.id}
+                                //   newsAgency={article.newsAgency}
+                                //   newsAgencyIcon={article.newsAgencyIcon}
+                                title={article.title}
+                                content={article.description}
+                                //   tags={article.tags}
+                                //   date={article.date}
+                                //   image={article.image}
+                                newsLink={article.link}
+                            />
+                        ))
+                    ) : null}
                 </div>
             </section>
             <section className="video-container">

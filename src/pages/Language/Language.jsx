@@ -5,7 +5,7 @@ import { USDImg, NEPImg } from '../../assets'
 
 import './language.scss'
 
-import LanguageButton from './LanguageButton'
+import LanguageButton from './LanguageButton/LanguageButton'
 
 const Language = () => {
     const [nepaliButtonActive, setNepaliButtonActive] = useState(false)

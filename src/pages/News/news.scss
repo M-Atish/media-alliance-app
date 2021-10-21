@@ -67,13 +67,19 @@
 }
 
 .news-articles {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 0.5em;
 
-    justify-content: flex-start;
-
     margin-bottom: 1.25em;
+
+    .spinner {
+        width: 300%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .is-active {

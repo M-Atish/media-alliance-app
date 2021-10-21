@@ -1,6 +1,3 @@
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import classNames from 'classnames'
 
 import { useState } from 'react'
@@ -29,7 +26,6 @@ const NavItem = (props) => {
                         />
                     )}
                     {props.item}
-                    {!props.picture && <FontAwesomeIcon icon={faAngleDown} />}
                     <div className="sub-content">{open && props.children}</div>
                 </div>
             </>

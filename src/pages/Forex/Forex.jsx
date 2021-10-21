@@ -1,7 +1,7 @@
 import './forex.scss'
 
-import CurrencyConverter from './CurrencyConverter'
-import ExchangeRates from './ExchangeRates'
+import CurrencyConverter from './CurrencyConverter/CurrencyConverter'
+import ExchangeRates from './ExchangeRates/ExchangeRates'
 
 const Forex = () => {
     return (

@@ -1,29 +1,22 @@
 import { useHistory } from 'react-router'
 
-import { useDispatch } from 'react-redux'
-
-import { firstTimePressed } from '../../store/firstTime'
-
-import GridImage from './GridImage'
-import Button from '../../components/Layout/Button/Button'
-
-import './interestedTopics.scss'
-
-// Constants
-
+import Button from 'components/Layout/Button/Button'
 import {
     interestTopicsHeadings,
     interestTopicsImages,
-} from '../../global/constants/dummyData'
+} from 'global/constants/dummyData'
+import useStore from 'store/store'
 
+import GridImage from './GridImage'
+import './interestedTopics.scss'
 const InterestTopics = () => {
     const history = useHistory()
 
-    const dispatch = useDispatch()
+    const toggleFirstTime = useStore((store) => store.toggleFirstTime)
 
     const handleButtonClick = (e) => {
         e.preventDefault()
-        dispatch(firstTimePressed())
+        toggleFirstTime()
         history.push('/')
     }
 
