@@ -1,15 +1,13 @@
-import { tagIconImg, tripleEllipseImg } from '../../../assets'
-
 import { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
+import intervalToDuration from 'date-fns/intervalToDuration'
 
 import './newsarticle.scss'
 
-import EllipseMenu from '../../../components/Layout/EllipseMenu/EllipseMenuContainer/EllipseMenu'
-
-import { ClickOutside } from '../../../utils/helpers/clickOutside/ClickOutside'
-
-import { Link } from 'react-router-dom'
-import { routePaths } from '../../../global/constants/routePaths'
+import { tagIconImg, tripleEllipseImg } from 'assets'
+import EllipseMenu from 'components/Layout/EllipseMenu/EllipseMenuContainer/EllipseMenu'
+import { routePaths } from 'global/constants/routePaths'
+import { ClickOutside } from 'utils/helpers/clickOutside/ClickOutside'
 
 const NewsArticle = ({
     newsAgency,
@@ -32,6 +30,23 @@ const NewsArticle = ({
     ClickOutside(wrapperRef, () => {
         setOptionMenuClicked(false)
     })
+
+    let currentDate = new Date()
+    let updatedDate = new Date(date)
+
+    let finalDate = intervalToDuration({ start: updatedDate, end: currentDate })
+
+    switch (finalDate) {
+        case finalDate.years !== 0: {
+            finalDate = finalDate.years
+        }
+        case finalDate.months !== 0: {
+            finalDate = finalDate.months
+        }
+        case finalDate.hours !== 0: {
+            finalDate = finalDate.minutes
+        }
+    }
 
     return (
         <div className="news-article-container">
@@ -68,7 +83,7 @@ const NewsArticle = ({
                             </span>
                             {newsAgency}
                         </div>
-                        <p className="news-date">{date}</p>
+                        <p className="news-date"></p>
                     </div>
                     <div className="news-article-title">{title}</div>
                 </Link>

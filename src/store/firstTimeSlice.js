@@ -19,6 +19,6 @@
 // export default firstTimeSlice.reducer
 
 export const firstTimeSlice = (set, get) => ({
-    firstTime: false,
+    firstTime: true,
     toggleFirstTime: () => set((prev) => ({ firstTime: !prev.firstTime })),
 })

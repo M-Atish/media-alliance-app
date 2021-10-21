@@ -13,15 +13,18 @@ import {
 import NewsArticle from './NewsArticle/NewsArticle'
 import MostRead from './MostRead/MostRead'
 import './news.scss'
-import { useFetchNews } from './../../hooks/news/useFetchNews'
+import { useFetchNews } from 'hooks/news/useFetchNews'
 import Spinner from 'components/Spinner/Spinner'
+import { useFetchVideos } from './../../hooks/videos/useFetchVideos'
 
 const News = () => {
     const searchQuery = useParamsQuery()
     const location = useLocation()
     const history = useHistory()
 
-    const { status, data: newsData } = useFetchNews()
+    const { status: statusNews, data: newsData } = useFetchNews()
+
+    const { status: statusVideos, data: videosData } = useFetchVideos()
 
     useEffect(() => {
         if (location.pathname === routePaths.news.base) {
@@ -79,7 +82,7 @@ const News = () => {
                 </div>
                 <h2 className="news-articles-heading">आजको समाचार</h2>
                 <div className="news-articles">
-                    {status === 'loading' ? (
+                    {statusNews === 'loading' ? (
                         <div className="spinner">
                             <Spinner />
                         </div>
@@ -94,7 +97,7 @@ const News = () => {
                                 title={article.title}
                                 content={article.description}
                                 //   tags={article.tags}
-                                //   date={article.date}
+                                date={article.updated_at}
                                 //   image={article.image}
                                 newsLink={article.link}
                             />
@@ -106,30 +109,54 @@ const News = () => {
                 <h2 className="news-videos-heading">
                     सबैभन्दा धेरै हेरिएको भिडियो
                 </h2>
-                <VideoCarousel>
-                    {sampleNews.map((article, index) => (
-                        <div className="video-item" key={index}>
-                            <img
-                                src={article.image}
-                                alt=""
-                                className="carousel-thumbnail"
-                            />
-                            <h4 className="video-title">
-                                मिडिया गठबन्धन नेपाल
-                            </h4>
-                            <p className="video-channel-description">
-                                <span>
-                                    <img
-                                        src={article.image}
-                                        className="video-channel-icon"
-                                        alt=""
-                                    />
-                                </span>
-                                Mountain TV
-                            </p>
-                        </div>
-                    ))}
-                </VideoCarousel>
+                {statusVideos === 'loading' ? (
+                    <Spinner />
+                ) : (
+                    <VideoCarousel>
+                        {videosData?.payload
+                            ? videosData.payload.map((article) => (
+                                  <div className="video-item" key={article.id}>
+                                      <a
+                                          href={videosData?.payload?.url}
+                                          target="_blank"
+                                          className="video"
+                                          rel="noreferrer"
+                                      >
+                                          <img
+                                              src={
+                                                  article?.image?.imageUrl
+                                                      ? article.image.imageUrl
+                                                      : null
+                                              }
+                                              alt={
+                                                  article?.title
+                                                      ? article.title
+                                                      : null
+                                              }
+                                              className="carousel-thumbnail"
+                                          />
+                                          <h4 className="video-title">
+                                              {article?.title
+                                                  ? article.title
+                                                  : 'There should have been a title here.'}
+                                          </h4>
+                                          <p className="video-channel-description">
+                                              {/* Needs working here. The API does not supply news agency details, images, and description as of yet. Implement this part when the backend supplies the news agency details */}
+                                              <span>
+                                                  {/* <img
+                                              src={article.image}
+                                              className="video-channel-icon"
+                                              alt=""
+                                          /> */}
+                                              </span>
+                                              Mountain TV
+                                          </p>
+                                      </a>
+                                  </div>
+                              ))
+                            : null}
+                    </VideoCarousel>
+                )}
             </section>
             <section className="most-read-container">
                 <h2 className="most-read-heading">धेरै पढिएको</h2>

@@ -1,42 +1,29 @@
 import './newsSinglePage.scss'
 
-import Button from './../../../components/Layout/Button/Button'
-import CommentSection from '../../../components/Layout/CommentSection/CommentSection'
+import Button from 'components/Layout/Button/Button'
+import CommentSection from 'components/Layout/CommentSection/CommentSection'
 
-import {
-    chinaTalibanImg,
-    tagIconImg,
-    annapurnaMediaNetworkImg,
-} from '../../../assets'
+import { chinaTalibanImg, tagIconImg, annapurnaMediaNetworkImg } from 'assets'
 
-import { useState, useEffect } from 'react'
-import { commentData } from '../../../global/constants/dummyData'
+import { useState } from 'react'
+import { commentData } from 'global/constants/dummyData'
 
-import { useParamsQuery } from '../../../utils/helpers/URLLocation'
-import http from './../../../utils/http'
+import Spinner from 'components/Spinner/Spinner'
+import { useParamsQuery } from 'utils/helpers/URLLocation'
+import { useFetchNewsViaId } from 'hooks/news/useFetchNewsById'
 
 const NewsSinglePage = () => {
     const [commentText, setCommentText] = useState('')
-    const [newsArticleData, setNewsArticleData] = useState({})
 
     const searchQuery = useParamsQuery()
 
     const newsArticleId = searchQuery.get('id')
 
-    useEffect(() => {
-        const fetchNewsDataViaId = () => {
-            return http()
-                .get(`https://demo.soanitech.com/api/v1/news/${newsArticleId}`)
-                .then((data) => setNewsArticleData(data))
-        }
-        fetchNewsDataViaId(newsArticleId)
-    }, [newsArticleId])
+    const { status, data: newsArticleData } = useFetchNewsViaId(newsArticleId)
+
+    console.log(newsArticleData)
 
     // Change this url to the target website in question for that specific news source
-    const targetWebsite =
-        'https://stackoverflow.com/questions/42914666/react-router-external-link'
-
-    const tags = ['के.पी ओलि', 'एमाले', 'राजनीति', 'नेपाल']
 
     const handleInputTextChange = (e) => {
         setCommentText(e.target.value)
@@ -50,26 +37,34 @@ const NewsSinglePage = () => {
         // Put the http post logic here
     }
 
-    return (
+    return status === 'loading' ? (
+        <div className="spinner">
+            <Spinner />
+        </div>
+    ) : (
         <section className="container">
             <div className="single-news-container">
                 <div className="top-container">
                     <div className="title-container">
                         <h2 className="title-heading">
-                            तालिवानको धार्मिक प्रहरीका पूर्व नाइकेले
-                            अफगानिस्तानमा मृत्युदण्ड
+                            {newsArticleData?.payload?.title
+                                ? newsArticleData.payload.title
+                                : null}
                         </h2>
                     </div>
                     <div className="image-tag-container">
-                        <div className="picture-container">
-                            <img
-                                src={chinaTalibanImg}
-                                alt="Two leaders standing like ducks"
-                                className="news-picture"
-                            />
-                        </div>
+                        {newsArticleData?.payload?.img ? (
+                            <div className="picture-container">
+                                <img
+                                    src={chinaTalibanImg}
+                                    alt="Two leaders standing like ducks"
+                                    className="news-picture"
+                                />
+                            </div>
+                        ) : null}
                         {/* na stands for News Agencies */}
                         <div className="tag-na-date-container">
+                            {/* Needs working here. The API does not give news agency details, nor does it give the news agency image. For now, I have left it to dummy data generated in the dummyData json file*/}
                             <div className="na-date">
                                 <div className="news-agency">
                                     <img
@@ -85,23 +80,38 @@ const NewsSinglePage = () => {
                                 <span>
                                     <img src={tagIconImg} alt="Icon of tags" />
                                 </span>
-                                {tags.map((tag, index) => (
-                                    <p className="news-article-tag" key={index}>
-                                        {tag}
-                                    </p>
-                                ))}
+                                {newsArticleData?.payload?.tags
+                                    ? newsArticleData?.payload?.tags.map(
+                                          (tag, index) => (
+                                              <p
+                                                  className="news-article-tag"
+                                                  key={index}
+                                              >
+                                                  {tag}
+                                              </p>
+                                          )
+                                      )
+                                    : null}
                             </div>
                         </div>
                     </div>
                     <div className="content-container">
-                        तालिवानको धार्मिक प्रहरीका पूर्व नाइकेले अफगानिस्तानमा
-                        मृत्युदण्ड र अंगभंग नै गर्नेजस्ता कडा सजाय पुनः
-                        कार्यान्वयनमा ल्याइने बताएका छन् । अहिले सम्पूर्ण
-                        कारागारका प्रमुख मुल्लाह नुरद्धिन तुरावीले एसोसि...
+                        {newsArticleData?.payload?.description &&
+                        typeof newsArticleData.payload.description === 'string'
+                            ? newsArticleData.payload.description + '....'
+                            : 'No description'}
                     </div>
                 </div>
                 {/* Link this button to the target website */}
-                <a href={targetWebsite} target="_blank" rel="noreferrer">
+                <a
+                    href={
+                        newsArticleData?.payload?.link
+                            ? newsArticleData.payload.link
+                            : '#'
+                    }
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     <Button
                         description="पूरा समाचार पढनुहोस"
                         size="large"
