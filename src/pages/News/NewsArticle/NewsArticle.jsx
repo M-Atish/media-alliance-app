@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import intervalToDuration from 'date-fns/intervalToDuration'
 
 import './newsarticle.scss'
 
@@ -8,7 +7,6 @@ import { tagIconImg, tripleEllipseImg } from 'assets'
 import EllipseMenu from 'components/Layout/EllipseMenu/EllipseMenuContainer/EllipseMenu'
 import { routePaths } from 'global/constants/routePaths'
 import { ClickOutside } from 'utils/helpers/clickOutside/ClickOutside'
-import { EnglishToNepaliConverter } from 'utils/helpers/englishToNepaliConverter/EnglishToNepaliConverter'
 import convertToRelativeTime from 'utils/convertToRelativeTime'
 
 const NewsArticle = ({
@@ -32,8 +30,6 @@ const NewsArticle = ({
     ClickOutside(wrapperRef, () => {
         setOptionMenuClicked(false)
     })
-
-    let updatedDate = new Date(date)
 
     return (
         <div className="news-article-container">
@@ -71,7 +67,7 @@ const NewsArticle = ({
                             {newsAgency}
                         </div>
                         <p className="news-date">
-                            {convertToRelativeTime(updatedDate)}
+                            {convertToRelativeTime(new Date(date))}
                         </p>
                     </div>
                     <div className="news-article-title">{title}</div>
