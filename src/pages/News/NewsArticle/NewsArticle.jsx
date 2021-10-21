@@ -35,18 +35,29 @@ const NewsArticle = ({
     let updatedDate = new Date(date)
 
     let finalDate = intervalToDuration({ start: updatedDate, end: currentDate })
+    let finalDateAttachment = ''
 
-    switch (finalDate) {
-        case finalDate.years !== 0: {
-            finalDate = finalDate.years
-        }
-        case finalDate.months !== 0: {
-            finalDate = finalDate.months
-        }
-        case finalDate.hours !== 0: {
-            finalDate = finalDate.minutes
-        }
+    if (finalDate.years !== 0) {
+        finalDate = finalDate.years
+        finalDateAttachment = 'years ago'
+    } else if (finalDate.months !== 0) {
+        finalDate = finalDate.months
+        finalDateAttachment = 'months ago'
+    } else if (finalDate.days !== 0) {
+        finalDate = finalDate.days
+        finalDateAttachment = 'days ago'
+    } else if (finalDate.hours !== 0) {
+        finalDate = finalDate.hours
+        finalDateAttachment = 'hours ago'
+    } else if (finalDate.minutes !== 0) {
+        finalDate = finalDate.minutes
+        finalDateAttachment = 'minutes ago'
+    } else {
+        finalDate = finalDate.seconds
+        finalDateAttachment = 'seconds ago'
     }
+
+    console.log(finalDate)
 
     return (
         <div className="news-article-container">
@@ -83,7 +94,7 @@ const NewsArticle = ({
                             </span>
                             {newsAgency}
                         </div>
-                        <p className="news-date"></p>
+                        <p className="news-date">{`${finalDate} ${finalDateAttachment}`}</p>
                     </div>
                     <div className="news-article-title">{title}</div>
                 </Link>

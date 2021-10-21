@@ -117,9 +117,11 @@ const News = () => {
                             ? videosData.payload.map((article) => (
                                   <div className="video-item" key={article.id}>
                                       <a
-                                          href={videosData?.payload?.url}
+                                          href={
+                                              article?.url ? article.url : null
+                                          }
                                           target="_blank"
-                                          className="video"
+                                          className="video-link"
                                           rel="noreferrer"
                                       >
                                           <img
