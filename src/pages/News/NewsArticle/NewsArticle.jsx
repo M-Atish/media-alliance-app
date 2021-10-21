@@ -8,6 +8,8 @@ import { tagIconImg, tripleEllipseImg } from 'assets'
 import EllipseMenu from 'components/Layout/EllipseMenu/EllipseMenuContainer/EllipseMenu'
 import { routePaths } from 'global/constants/routePaths'
 import { ClickOutside } from 'utils/helpers/clickOutside/ClickOutside'
+import { EnglishToNepaliConverter } from 'utils/helpers/englishToNepaliConverter/EnglishToNepaliConverter'
+import convertToRelativeTime from 'utils/convertToRelativeTime'
 
 const NewsArticle = ({
     newsAgency,
@@ -31,33 +33,7 @@ const NewsArticle = ({
         setOptionMenuClicked(false)
     })
 
-    let currentDate = new Date()
     let updatedDate = new Date(date)
-
-    let finalDate = intervalToDuration({ start: updatedDate, end: currentDate })
-    let finalDateAttachment = ''
-
-    if (finalDate.years !== 0) {
-        finalDate = finalDate.years
-        finalDateAttachment = 'years ago'
-    } else if (finalDate.months !== 0) {
-        finalDate = finalDate.months
-        finalDateAttachment = 'months ago'
-    } else if (finalDate.days !== 0) {
-        finalDate = finalDate.days
-        finalDateAttachment = 'days ago'
-    } else if (finalDate.hours !== 0) {
-        finalDate = finalDate.hours
-        finalDateAttachment = 'hours ago'
-    } else if (finalDate.minutes !== 0) {
-        finalDate = finalDate.minutes
-        finalDateAttachment = 'minutes ago'
-    } else {
-        finalDate = finalDate.seconds
-        finalDateAttachment = 'seconds ago'
-    }
-
-    console.log(finalDate)
 
     return (
         <div className="news-article-container">
@@ -94,7 +70,9 @@ const NewsArticle = ({
                             </span>
                             {newsAgency}
                         </div>
-                        <p className="news-date">{`${finalDate} ${finalDateAttachment}`}</p>
+                        <p className="news-date">
+                            {convertToRelativeTime(updatedDate)}
+                        </p>
                     </div>
                     <div className="news-article-title">{title}</div>
                 </Link>
