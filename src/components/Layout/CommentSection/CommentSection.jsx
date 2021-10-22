@@ -6,6 +6,7 @@ import { likeIconLightImg } from '../../../assets'
 import classNames from 'classnames'
 
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const CommentSection = ({ commentData }) => {
     const [likeButtonClicked, setLikeButtonClicked] = useState(false)
@@ -24,6 +25,7 @@ const CommentSection = ({ commentData }) => {
         }
         setDislikeButtonClicked(!dislikeButtonClicked)
     }
+    const { t } = useTranslation()
 
     return (
         <section className="comment-section">
@@ -43,7 +45,7 @@ const CommentSection = ({ commentData }) => {
                     <div className="reply-button">
                         <Button
                             bgColor="red"
-                            description="Reply"
+                            description={t('buttons.newsSingleArticleReply')}
                             size="small"
                         />
                     </div>
@@ -64,7 +66,7 @@ const CommentSection = ({ commentData }) => {
                                 className="like-icon"
                             />
                         </div>
-                        <p>Like</p>
+                        <p>{t('buttons.newsSingleArticleLike')}</p>
                     </div>
                     <div
                         className={classNames('dislike-container', {
@@ -83,7 +85,7 @@ const CommentSection = ({ commentData }) => {
                                 className="dislike-icon"
                             />
                         </div>
-                        <p>Dislike</p>
+                        <p>{t('buttons.newsSingleArticleDislike')}</p>
                     </div>
                 </div>
             </div>

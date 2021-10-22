@@ -1,5 +1,6 @@
 import intervalToDuration from 'date-fns/intervalToDuration'
 import { EnglishToNepaliConverter } from './helpers/englishToNepaliConverter/EnglishToNepaliConverter'
+import nepaliDateFormatter from './helpers/nepaliDateFormatter/nepaliDateFormatter'
 
 export default function convertToRelativeTime(updatedDate) {
     let currentDate = new Date()
@@ -27,5 +28,8 @@ export default function convertToRelativeTime(updatedDate) {
         finalDateAttachment = 'seconds ago'
     }
 
-    return `${EnglishToNepaliConverter(finalDate)} ${finalDateAttachment}`
+    return `${EnglishToNepaliConverter(finalDate)} ${nepaliDateFormatter(
+        finalDateAttachment,
+        finalDate
+    )}`
 }

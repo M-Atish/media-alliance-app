@@ -87,7 +87,7 @@ const News = () => {
                             <Spinner />
                         </div>
                     ) : Array.isArray(newsData?.payload) &&
-                      newsData?.payload.length ? (
+                      newsData?.payload.length > 0 ? (
                         newsData.payload.map((article) => (
                             <NewsArticle
                                 id={article.id}
@@ -96,9 +96,9 @@ const News = () => {
                                 //   newsAgencyIcon={article.newsAgencyIcon}
                                 title={article.title}
                                 content={article.description}
-                                //   tags={article.tags}
+                                tags={article?.tags ? article.tags : null}
                                 date={article.updated_at}
-                                //   image={article.image}
+                                image={article?.image ? article.image : null}
                                 newsLink={article.link}
                             />
                         ))

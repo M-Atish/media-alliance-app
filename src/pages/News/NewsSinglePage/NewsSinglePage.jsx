@@ -11,6 +11,7 @@ import { commentData } from 'global/constants/dummyData'
 import Spinner from 'components/Spinner/Spinner'
 import { useParamsQuery } from 'utils/helpers/URLLocation'
 import { useFetchNewsViaId } from 'hooks/news/useFetchNewsById'
+import { useTranslation } from 'react-i18next'
 
 const NewsSinglePage = () => {
     const [commentText, setCommentText] = useState('')
@@ -21,7 +22,7 @@ const NewsSinglePage = () => {
 
     const { status, data: newsArticleData } = useFetchNewsViaId(newsArticleId)
 
-    console.log(newsArticleData)
+    const { t } = useTranslation()
 
     // Change this url to the target website in question for that specific news source
 
@@ -113,7 +114,7 @@ const NewsSinglePage = () => {
                     rel="noreferrer"
                 >
                     <Button
-                        description="पूरा समाचार पढनुहोस"
+                        description={t('buttons.newsSingleArticle')}
                         size="large"
                         bgColor="grey"
                     />
@@ -132,7 +133,9 @@ const NewsSinglePage = () => {
                                 value={commentText}
                             ></textarea>
                             <Button
-                                description="कमेन्ट गर्नुहोस्"
+                                description={t(
+                                    'buttons.newsSingleArticleComment'
+                                )}
                                 handleButtonClick={handleButtonSubmit}
                                 bgColor="grey"
                                 size="large"

@@ -9,7 +9,7 @@ import './navitem.scss'
 const NavItem = (props) => {
     const [open, setOpen] = useState(false)
 
-    if (props.type === 'hasSubMenu') {
+    if (props?.type && props.type === 'hasSubMenu') {
         return (
             <>
                 <div
@@ -31,7 +31,7 @@ const NavItem = (props) => {
             </>
         )
     } else {
-        return (
+        return props.urlLink ? (
             <NavLink
                 to={props.urlLink}
                 className={classNames({
@@ -53,6 +53,8 @@ const NavItem = (props) => {
                     props.item
                 )}
             </NavLink>
+        ) : (
+            <p>{props.item}</p>
         )
     }
 }

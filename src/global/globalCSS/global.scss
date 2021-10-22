@@ -24,19 +24,19 @@
     --accentBg: #bae1ff;
 
     --singlePageWidth: 43.75em;
-
-    &.dark {
-        // Dark mode colors
-        --clr-theme-primary: #1d1d1f;
-        --clr-primary-500: #eee;
-        --clr-primary-900: #fff;
-        --clr-off-white: #b4b8c6;
-
-        --clr-white: #1d1d1f;
-
-        --navbar-background: #1d1d1f;
-    }
 }
+
+// .dark {
+//     // Dark mode colors
+//     --clr-theme-primary: #1d1d1f;
+//     --clr-primary-500: #eee;
+//     --clr-primary-900: #fff;
+//     --clr-off-white: #b4b8c6;
+
+//     --clr-white: #1d1d1f;
+
+//     --navbar-background: #1d1d1f;
+// }
 
 %container {
     text-align: center;

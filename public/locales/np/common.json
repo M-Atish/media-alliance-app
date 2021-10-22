@@ -1,0 +1,19 @@
+{
+    "nepali": "नेपाली",
+    "unidentifiedUrl": "त्रुटि 404. पृष्ठ भेटिएन।",
+    "searchBar": "यहाँ खोज्नुहोस्",
+    "buttons": {
+        "newsSingleArticle": "पूरा समाचार पढनुहोस",
+        "newsSingleArticleComment": "कमेन्ट गर्नुहोस्",
+        "newsSingleArticleReply": "जवाफ गर्नुहोस्",
+        "newsSingleArticleLike": "मलाई मन पर्यो",
+        "newsSingleArticleDislike": "मलाई मन परेन",
+        "submitButton": "पेस गर्नुहोस्"
+    },
+    "ellipseMenu": {
+        "likeNews": "मलाई यो समाचार मन पर्यो",
+        "shareNews": "यो समाचार साझा गर्नुहोस्",
+        "markFavoriteNews": "मनपर्ने समाचारमध्ये राख्नुहोस्",
+        "addCommentNews": "जवाफ दिनुहोस्"
+    }
+}

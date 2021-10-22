@@ -24,5 +24,24 @@
         color: var(--clr-primary-500);
 
         font-weight: var(--navbar-font-weight);
+
+        .language-button {
+            margin-right: 1em;
+            padding: 1em;
+            border: none;
+            outline: none;
+            background-color: var(--navbar-background);
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--clr-primary-500);
+                border-radius: 0.625em;
+            }
+
+            &:active {
+                background-color: var(--clr-primary-900);
+                border-radius: 0.625em;
+            }
+        }
     }
 }

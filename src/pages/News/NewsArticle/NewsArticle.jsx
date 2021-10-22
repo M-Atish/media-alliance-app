@@ -58,11 +58,13 @@ const NewsArticle = ({
                         {/* na means News Agency */}
                         <div className="top-na-date">
                             <span>
-                                <img
-                                    src={newsAgencyIcon}
-                                    alt="Logo of the news agency"
-                                    className="news-agency-icon"
-                                />
+                                {newsAgencyIcon && (
+                                    <img
+                                        src={newsAgencyIcon}
+                                        alt="Logo of the news agency"
+                                        className="news-agency-icon"
+                                    />
+                                )}
                             </span>
                             {newsAgency}
                         </div>
@@ -75,7 +77,9 @@ const NewsArticle = ({
                 <div className="tags-ellipse-option">
                     <div className="news-article-tags">
                         <span>
-                            <img src={tagIconImg} alt="Icon of tags" />
+                            {tags && (
+                                <img src={tagIconImg} alt="Icon of tags" />
+                            )}
                         </span>
                         {tags
                             ? tags.map((tag, index) => (

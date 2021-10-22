@@ -9,6 +9,7 @@ import useStore from 'store/store'
 
 import GridImage from './GridImage'
 import './interestedTopics.scss'
+import { useTranslation } from 'react-i18next'
 const InterestTopics = () => {
     const history = useHistory()
 
@@ -19,6 +20,8 @@ const InterestTopics = () => {
         toggleFirstTime()
         history.push('/')
     }
+
+    const { t } = useTranslation()
 
     return (
         <div className="interested-topics-container">
@@ -37,7 +40,7 @@ const InterestTopics = () => {
                 ))}
             </div>
             <Button
-                description="पेस गर्नुहोस्"
+                description={t('buttons.submitButton')}
                 handleButtonClick={handleButtonClick}
                 bgColor="grey"
                 size="large"
