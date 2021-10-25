@@ -23,12 +23,24 @@ import { NavLink } from 'react-router-dom'
 const NAV_ITEM_WIDTH = 170
 
 const NavBar = ({ dummyData }) => {
-    const navBarMenuRef = useRef(null)
     const [totalNavItems, setTotalNavItems] = useState(9)
-    const { i18n } = useTranslation()
     const [toggleNav, setToggleNav] = useState(false)
 
+    const navBarMenuRef = useRef(null)
+
+    const { i18n } = useTranslation()
+
     const isNavbar = useMediaQuery('(min-width: 768px)')
+
+    const { t } = useTranslation()
+
+    // This is for the toLocaleDateString converter. Remove this section once the API comes.
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+    }
 
     useEffect(() => {
         setToggleNav(false)
@@ -71,16 +83,6 @@ const NavBar = ({ dummyData }) => {
     const handleHamburgerMenuClick = () => {
         setToggleNav((toggleNav) => !toggleNav)
     }
-
-    // This is for the toLocaleDateString converter. Remove this section once the API comes.
-    const options = {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-    }
-
-    const { t } = useTranslation()
 
     return (
         <nav className="navbar-container">
