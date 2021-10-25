@@ -1,48 +1,75 @@
-.item,
-.logo {
+.item {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    // flex-grow: 1;
-    width: 100%;
+    width: 171px;
     height: 100%;
 
-    color: var(--clr-primary-500);
+    color: var(--clr-white);
     text-decoration: none;
 
     cursor: pointer;
 
+    &:hover .item-desc {
+        border-bottom-color: var(--clr-white);
+    }
+}
+
+.item-desc {
     border-bottom: 0.125em solid transparent;
-}
-
-.item {
-    flex: 0.1;
-    &:hover {
-        border-bottom-color: var(--clr-theme-red);
-    }
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 0.3;
-
-    &.is-active {
-        border-bottom-color: transparent !important;
-    }
 }
 
 .has-submenu {
     position: relative;
+
+    .item-desc {
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        position: relative;
+
+        .submenu-icon-container {
+            position: absolute;
+            top: -0.0625em;
+            right: -1em;
+            .submenu-icon {
+                height: 0.4em;
+                width: 0.8125em;
+                margin-left: 0.0625em;
+            }
+        }
+    }
 }
 
 .sub-content {
     position: absolute;
-    top: var(--navbar-height);
-    width: 100%;
-    text-align: center;
+    top: calc(var(--navbar-height) / 3);
+    right: 0;
+    width: 20em;
+    background-color: var(--clr-theme-red);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0.75em;
+
+    .sub-item {
+        padding: 0.5em;
+        text-decoration: none;
+        color: var(--clr-white);
+        width: 50%;
+        text-align: left;
+
+        .sub-item-text-container {
+            .sub-item-text {
+                border-bottom: 0.125em solid transparent;
+            }
+
+            &:hover .sub-item-text {
+                border-color: var(--clr-white);
+            }
+        }
+    }
 }
 
 .nav-item-picture {
@@ -52,5 +79,5 @@
 }
 
 .is-active {
-    border-bottom-color: var(--clr-theme-red);
+    border-bottom-color: var(--clr-white);
 }

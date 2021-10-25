@@ -5,10 +5,10 @@
     --clr-primary-900: #1d1d1f;
     --clr-theme-primary: #b4b8c6;
     --clr-theme-primary-rgb: rgb(180, 184, 198);
-    --clr-theme-red: #a31e28;
+    --clr-theme-red: #a90000;
     --clr-off-white: #f1f1f1;
 
-    --navbar-height: 3.125em;
+    --navbar-height: 8.4375em;
     --navbar-background: #b4b8c6;
     --navbar-font-weight: 700;
 
@@ -58,6 +58,6 @@ i[class*='la'] {
 }
 
 .container {
-    max-width: 75em;
+    max-width: 80%;
     margin: 0 auto;
 }

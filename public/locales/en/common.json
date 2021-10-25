@@ -2,6 +2,7 @@
     "english": "english",
     "unidentifiedUrl": "Error 404. Page not found.",
     "searchBar": "Search anything.....",
+    "navBarOthers": "Others",
     "buttons": {
         "newsSingleArticle": "Read the full news",
         "newsSingleArticleComment": "Post your comment",
@@ -13,7 +14,7 @@
     "ellipseMenu": {
         "likeNews": "Like this news",
         "shareNews": "Share this news",
-        "markFavoriteNews": "Mark as Favorite", 
+        "markFavoriteNews": "Mark as Favorite",
         "addCommentNews": "Add Comment"
     }
 }

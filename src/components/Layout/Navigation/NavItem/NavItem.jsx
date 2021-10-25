@@ -6,6 +6,8 @@ import { NavLink } from 'react-router-dom'
 
 import './navitem.scss'
 
+import { subMenuIconImg } from 'assets'
+
 const NavItem = (props) => {
     const [open, setOpen] = useState(false)
 
@@ -18,15 +20,33 @@ const NavItem = (props) => {
                     })}
                     onClick={() => setOpen(!open)}
                 >
-                    {props.picture && (
-                        <img
-                            src={props.picture}
-                            alt="icons"
-                            className="nav-item-picture"
-                        />
+                    <p className="item-desc">
+                        {props.item}
+                        <span className="submenu-icon-container">
+                            <img
+                                src={subMenuIconImg}
+                                className="submenu-icon"
+                                alt=""
+                            />
+                        </span>
+                    </p>
+                    {open && (
+                        <div className="sub-content">
+                            {props.children?.map((data, index) => (
+                                <NavLink
+                                    to={data.props.urlLink}
+                                    className="sub-item"
+                                    key={index}
+                                >
+                                    <div className="sub-item-text-container">
+                                        <span className="sub-item-text">
+                                            {data.props.item}
+                                        </span>
+                                    </div>
+                                </NavLink>
+                            ))}
+                        </div>
                     )}
-                    {props.item}
-                    <div className="sub-content">{open && props.children}</div>
                 </div>
             </>
         )
@@ -36,25 +56,13 @@ const NavItem = (props) => {
                 to={props.urlLink}
                 className={classNames({
                     item: props.type === 'text',
-                    logo: props.type === 'logo',
                 })}
                 activeClassName="is-active"
             >
-                {props.picture ? (
-                    <>
-                        <img
-                            src={props.picture}
-                            alt="Logo of the organization"
-                            className="nav-item-picture"
-                        />
-                        <span>{props.item}</span>
-                    </>
-                ) : (
-                    props.item
-                )}
+                <p className="item-desc">{props.item}</p>
             </NavLink>
         ) : (
-            <p>{props.item}</p>
+            <p className="item-desc">{props.item}</p>
         )
     }
 }

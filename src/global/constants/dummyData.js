@@ -1,5 +1,4 @@
 import {
-    logoImg,
     AEDImg,
     AUDImg,
     BHDImg,
@@ -44,12 +43,6 @@ import {
 } from '../../assets'
 
 const dummyData = [
-    {
-        item: 'Media Alliance',
-        type: 'logo',
-        urlLink: '/',
-        picture: logoImg,
-    },
     {
         item: 'समाचार',
         type: 'text',
@@ -102,6 +95,24 @@ const dummyData = [
         item: 'शेयर क्यालकुलेटर',
         type: 'text',
         urlLink: '/share-calculator',
+        picture: '',
+    },
+    {
+        item: 'टिभी',
+        type: 'text',
+        urlLink: '/forex',
+        picture: '',
+    },
+    {
+        item: 'भिडियो संग्रह',
+        type: 'text',
+        urlLink: '/forex',
+        picture: '',
+    },
+    {
+        item: 'रेडियो',
+        type: 'text',
+        urlLink: '/forex',
         picture: '',
     },
 ]
