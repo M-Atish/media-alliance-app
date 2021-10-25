@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 
 import { BsKeyboard, BsGlobe2 } from 'react-icons/bs'
 import { CgProfile } from 'react-icons/cg'
+import { IoHome } from 'react-icons/io5'
 
 import {
     logoImg,
@@ -25,6 +26,7 @@ const NAV_ITEM_WIDTH = 170
 const NavBar = ({ dummyData }) => {
     const [totalNavItems, setTotalNavItems] = useState(9)
     const [toggleNav, setToggleNav] = useState(false)
+    const [scrolledNavBar, setScrolledNavBar] = useState(false)
 
     const navBarMenuRef = useRef(null)
 
@@ -46,6 +48,7 @@ const NavBar = ({ dummyData }) => {
         setToggleNav(false)
     }, [isNavbar])
 
+    // This is for the proper reassigning of the values in the navbar when resized
     useEffect(() => {
         if (navBarMenuRef.current) {
             const navBarMenuWidth =
@@ -70,6 +73,22 @@ const NavBar = ({ dummyData }) => {
         }
     }, [])
 
+    useEffect(() => {
+        // This is for the changing navbar when scrolled
+        const changeBackground = () => {
+            const windowScrollYValue = window.scrollY
+            console.log('windowScrollvalue', windowScrollYValue)
+            if (windowScrollYValue >= 92) {
+                setScrolledNavBar(true)
+            } else {
+                setScrolledNavBar(false)
+            }
+        }
+        changeBackground()
+        window.addEventListener('scroll', changeBackground)
+    }, [])
+
+    // This is for changing the language into English or Nepali, depending upon the situation
     function handleChangeLanguage(e) {
         const currentLang = i18n.language
 
@@ -80,12 +99,19 @@ const NavBar = ({ dummyData }) => {
         }
     }
 
+    // TODO: hamburder menu click function when you resize the browser
     const handleHamburgerMenuClick = () => {
         setToggleNav((toggleNav) => !toggleNav)
     }
 
+    console.log(scrolledNavBar, 'scollNavbar')
+
     return (
-        <nav className="navbar-container">
+        <nav
+            className={classNames('navbar-container', {
+                scrolled: scrolledNavBar,
+            })}
+        >
             <header className="navbar-top">
                 <NavLink to="/" className="navbar-logo-container">
                     <img
@@ -158,44 +184,46 @@ const NavBar = ({ dummyData }) => {
                     </div>
                 </div>
             </header>
-            <div
-                className={classNames('navbar-menu', {
-                    'is-opened': toggleNav,
-                })}
-                ref={navBarMenuRef}
-            >
-                {dummyData ? (
-                    dummyData.length <= totalNavItems ? (
-                        dummyData.map((data, index) => (
-                            <NavItem
-                                key={index}
-                                item={data.item}
-                                type="text"
-                                urlLink={data?.urlLink ? data.urlLink : null}
-                            />
-                        ))
-                    ) : (
+            {/* This is for the red navbar menu */}
+            {/* This section checks whether the totalNavItems (from the ref-width calculator function above) is applicable to the array data's length. If it is, render it or else slice it and display the ones that will fit in the given width */}
+            <div className="navbar-menu-container">
+                <div
+                    className={classNames('navbar-menu', {
+                        'is-opened': toggleNav,
+                    })}
+                    ref={navBarMenuRef}
+                >
+                    {scrolledNavBar && (
                         <>
-                            {dummyData
-                                .slice(0, totalNavItems)
-                                .map((data, index) => (
-                                    <NavItem
-                                        key={index}
-                                        item={data.item}
-                                        type="text"
-                                        urlLink={
-                                            data?.urlLink ? data.urlLink : null
-                                        }
-                                    />
-                                ))}
-                            <NavItem item={t('navBarOthers')} type="hasSubMenu">
+                            <div className="navbar-logo-container"></div>
+                            <div className="navbar-menu-home-logo-scrolled">
+                                <NavLink to="/">
+                                    <IoHome className="navbar-menu-home-icon" />{' '}
+                                </NavLink>
+                            </div>
+                        </>
+                    )}
+                    {dummyData ? (
+                        dummyData.length <= totalNavItems ? (
+                            dummyData.map((data, index) => (
+                                <NavItem
+                                    key={index}
+                                    item={data.item}
+                                    type="text"
+                                    urlLink={
+                                        data?.urlLink ? data.urlLink : null
+                                    }
+                                />
+                            ))
+                        ) : (
+                            <>
                                 {dummyData
-                                    .slice(totalNavItems, dummyData.length)
+                                    .slice(0, totalNavItems)
                                     .map((data, index) => (
                                         <NavItem
                                             key={index}
                                             item={data.item}
-                                            type={'text'}
+                                            type="text"
                                             urlLink={
                                                 data?.urlLink
                                                     ? data.urlLink
@@ -203,11 +231,29 @@ const NavBar = ({ dummyData }) => {
                                             }
                                         />
                                     ))}
-                            </NavItem>
-                        </>
-                    )
-                ) : null}
-                {/* {dummyData && dummyData.length > 7
+                                <NavItem
+                                    item={t('navBarOthers')}
+                                    type="hasSubMenu"
+                                >
+                                    {dummyData
+                                        .slice(totalNavItems, dummyData.length)
+                                        .map((data, index) => (
+                                            <NavItem
+                                                key={index}
+                                                item={data.item}
+                                                type={'text'}
+                                                urlLink={
+                                                    data?.urlLink
+                                                        ? data.urlLink
+                                                        : null
+                                                }
+                                            />
+                                        ))}
+                                </NavItem>
+                            </>
+                        )
+                    ) : null}
+                    {/* {dummyData && dummyData.length > 7
                     ? dummyData.map((data, index) =>
                           index < 7 ? (
                               <NavItem
@@ -235,7 +281,9 @@ const NavBar = ({ dummyData }) => {
                               picture={data.picture}
                           />
                       ))} */}
+                </div>
             </div>
+            {/* TODO: hamburder menu section! */}
             <div
                 className={classNames('hamburger', {
                     'is-opened': toggleNav,
