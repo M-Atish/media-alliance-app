@@ -1,0 +1,19 @@
+.horoscope-container {
+    .horoscope-header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 0.0625em solid var(--clr-theme-red);
+
+        .horoscope-title {
+            color: var(--clr-primary-900);
+        }
+
+        .horoscope-see-all-tag {
+            font-size: 0.9em;
+            color: var(--clr-theme-red);
+            text-decoration: none;
+        }
+    }
+}

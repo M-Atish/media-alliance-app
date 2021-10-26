@@ -15,6 +15,7 @@ import {
 } from 'assets'
 
 import NavItem from '../NavItem/NavItem'
+
 import { useTranslation } from 'react-i18next'
 import { lang } from 'global/constants/appConstants'
 import classNames from 'classnames'
@@ -77,7 +78,6 @@ const NavBar = ({ dummyData }) => {
         // This is for the changing navbar when scrolled
         const changeBackground = () => {
             const windowScrollYValue = window.scrollY
-            console.log('windowScrollvalue', windowScrollYValue)
             if (windowScrollYValue >= 92) {
                 setScrolledNavBar(true)
             } else {
@@ -100,11 +100,9 @@ const NavBar = ({ dummyData }) => {
     }
 
     // TODO: hamburder menu click function when you resize the browser
-    const handleHamburgerMenuClick = () => {
-        setToggleNav((toggleNav) => !toggleNav)
-    }
-
-    console.log(scrolledNavBar, 'scollNavbar')
+    // const handleHamburgerMenuClick = () => {
+    //     setToggleNav((toggleNav) => !toggleNav)
+    // }
 
     return (
         <nav
@@ -195,10 +193,16 @@ const NavBar = ({ dummyData }) => {
                 >
                     {scrolledNavBar && (
                         <>
-                            <div className="navbar-logo-container"></div>
                             <div className="navbar-menu-home-logo-scrolled">
-                                <NavLink to="/">
-                                    <IoHome className="navbar-menu-home-icon" />{' '}
+                                <NavLink
+                                    to="/"
+                                    className="navbar-menu-home-icon-link"
+                                >
+                                    <img
+                                        src={logoImg}
+                                        alt="Media Alliance Nepal"
+                                        className="navbar-menu-home-icon"
+                                    />
                                 </NavLink>
                             </div>
                         </>
@@ -253,38 +257,10 @@ const NavBar = ({ dummyData }) => {
                             </>
                         )
                     ) : null}
-                    {/* {dummyData && dummyData.length > 7
-                    ? dummyData.map((data, index) =>
-                          index < 7 ? (
-                              <NavItem
-                                  key={index}
-                                  item={data.item}
-                                  type={data.type}
-                                  urlLink={data?.urlLink ? data.urlLink : null}
-                                  picture={data.picture}
-                              />
-                          ) : (
-                              <NavItem key={index} type={'has-submenu'}>
-                                  {
-                                      (data.item,
-                                      data?.urlLink ? data.urlLink : null)
-                                  }
-                              </NavItem>
-                          )
-                      )
-                    : dummyData.map((data, index) => (
-                          <NavItem
-                              key={index}
-                              item={data.item}
-                              type={data.type}
-                              urlLink={data?.urlLink ? data.urlLink : null}
-                              picture={data.picture}
-                          />
-                      ))} */}
                 </div>
             </div>
             {/* TODO: hamburder menu section! */}
-            <div
+            {/* <div
                 className={classNames('hamburger', {
                     'is-opened': toggleNav,
                 })}
@@ -293,7 +269,7 @@ const NavBar = ({ dummyData }) => {
                 <span className="bar" />
                 <span className="bar" />
                 <span className="bar" />
-            </div>
+            </div> */}
         </nav>
     )
 }

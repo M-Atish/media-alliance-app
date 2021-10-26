@@ -6,7 +6,7 @@
     --clr-theme-primary: #b4b8c6;
     --clr-theme-primary-rgb: rgb(180, 184, 198);
     --clr-theme-red: #a90000;
-    --clr-off-white: #f1f1f1;
+    --clr-off-white: #eeeeee;
 
     --navbar-height: 8.4375em;
     --navbar-background: #b4b8c6;
@@ -50,11 +50,6 @@
 %header-span {
     font-weight: 400;
     color: #86868b;
-}
-
-i[class*='la'] {
-    font-family: 'Line Awesome Free';
-    font-weight: 900;
 }
 
 .container {

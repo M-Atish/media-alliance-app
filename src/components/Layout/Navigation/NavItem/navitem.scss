@@ -44,29 +44,33 @@
 
 .sub-content {
     position: absolute;
-    top: calc(var(--navbar-height) / 3);
-    right: 0;
+    top: calc(var(--navbar-height) / 2.6);
+    right: 0em;
     width: 20em;
-    background-color: var(--clr-theme-red);
+    background-color: var(--clr-white);
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 0.75em;
+    z-index: 100;
+    box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.3);
 
     .sub-item {
         padding: 0.5em;
         text-decoration: none;
-        color: var(--clr-white);
+        color: var(--clr-primary-900);
         width: 50%;
         text-align: left;
 
         .sub-item-text-container {
             .sub-item-text {
+                font-weight: 700;
                 border-bottom: 0.125em solid transparent;
             }
 
             &:hover .sub-item-text {
-                border-color: var(--clr-white);
+                color: var(--clr-theme-red);
+                border-color: var(--clr-theme-red);
             }
         }
     }

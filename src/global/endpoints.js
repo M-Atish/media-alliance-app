@@ -7,4 +7,7 @@ export const endpoints = {
         base: 'v1/videos',
         details: 'v1/videos/{id}',
     },
+    horoscopes: {
+        base: 'v1/horoscopes',
+    },
 }

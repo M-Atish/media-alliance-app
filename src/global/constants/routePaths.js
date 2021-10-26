@@ -1,5 +1,6 @@
 export const routePaths = {
     // First time
+    // authentication: '/',
     language: '/',
     interestTopics: '/interested-topics',
 

@@ -1,6 +1,7 @@
 import { Route, Switch } from 'react-router'
 
 // Pages
+// import Authentication from 'pages/Authentication/Authentication'
 import News from '../../../pages/News/News'
 import Forex from '../../../pages/Forex/Forex'
 import ShareCalculator from '../../../pages/ShareCalculator/ShareCalculator'
@@ -24,6 +25,11 @@ import NewsSinglePage from './../../../pages/News/NewsSinglePage/NewsSinglePage'
 const Routes = ({ firstTime }) => {
     return firstTime ? (
         <Switch>
+            {/* <Route
+                exact
+                path={routePaths.authentication}
+                component={Authentication}
+            /> */}
             <Route exact path={routePaths.language} component={Language} />
             <Route
                 path={routePaths.interestTopics}

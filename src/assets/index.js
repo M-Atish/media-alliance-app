@@ -4,12 +4,17 @@ import logoImg from './images/logo192.png'
 import tagIconImg from './images/tagicon.png'
 import adTwoImg from './images/adTwo.png'
 
+// Advertisement Images
+import advertisementOneImg from './images/advertisements/advertisementOne.png'
+import advertisementTwoImg from './images/advertisements/advertisementTwo.png'
+
 // NavBar Images
 import locationTagImg from './images/navigationBar/locationTag.svg'
 import weatherTagImg from './images/navigationBar/weatherTag.svg'
 import degreeTagImg from './images/navigationBar/degreeTag.svg'
 import searchBarIconImg from './images/navigationBar/searchBarIcon.svg'
 import subMenuIconImg from './images/navigationBar/subMenuIconArrow.svg'
+
 // Categories Images
 import artImg from './images/categories/art.png'
 import businessImg from './images/categories/business.png'
@@ -133,6 +138,9 @@ export {
     logoImg,
     tagIconImg,
     adTwoImg,
+    // Advertisement images export
+    advertisementOneImg,
+    advertisementTwoImg,
     // NavBar images export
     locationTagImg,
     weatherTagImg,

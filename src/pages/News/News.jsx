@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { NavLink, useLocation, useHistory } from 'react-router-dom'
 
-import VideoCarousel from 'utils/carousel/VideoCarousel'
+import Carousel from 'utils/carousel/Carousel'
 import { useParamsQuery } from 'utils/helpers/URLLocation'
 import { routePaths } from 'global/constants/routePaths'
 import {
@@ -37,6 +37,8 @@ const News = () => {
 
         // eslint-disable-next-line
     }, [])
+
+    console.log(newsData)
 
     return (
         <div className="container">
@@ -92,8 +94,8 @@ const News = () => {
                             <NewsArticle
                                 id={article.id}
                                 key={article.id}
-                                //   newsAgency={article.newsAgency}
-                                //   newsAgencyIcon={article.newsAgencyIcon}
+                                newsAgency={article.channel_name}
+                                newsAgencyIcon={article.channel_icon}
                                 title={article.title}
                                 content={article.description}
                                 tags={article?.tags ? article.tags : null}
@@ -112,7 +114,7 @@ const News = () => {
                 {statusVideos === 'loading' ? (
                     <Spinner />
                 ) : (
-                    <VideoCarousel>
+                    <Carousel>
                         {videosData?.payload
                             ? videosData.payload.map((article) => (
                                   <div className="video-item" key={article.id}>
@@ -157,7 +159,7 @@ const News = () => {
                                   </div>
                               ))
                             : null}
-                    </VideoCarousel>
+                    </Carousel>
                 )}
             </section>
             <section className="most-read-container">

@@ -44,6 +44,12 @@ import {
 
 const dummyData = [
     {
+        item: 'गृहपृष्ठ',
+        type: 'text',
+        urlLink: '/',
+        picture: '',
+    },
+    {
         item: 'समाचार',
         type: 'text',
         urlLink: '/news',
