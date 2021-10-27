@@ -10,6 +10,7 @@ import { ClickOutside } from 'utils/helpers/clickOutside/ClickOutside'
 import convertToRelativeTime from 'utils/convertToRelativeTime'
 
 const NewsArticle = ({
+    showDesc,
     newsAgency,
     newsAgencyIcon,
     title,
@@ -69,7 +70,7 @@ const NewsArticle = ({
                             {newsAgency}
                         </div>
                         <p className="news-date">
-                            {convertToRelativeTime(new Date(date))}
+                            {date && convertToRelativeTime(new Date(date))}
                         </p>
                     </div>
                     <div className="news-article-title">{title}</div>

@@ -4,6 +4,8 @@ import { useFetchNews } from 'hooks/news/useFetchNews'
 import Carousel from 'utils/carousel/Carousel'
 import convertToRelativeTime from 'utils/convertToRelativeTime'
 
+import { adOneImg } from 'assets'
+
 import './featuredNews.scss'
 
 import { AiFillTags } from 'react-icons/ai'
@@ -28,7 +30,8 @@ const FeaturedNews = (props) => {
                               >
                                   <figure>
                                       <img
-                                          src={data.image}
+                                          //   src={data.image}
+                                          src={adOneImg}
                                           alt=""
                                           className="featured-news-image"
                                       />

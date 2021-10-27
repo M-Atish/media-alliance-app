@@ -1,6 +1,7 @@
 import Title from 'components/Layout/Titles/Title'
-import Horoscope from 'pages/Horoscope'
+// import Horoscope from 'pages/Horoscope'
 import FeaturedNews from 'pages/News/FeaturedNews/FeaturedNews'
+import NewsArticleBundle from 'pages/News/NewsArticleBundle/NewsArticleBundle'
 
 import './dashboard.scss'
 
@@ -24,18 +25,23 @@ const Dashboard = () => {
                 </div>
             </section>
             <main className="container">
-                <section>
+                <section className="main-news-section">
                     <div className="main-news-container">
                         <Title
                             title="मुख्य समाचार"
-                            urlLink="/"
+                            urlLink="/news"
                             classTitle="main-news"
                         />
                     </div>
                     <section className="main-news-left-side">
                         <article className="featured-news-section">
                             <div className="featured-news-container">
-                                <FeaturedNews></FeaturedNews>
+                                <FeaturedNews />
+                            </div>
+                        </article>
+                        <article className="single-news-block-section">
+                            <div className="single-news-block-container">
+                                <NewsArticleBundle />
                             </div>
                         </article>
                     </section>
@@ -53,7 +59,7 @@ const Dashboard = () => {
                     <div className="horoscopes-container">
                         <Title
                             title="राशिफल"
-                            urlLink="/"
+                            urlLink="/horoscopes"
                             classTitle="horoscopes"
                         />
                         {/* <Horoscope /> */}

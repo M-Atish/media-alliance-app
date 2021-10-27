@@ -10,19 +10,16 @@ import {
     sampleNews,
 } from 'global/constants/dummyData'
 
-import NewsArticle from './NewsArticle/NewsArticle'
 import MostRead from './MostRead/MostRead'
 import './news.scss'
-import { useFetchNews } from 'hooks/news/useFetchNews'
 import Spinner from 'components/Spinner/Spinner'
 import { useFetchVideos } from './../../hooks/videos/useFetchVideos'
+import NewsArticleBundle from './NewsArticleBundle/NewsArticleBundle'
 
 const News = () => {
     const searchQuery = useParamsQuery()
     const location = useLocation()
     const history = useHistory()
-
-    const { status: statusNews, data: newsData } = useFetchNews()
 
     const { status: statusVideos, data: videosData } = useFetchVideos()
 
@@ -82,27 +79,7 @@ const News = () => {
                 </div>
                 <h2 className="news-articles-heading">आजको समाचार</h2>
                 <div className="news-articles">
-                    {statusNews === 'loading' ? (
-                        <div className="spinner">
-                            <Spinner />
-                        </div>
-                    ) : Array.isArray(newsData?.payload) &&
-                      newsData?.payload.length > 0 ? (
-                        newsData.payload.map((article) => (
-                            <NewsArticle
-                                id={article.id}
-                                key={article.id}
-                                newsAgency={article.channel_name}
-                                newsAgencyIcon={article.channel_icon}
-                                title={article.title}
-                                content={article.description}
-                                tags={article?.tags ? article.tags : null}
-                                date={article.updated_at}
-                                image={article?.image ? article.image : null}
-                                newsLink={article.link}
-                            />
-                        ))
-                    ) : null}
+                    <NewsArticleBundle />
                 </div>
             </section>
             <section className="video-container">
