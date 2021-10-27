@@ -1,102 +1,96 @@
 .news-article-container {
-    margin-top: 0.9375em;
-    max-width: 27.5em;
-    border-radius: 0.75em;
+    width: 55em;
+    border-radius: 0.25em;
     display: flex;
-    flex-direction: column;
     cursor: pointer;
+    border: 0.0625em solid var(--clr-border-grey);
+    padding: 1em;
+    justify-content: space-between;
+    margin-top: 1em;
 
-    flex: 1;
+    .news-agency-text-container {
+        color: var(--clr-theme-primary);
+        width: 39em;
+        height: 12em;
+        position: relative;
 
-    .news-article-image-link,
-    .news-article-text-link {
-        text-decoration: none;
-    }
-
-    .news-article-image {
-        border-radius: 0.75em;
-        max-height: 13.75em;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .news-article-text-container {
-        font-size: 1rem;
-
-        .news-agency-text {
+        .news-agency-container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            color: var(--clr-theme-primary);
-
-            .top-na-date {
+            .news-agency {
                 line-height: 1;
                 display: flex;
                 align-items: center;
 
+                &:hover {
+                    text-decoration: underline;
+                }
+
                 .news-agency-icon {
                     height: 1em;
                     width: 1em;
+
+                    border-radius: 0.25em;
 
                     margin-right: 0.375em;
                 }
             }
         }
 
-        .news-article-title {
-            width: 100%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            -webkit-line-clamp: 1;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
+        .news-article-text-link {
+            text-decoration: none;
+            color: var(--clr-black);
 
-            color: var(--clr-primary-900);
-            font-size: 1.125rem;
-            font-weight: 600;
-
-            text-align: center;
+            .news-article-title {
+                font-size: 1.75em;
+                font-weight: 500;
+            }
         }
 
-        .tags-ellipse-option {
+        .news-date {
+            color: var(--clr-grey);
+            font-size: 0.9em;
+        }
+
+        .news-article-tags {
             display: flex;
-            justify-content: space-between;
-            position: relative;
+            align-items: center;
+            color: var(--clr-grey);
 
-            .news-article-tags {
-                color: var(--clr-theme-primary);
-
-                display: flex;
-
-                img {
-                    margin-right: 0.75em;
-                }
-
-                .news-article-tag {
-                    margin-right: 0.75em;
-                }
+            .news-article-tag {
+                margin-left: 0.5em;
             }
+        }
 
-            .extra-options {
-                width: 1.25em;
-                text-align: center;
+        .see-all-tag-link {
+            text-decoration: none;
+            position: absolute;
+            bottom: 0;
+            .see-all-tag-container {
+                .see-all-tag {
+                    color: var(--clr-theme-red);
+                    font-size: 1em;
+                    font-weight: 600;
+                }
             }
         }
     }
-}
 
-.news-article-container {
-    display: flex;
-    flex-direction: column;
+    .news-article-image-link {
+        text-decoration: none;
+        margin-left: 1em;
 
-    .news-agency-text {
-        display: flex;
-        justify-content: space-between;
-        .top-na-date {
-            .news-agency-icon {
-                height: 1em;
-                width: 1em;
+        .news-image-container {
+            border-radius: 0.25em;
+            .news-article-image {
+                width: 12.5625em;
+                height: 12em;
+                border-radius: 0.25em;
             }
         }
+    }
+
+    .extra-options {
+        transform: rotate(90deg);
     }
 }

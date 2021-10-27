@@ -18,7 +18,7 @@ const NewsArticleBundle = () => {
                 newsAgencyIcon={article.channel_icon}
                 title={article.title}
                 content={article.description}
-                tags={article?.tags ? article.tags : null}
+                tags={article?.tag ? article.tag : null}
                 date={article.updated_at}
                 image={article?.image ? article.image : null}
                 newsLink={article.link}

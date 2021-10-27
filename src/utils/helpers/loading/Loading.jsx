@@ -1,4 +1,4 @@
-import logo from './favicon-32x32.png'
+import { logoImg } from 'assets'
 import './loading.scss'
 import classNames from 'classnames'
 
@@ -6,7 +6,7 @@ const Loading = ({ spinner, visible }) => {
     return (
         <div className={classNames('loadingContainer', { visible: visible })}>
             <img
-                src={logo}
+                src={logoImg}
                 alt="Loading..."
                 className={classNames('loading', {
                     'loading-current': spinner,

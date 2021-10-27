@@ -25,13 +25,12 @@ const FeaturedNews = (props) => {
                               <NavLink
                                   to={routePaths.news.details.replace(
                                       '{idNumber}',
-                                      data.id
+                                      encodeURIComponent(String(data.id))
                                   )}
                               >
                                   <figure>
                                       <img
-                                          //   src={data.image}
-                                          src={adOneImg}
+                                          src={data.image}
                                           alt=""
                                           className="featured-news-image"
                                       />
@@ -64,7 +63,6 @@ const FeaturedNews = (props) => {
                                           className="news-relative-date"
                                           title={new Date(data.updated_at)}
                                       >
-                                          {/* CHECK: Check whether the object method is correct or not. Specifically: updated_at */}
                                           {convertToRelativeTime(
                                               new Date(data.updated_at)
                                           )}
@@ -73,7 +71,7 @@ const FeaturedNews = (props) => {
                                   <NavLink
                                       to={routePaths.news.details.replace(
                                           '{idNumber}',
-                                          data.id
+                                          encodeURIComponent(String(data.id))
                                       )}
                                       className="news-title-redirect-link"
                                   >
