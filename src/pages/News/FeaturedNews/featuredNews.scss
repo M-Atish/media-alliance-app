@@ -1,0 +1,118 @@
+.featured-news-container {
+    border-radius: 0.25em;
+    position: relative;
+    width: 45em;
+
+    figure {
+        border-radius: 0.25em;
+        height: 25em;
+        width: 45em;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: linear-gradient(
+                    180deg,
+                    rgba(196, 196, 196, 0) 0%,
+                    #000000 100%
+                ),
+                linear-gradient(
+                    90deg,
+                    #000000 0%,
+                    rgba(196, 196, 196, 0.1) 5%,
+                    rgba(196, 196, 196, 0) 50%,
+                    rgba(196, 196, 196, 0.1) 95%,
+                    #000000 100%
+                );
+            opacity: 0.9;
+            border-radius: 0.25em;
+        }
+
+        .featured-news-image {
+            object-fit: cover;
+            border-radius: 0.25em;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .featured-news-bottom-container {
+        // Make the width to be subtracted from 100% double the size of the measurement of the left value
+        width: calc(100% - 2em);
+
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+
+        color: var(--clr-white);
+
+        font-weight: 300;
+
+        .news-agency-date-container {
+            display: flex;
+            justify-content: space-between;
+
+            .news-agency-redirect-link {
+                text-decoration: none;
+                color: var(--clr-white);
+
+                .news-agency-details {
+                    display: flex;
+                    align-items: center;
+                    line-height: 1;
+
+                    .news-agency-icon {
+                        height: 1.25em;
+                        width: 1.75em;
+                        border-radius: 0.25em;
+                    }
+
+                    .news-agency-name {
+                        margin-left: 0.625em;
+
+                        color: var(--clr-white) !important;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .news-relative-date {
+                    font-size: 0.75em;
+                }
+            }
+        }
+
+        .news-title-redirect-link {
+            text-decoration: none;
+            color: var(--clr-white);
+
+            .news-title-container {
+                width: 100%;
+                text-align: center;
+                font-size: 1.5em;
+
+                .news-title {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .news-tags-container {
+            display: flex;
+            align-items: center;
+            line-height: 1;
+            color: var(--clr-grey);
+
+            .news-tag-list {
+                font-size: 0.75em;
+                margin-left: 0.625em;
+            }
+        }
+    }
+}

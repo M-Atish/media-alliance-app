@@ -1,2 +1,18 @@
+.advertisement-section {
+    background-color: var(--clr-off-white);
+
+    width: 100%;
+
+    .advertisement-container {
+        height: 8.75em;
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 .container {
+    
 }

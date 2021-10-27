@@ -1,4 +1,4 @@
-$names: main-news, video-section, horoscopes, quick-navigation;
+$names: main-news, video-playlist, horoscopes, quick-navigation;
 
 @each $name in $names {
     .#{$name}-header {

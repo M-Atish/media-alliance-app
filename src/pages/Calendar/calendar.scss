@@ -1,9 +1,30 @@
-.calendar-iframe iframe {
-    height: 100vh;
-    width: 100em;
-    cursor: pointer;
+.calendar-iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    table {
-        background-color: var(--clr-theme-red) !important;
+.calendar-iframe-container {
+    position: relative;
+    .remover-one {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 3.3125em;
+        background-color: #f9f9f9;
+        width: 10em;
+        border-left: 0.0625em solid #ebebeb;
     }
+
+    .remover-two {
+        position: absolute;
+        width: 10em;
+        height: 1.2em;
+        background-color: white;
+        bottom: 0;
+    }
+}
+
+.iframe-calendar {
+    cursor: pointer;
 }

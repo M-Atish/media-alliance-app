@@ -5,31 +5,30 @@
     box-shadow: 0.0625em 0.0625em 0.3em var(--clr-theme-primary);
 }
 
-.owl-carousel {
-    position: relative;
-
-    .owl-prev,
-    .owl-next {
+.slick-slider {
+    .slick-prev {
         position: absolute;
-        margin: 0 !important;
-        top: 0;
+        left: 16px;
+        color: var(--clr-grey);
         height: 100%;
-        width: 1.25em;
-        font-size: 2.8125rem !important;
-        border-radius: 0 !important;
+        width: 35px;
+        z-index: 10;
 
         &:hover {
-            background-color: black !important;
-            opacity: 0.4;
-            border-radius: 0.2em !important;
+            color: var(--clr-white);
         }
     }
 
-    .owl-prev {
-        left: 0.09em;
-    }
+    .slick-next {
+        position: absolute;
+        right: 16px;
+        height: 100%;
+        width: 35px;
+        color: var(--clr-grey);
+        z-index: 10;
 
-    .owl-next {
-        right: 0.09em;
+        &:hover {
+            color: var(--clr-white);
+        }
     }
 }

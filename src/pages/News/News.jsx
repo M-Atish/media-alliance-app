@@ -38,8 +38,6 @@ const News = () => {
         // eslint-disable-next-line
     }, [])
 
-    console.log(newsData)
-
     return (
         <div className="container">
             <section className="news-topic-container">

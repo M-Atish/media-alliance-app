@@ -3,24 +3,25 @@ import './calendar.scss'
 const Calendar = () => {
     return (
         <div className="calendar-iframe">
-            <iframe
-                title="nepali-calendar"
-                src="https://www.ashesh.com.np/nepali-calendar/calendar.php?api='+nc_api_id+'"
-                frameborder="0"
-                allowtransparency="true"
-                onload="this.style.height=(this.contentWindow.document.body.scrollHeight+5)+\'px\';"
-            ></iframe>
-            <div id="ncwidgetlink">
-                Powered by ©{' '}
-                <a
-                    href="https://www.ashesh.com.np/nepali-calendar/"
-                    id="nclink"
-                    title="Nepali calendar"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    nepali calendar
-                </a>
+            <div className="calendar-iframe-container">
+                <div className="remover-one"></div>
+                <div className="remover-two"></div>
+                <iframe
+                    title="calendar"
+                    src="https://www.hamropatro.com/widgets/calender-full.php"
+                    frameborder="0"
+                    scrolling="no"
+                    marginwidth="0"
+                    marginheight="0"
+                    style={{
+                        border: 'none',
+                        overflow: 'hidden',
+                        width: '800px',
+                        height: '840px',
+                    }}
+                    allowtransparency="true"
+                    className="iframe-calendar"
+                ></iframe>
             </div>
         </div>
     )

@@ -8,6 +8,8 @@ import adTwoImg from './images/adTwo.png'
 import advertisementOneImg from './images/advertisements/advertisementOne.png'
 import advertisementTwoImg from './images/advertisements/advertisementTwo.png'
 
+// Carousel Images
+
 // NavBar Images
 import locationTagImg from './images/navigationBar/locationTag.svg'
 import weatherTagImg from './images/navigationBar/weatherTag.svg'
@@ -141,6 +143,7 @@ export {
     // Advertisement images export
     advertisementOneImg,
     advertisementTwoImg,
+    // Carousel images export,
     // NavBar images export
     locationTagImg,
     weatherTagImg,

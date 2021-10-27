@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react'
 
 import { BsKeyboard, BsGlobe2 } from 'react-icons/bs'
 import { CgProfile } from 'react-icons/cg'
-import { IoHome } from 'react-icons/io5'
 
 import {
     logoImg,

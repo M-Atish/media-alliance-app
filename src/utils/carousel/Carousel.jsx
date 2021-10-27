@@ -1,28 +1,22 @@
-import OwlCarousel from 'react-owl-carousel'
-import 'owl.carousel/dist/assets/owl.carousel.css'
-import 'owl.carousel/dist/assets/owl.theme.default.css'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 import './carousel.scss'
 
+import { HiArrowSmRight, HiArrowSmLeft } from 'react-icons/hi'
+
 const Carousel = (props) => {
-    return (
-        <OwlCarousel
-            className="owl-theme"
-            items={props.itemsNumber}
-            margin={10}
-            dots={false}
-            autoplay={true}
-            autoplayTimeout={5000}
-            autoplayHoverPause={true}
-            video={true}
-            videoHeight={100}
-            videoWidth={100}
-            rewind={true}
-            nav
-        >
-            {props.children}
-        </OwlCarousel>
-    )
+    const settings = {
+        speed: 300,
+        autoplaySpped: 5000,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: <HiArrowSmLeft className="slick-prev" />,
+        nextArrow: <HiArrowSmRight className="slick-next" />,
+    }
+    return <Slider {...settings}>{props.children}</Slider>
 }
 
 export default Carousel
