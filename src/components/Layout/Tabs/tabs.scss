@@ -1,12 +1,15 @@
 .tabs {
-    width: 26.375em;
-    overflow: auto;
+    width: 100%;
+    border: 0.0625em solid var(--clr-border-grey);
+    border-radius: 0.25em;
+
     .tabs-nav {
         background-color: var(--clr-theme-red);
-        white-space: nowrap;
         text-align: center;
         justify-content: center;
         display: flex;
+        border-radius: 0.25em 0.25em 0 0;
+        border: 0.0625em 0.0625em 0 0.0625em solid var(--clr-border-grey);
 
         & .tab-heading:not(:last-child) {
             &:after {
@@ -29,6 +32,30 @@
             &:hover {
                 text-decoration: underline;
             }
+        }
+    }
+
+    .tabs-content {
+        height: 41.375em;
+        overflow: auto;
+    }
+
+    .tabs-add-more {
+        background-color: var(--clr-theme-red);
+        border-radius: 0 0 0.25em 0.25em;
+        color: var(--clr-white);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 2.3;
+
+        .tabs-add-more-text {
+        }
+
+        .tabs-add-more-icon {
+            margin-left: 0.5em;
+            display: flex;
         }
     }
 }

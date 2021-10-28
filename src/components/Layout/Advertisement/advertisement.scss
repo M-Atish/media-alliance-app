@@ -1,0 +1,13 @@
+.advertisement-container {
+    display: block;
+
+    &.grey {
+        background-color: var(--clr-grey);
+    }
+
+    &.leaderboard {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

@@ -7,6 +7,8 @@ import adTwoImg from './images/adTwo.png'
 // Advertisement Images
 import advertisementOneImg from './images/advertisements/advertisementOne.png'
 import advertisementTwoImg from './images/advertisements/advertisementTwo.png'
+import advertisementThreeImg from './images/advertisements/advertisementThree.png'
+import advertisementFourImg from './images/advertisements/advertisementFour.png'
 
 // Carousel Images
 
@@ -143,6 +145,8 @@ export {
     // Advertisement images export
     advertisementOneImg,
     advertisementTwoImg,
+    advertisementThreeImg,
+    advertisementFourImg,
     // Carousel images export,
     // NavBar images export
     locationTagImg,

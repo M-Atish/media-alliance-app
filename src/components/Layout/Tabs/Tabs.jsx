@@ -3,6 +3,8 @@ import TabsContent from './TabsContent/TabsContent'
 
 import './tabs.scss'
 
+import { RiArrowDownSLine } from 'react-icons/ri'
+
 const Tabs = ({ tabsHeadingContent }) => {
     const [activeTab, setActiveTab] = useState(0)
 
@@ -19,11 +21,18 @@ const Tabs = ({ tabsHeadingContent }) => {
                     </div>
                 ))}
             </div>
-            <div className="tabs-content"></div>
-            <TabsContent
-                tab={tabsHeadingContent[activeTab].payload}
-                index={activeTab}
-            />
+            <div className="tabs-content">
+                <TabsContent
+                    tab={tabsHeadingContent[activeTab].payload}
+                    index={activeTab}
+                />
+            </div>
+            <div className="tabs-add-more">
+                <p className="tabs-add-more-text">अधिक </p>
+                <span className="tabs-add-more-icon">
+                    <RiArrowDownSLine />
+                </span>
+            </div>
         </div>
     )
 }
