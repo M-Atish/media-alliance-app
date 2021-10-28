@@ -1,0 +1,34 @@
+.tabs {
+    width: 26.375em;
+    overflow: auto;
+    .tabs-nav {
+        background-color: var(--clr-theme-red);
+        white-space: nowrap;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+
+        & .tab-heading:not(:last-child) {
+            &:after {
+                content: '';
+                background: white;
+                position: absolute;
+                bottom: 25%;
+                right: 0;
+                height: 50%;
+                width: 1px;
+            }
+        }
+
+        .tab-heading {
+            cursor: pointer;
+            flex: 1;
+            color: var(--clr-white);
+            position: relative;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

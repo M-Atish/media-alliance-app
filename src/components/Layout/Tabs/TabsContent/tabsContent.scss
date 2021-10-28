@@ -1,0 +1,8 @@
+.tab-content-container {
+    .tab-content:nth-child(odd) {
+        background-color: var(--clr-theme-primary);
+    }
+    .tab-content:nth-child(even) {
+        background-color: var(--clr-off-white);
+    }
+}
