@@ -2,7 +2,6 @@
     border-radius: 0.25em;
     position: relative;
     width: 55em;
-    margin-top: 0.5em;
 
     figure {
         border-radius: 0.25em;
@@ -75,7 +74,7 @@
                     .news-agency-name {
                         margin-left: 0.625em;
 
-                        color: var(--clr-white) !important;
+                        color: var(--clr-white);
 
                         &:hover {
                             text-decoration: underline;
@@ -95,7 +94,6 @@
 
             .news-title-container {
                 width: 100%;
-                text-align: center;
                 font-size: 1.5em;
 
                 .news-title {

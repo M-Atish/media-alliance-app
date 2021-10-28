@@ -1,46 +1,41 @@
 :root {
     // Light mode colors
-    --clr-white: #fff;
+    --clr-white-black: #fff;
     --clr-primary-500: #505565;
     --clr-primary-900: #1d1d1f;
-    --clr-theme-primary: #b4b8c6;
+    --clr-theme-primary: #ffffff;
     --clr-theme-primary-rgb: rgb(180, 184, 198);
     --clr-theme-red: #a90000;
     --clr-off-white: #eeeeee;
     --clr-grey: #9a9a9a;
-    --clr-black: #000;
+    --clr-black-white: #000;
+    --clr-white: #ffffff;
+
+    --clr-red-white: #a90000;
+
+    --clr-background: #ffffff;
 
     --clr-border-grey: #dadce0;
 
     --navbar-height: 8.4375em;
     --navbar-background: #b4b8c6;
-    --navbar-font-weight: 700;
 
     // Font family
     --font-family-primary: 'Mukta', sans-serif;
 
-    // Selector styling variables
-    --radius: 0.125em;
-    --baseFg: dimgray;
-    --baseBg: white;
-    --clr-theme-blue: #006fc2;
-    --clr-theme-green: #45a48e;
-    --accentBg: #bae1ff;
-
     --singlePageWidth: 43.75em;
 }
 
-// .dark {
-//     // Dark mode colors
-//     --clr-theme-primary: #1d1d1f;
-//     --clr-primary-500: #eee;
-//     --clr-primary-900: #fff;
-//     --clr-off-white: #b4b8c6;
-
-//     --clr-white: #1d1d1f;
-
-//     --navbar-background: #1d1d1f;
-// }
+.dark {
+    //   Dark mode colors
+    --clr-red-white: #ffffff;
+    --clr-theme-primary: #1d1d1f;
+    --clr-primary-500: #eee;
+    --clr-primary-900: #fff;
+    --clr-off-white: #343538;
+    --clr-white-black: #000000;
+    --clr-black-white: #ffffff;
+}
 
 %container {
     text-align: center;

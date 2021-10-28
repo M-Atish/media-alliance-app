@@ -6,6 +6,7 @@ import NewsArticleBundle from 'pages/News/NewsArticleBundle/NewsArticleBundle'
 import './dashboard.scss'
 
 import { advertisementOneImg, advertisementTwoImg } from 'assets/index'
+import HotNewsTab from './../HotNewsTab/HotNewsTab'
 
 const Dashboard = () => {
     return (
@@ -33,17 +34,26 @@ const Dashboard = () => {
                             classTitle="main-news"
                         />
                     </div>
-                    <section className="main-news-left-side">
-                        <article className="featured-news-section">
-                            <div className="featured-news-container">
-                                <FeaturedNews />
-                            </div>
-                        </article>
-                        <article className="single-news-block-section">
-                            <div className="single-news-block-container">
-                                <NewsArticleBundle />
-                            </div>
-                        </article>
+                    <section className="main-news-dashboard">
+                        <section className="main-news-left-side">
+                            <article className="featured-news-section">
+                                <div className="featured-news-container">
+                                    <FeaturedNews />
+                                </div>
+                            </article>
+                            <article className="single-news-block-section">
+                                <div className="single-news-block-container">
+                                    <NewsArticleBundle />
+                                </div>
+                            </article>
+                        </section>
+                        <section className="main-news-right-side">
+                            <article className="fresh-popular-trending-news-section">
+                                <div className="fresh-popular-trending-news-container">
+                                    <HotNewsTab />
+                                </div>
+                            </article>
+                        </section>
                     </section>
                 </section>
                 <section className="video-playlist-section">

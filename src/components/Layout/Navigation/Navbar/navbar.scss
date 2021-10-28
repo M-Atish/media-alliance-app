@@ -8,7 +8,7 @@
 
     height: auto;
 
-    background-color: var(--clr-white);
+    background-color: var(--clr-theme-primary);
     align-items: center;
 
     &.scrolled {
@@ -128,9 +128,10 @@
                 border: none;
                 color: var(--clr-theme-500);
                 flex: 90%;
+                background-color: var(--clr-theme-primary);
 
                 &::placeholder {
-                    color: var(--clr-theme-primary);
+                    color: var(--clr-grey);
                     font-weight: 500;
                 }
             }

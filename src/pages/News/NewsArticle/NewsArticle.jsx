@@ -1,9 +1,11 @@
 import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 
+import { FaEllipsisH } from 'react-icons/fa'
+
 import './newsarticle.scss'
 
-import { tagIconImg, tripleEllipseImg } from 'assets'
+import { tagIconImg } from 'assets'
 import EllipseMenu from 'components/Layout/EllipseMenu/EllipseMenuContainer/EllipseMenu'
 import { routePaths } from 'global/constants/routePaths'
 import { ClickOutside } from 'utils/helpers/clickOutside/ClickOutside'
@@ -62,7 +64,8 @@ const NewsArticle = ({
                         className="extra-options"
                         onClick={handleOptionMenuClicked}
                     >
-                        <img src={tripleEllipseImg} alt="triple ellipse dots" />
+                        {/* TODO: replace this image with an icon */}
+                        <FaEllipsisH />
                     </div>
                 </div>
                 <Link

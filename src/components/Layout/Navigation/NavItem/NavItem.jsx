@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 
 import './navitem.scss'
 
-import { subMenuIconImg } from 'assets'
+import { GoTriangleDown } from 'react-icons/go'
 import { ClickOutside } from './../../../../utils/helpers/clickOutside/ClickOutside'
 
 const NavItem = (props) => {
@@ -27,13 +27,10 @@ const NavItem = (props) => {
             >
                 <p className="item-desc">
                     {props.item}
-                    <span className="submenu-icon-container">
-                        <img
-                            src={subMenuIconImg}
-                            className="submenu-icon"
-                            alt=""
-                        />
-                    </span>
+
+                    <GoTriangleDown
+                        className={classNames('submenu-icon', { open: open })}
+                    />
                 </p>
                 {open && (
                     <div className="sub-content">

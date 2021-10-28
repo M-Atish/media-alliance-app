@@ -9,7 +9,7 @@
     margin-top: 1em;
 
     .news-agency-text-container {
-        color: var(--clr-theme-primary);
+        color: var(--clr-grey);
         width: 39em;
         height: 12em;
         position: relative;
@@ -39,7 +39,7 @@
 
         .news-article-text-link {
             text-decoration: none;
-            color: var(--clr-black);
+            color: var(--clr-black-white);
 
             .news-article-title {
                 font-size: 1.75em;

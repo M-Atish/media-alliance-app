@@ -13,7 +13,7 @@ $names: main-news, video-playlist, horoscopes, quick-navigation;
     }
     .#{$name}-see-all-tag {
         font-size: 0.9em;
-        color: var(--clr-theme-red);
+        color: var(--clr-red-white);
         text-decoration: none;
     }
 }

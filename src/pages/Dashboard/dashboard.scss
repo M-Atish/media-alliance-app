@@ -14,5 +14,13 @@
 }
 
 .container {
-    
+    .main-news-section {
+        .main-news-dashboard {
+            display: flex;
+            margin-top: 1em;
+            .main-news-right-side {
+                margin-left: 1em;
+            }
+        }
+    }
 }

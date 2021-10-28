@@ -29,14 +29,15 @@
         line-height: 1;
         position: relative;
 
-        .submenu-icon-container {
+        .submenu-icon {
             position: absolute;
-            top: -0.0625em;
-            right: -1em;
-            .submenu-icon {
-                height: 0.4em;
-                width: 0.8125em;
-                margin-left: 0.0625em;
+            top: 0em;
+
+            right: -1.2em;
+            transition: transform 0.5s;
+
+            &.open {
+                transform: rotate(180deg);
             }
         }
     }
@@ -47,7 +48,7 @@
     top: calc(var(--navbar-height) / 2.6);
     right: 0em;
     width: 20em;
-    background-color: var(--clr-white);
+    background-color: var(--clr-theme-primary);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -83,5 +84,5 @@
 }
 
 .is-active {
-    border-bottom-color: var(--clr-white);
+    border-bottom-color: var(--clr-white-black);
 }
