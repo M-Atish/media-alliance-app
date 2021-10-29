@@ -1,9 +1,9 @@
-.advertisement-section {
+.advertisement-section-one {
     background-color: var(--clr-off-white);
 
     width: 100%;
 
-    .advertisement-container {
+    .advertisement-container-one {
         height: 8.75em;
         margin: 0 auto;
         width: 80%;
@@ -14,13 +14,34 @@
 }
 
 .container {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
     .main-news-section {
         .main-news-dashboard {
             display: flex;
             margin-top: 1em;
+
+            .main-news-left-side {
+                width: 60%;
+            }
             .main-news-right-side {
                 margin-left: 1em;
-                width: 100%;
+                width: 40%;
+
+                .advertisement-section-two {
+                    margin-top: 0.5em;
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5em;
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                        border-radius: 0.25em;
+                    }
+                }
             }
         }
     }

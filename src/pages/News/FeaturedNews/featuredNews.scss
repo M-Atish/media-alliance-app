@@ -1,12 +1,10 @@
 .featured-news-container {
     border-radius: 0.25em;
     position: relative;
-    width: 55em;
 
     figure {
         border-radius: 0.25em;
         height: 25em;
-        width: 55em;
 
         &::before {
             position: absolute;

@@ -5,23 +5,33 @@ import NewsArticleBundle from 'pages/News/NewsArticleBundle/NewsArticleBundle'
 
 import './dashboard.scss'
 
-import { advertisementOneImg, advertisementTwoImg } from 'assets/index'
+import {
+    advertisementFourImg,
+    advertisementOneImg,
+    advertisementThreeImg,
+    advertisementTwoImg,
+} from 'assets/index'
 import HotNewsTab from './../HotNewsTab/HotNewsTab'
+import LeaderboardAdvertisement from 'components/Layout/Advertisement/LeaderboardAdvertisement/LeaderboardAdvertisement'
+import MediumRectanglesAdvertisement from 'components/Layout/Advertisement/MediumRectanglesAdvertisement/MediumRectanglesAdvertisement'
 
 const Dashboard = () => {
+    const advertisementLeaderboardImages = [
+        advertisementOneImg,
+        advertisementTwoImg,
+    ]
+
+    const advertisementMediumRectangleImages = [
+        advertisementThreeImg,
+        advertisementFourImg,
+    ]
+
     return (
         <>
-            <section className="advertisement-section">
-                <div className="advertisement-container">
-                    <img
-                        src={advertisementOneImg}
-                        alt="advertisement of Coke"
-                        className="advertisement-img-one"
-                    />
-                    <img
-                        src={advertisementTwoImg}
-                        alt="advertisement of Coke Two"
-                        className="advertisement-img-two"
+            <section className="advertisement-section-one">
+                <div className="advertisement-container-one">
+                    <LeaderboardAdvertisement
+                        payload={advertisementLeaderboardImages}
                     />
                 </div>
             </section>
@@ -53,8 +63,18 @@ const Dashboard = () => {
                                     <HotNewsTab />
                                 </div>
                             </article>
+                            <article className="advertisement-section-two">
+                                <MediumRectanglesAdvertisement
+                                    payload={advertisementMediumRectangleImages}
+                                />
+                            </article>
                         </section>
                     </section>
+                </section>
+                <section className="short-widget-number-one">
+                    <article className="share-market-widget"></article>
+                    <article className="forex-widget"></article>
+                    <article className="weather-widget"></article>
                 </section>
                 <section className="video-playlist-section">
                     <div className="video-playlist-container">

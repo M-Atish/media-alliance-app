@@ -13,7 +13,7 @@ import {
 import MostRead from './MostRead/MostRead'
 import './news.scss'
 import Spinner from 'components/Spinner/Spinner'
-import { useFetchVideos } from './../../hooks/videos/useFetchVideos'
+import { useFetchVideos } from 'hooks/videos/useFetchVideos'
 import NewsArticleBundle from './NewsArticleBundle/NewsArticleBundle'
 
 const News = () => {

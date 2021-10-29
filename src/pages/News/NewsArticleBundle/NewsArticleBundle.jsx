@@ -1,16 +1,21 @@
-import { useFetchNews } from 'hooks/news/useFetchNews'
+// import { useFetchNews } from 'hooks/news/useFetchNews'
 import Spinner from 'components/Spinner/Spinner'
 import NewsArticle from '../NewsArticle/NewsArticle'
+import { useFetchNewsPaginate } from 'hooks/news/useFetchNewsPaginate'
 
 const NewsArticleBundle = () => {
-    const { status: statusNews, data: newsData } = useFetchNews()
+    const { status: statusNewsPaginate, data: newsDataPaginate } =
+        useFetchNewsPaginate(3)
 
-    return statusNews === 'loading' ? (
+    // TODO: Make a fetch component which takes the popular/trending news on the news bundle and put it here
+
+    return statusNewsPaginate === 'loading' ? (
         <div className="spinner">
             <Spinner />
         </div>
-    ) : Array.isArray(newsData?.payload) && newsData?.payload.length > 0 ? (
-        newsData.payload.map((article) => (
+    ) : Array.isArray(newsDataPaginate?.payload) &&
+      newsDataPaginate?.payload.length > 0 ? (
+        newsDataPaginate.payload.map((article) => (
             <NewsArticle
                 id={article.id}
                 key={article.id}

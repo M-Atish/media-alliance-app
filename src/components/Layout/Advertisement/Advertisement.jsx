@@ -7,6 +7,9 @@ import LargeRectanglesAdvertisement from './LargeRectanglesAdvertisement/LargeRe
 
 const Advertisement = ({ type, bgColor, payload }) => {
     // A note to future developers: please send the payload, whatever the hell it is: images, gifs, videos, etc. in an array format. Thanks.
+
+    // REMINDER: Add in a URL link so that when the user clicks on it, the user is redirected to the advetisement's site.
+
     type = type.toLowerCase()
 
     switch (type) {

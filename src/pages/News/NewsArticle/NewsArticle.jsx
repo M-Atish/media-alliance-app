@@ -13,7 +13,6 @@ import convertToRelativeTime from 'utils/convertToRelativeTime'
 import { useTranslation } from 'react-i18next'
 
 const NewsArticle = ({
-    showDesc,
     newsAgency,
     newsAgencyIcon,
     title,
@@ -42,21 +41,28 @@ const NewsArticle = ({
             <div className="news-agency-text-container">
                 {/* na means News Agency */}
                 <div className="news-agency-container">
-                    <div
-                        className="news-agency"
-                        title={`Go to ${newsAgency}'s website`}
+                    <a
+                        href={newsLink}
+                        className="news-agency-link"
+                        target="_blank"
+                        rel="noreferrer"
                     >
-                        <span>
-                            {newsAgencyIcon && (
-                                <img
-                                    src={newsAgencyIcon}
-                                    alt="Logo of the news agency"
-                                    className="news-agency-icon"
-                                />
-                            )}
-                        </span>
-                        {newsAgency}
-                    </div>
+                        <div
+                            className="news-agency"
+                            title={`Go to ${newsAgency}'s website`}
+                        >
+                            <span>
+                                {newsAgencyIcon && (
+                                    <img
+                                        src={newsAgencyIcon}
+                                        alt="Logo of the news agency"
+                                        className="news-agency-icon"
+                                    />
+                                )}
+                            </span>
+                            {newsAgency}
+                        </div>
+                    </a>
                     <div ref={wrapperRef}>
                         <EllipseMenu active={optionMenuClicked} />
                     </div>

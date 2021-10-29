@@ -1,21 +1,18 @@
 :root {
-    // Light mode colors
-    --clr-white-black: #fff;
+    // Light mode colors, make the entire thing in alphabetical order for the love of God. Please.
+    --clr-black-white: #000;
+    --clr-background: #ffffff;
+    --clr-border-grey: #dadce0;
+    --clr-grey: #9a9a9a;
+    --clr-off-white: #eeeeee;
     --clr-primary-500: #505565;
     --clr-primary-900: #1d1d1f;
+    --clr-red-white: #a90000;
     --clr-theme-primary: #ffffff;
     --clr-theme-primary-rgb: rgb(180, 184, 198);
     --clr-theme-red: #a90000;
-    --clr-off-white: #eeeeee;
-    --clr-grey: #9a9a9a;
-    --clr-black-white: #000;
     --clr-white: #ffffff;
-
-    --clr-red-white: #a90000;
-
-    --clr-background: #ffffff;
-
-    --clr-border-grey: #dadce0;
+    --clr-white-black: #fff;
 
     --navbar-height: 8.4375em;
     --navbar-background: #b4b8c6;
@@ -28,13 +25,13 @@
 
 .dark {
     //   Dark mode colors
-    --clr-red-white: #ffffff;
-    --clr-theme-primary: #1d1d1f;
+    --clr-black-white: #ffffff;
+    --clr-off-white: #343538;
     --clr-primary-500: #eee;
     --clr-primary-900: #fff;
-    --clr-off-white: #343538;
+    --clr-red-white: #ffffff;
+    --clr-theme-primary: #1d1d1f;
     --clr-white-black: #000000;
-    --clr-black-white: #ffffff;
 }
 
 %container {
