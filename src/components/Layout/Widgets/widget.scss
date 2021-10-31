@@ -2,11 +2,95 @@
 
 .widget-container {
     @include pxToem(border-radius, 4, em);
-    background-color: var(--clr-white-black);
+    @include pxToem(font-size, 16, rem);
+
+    background-color: var(--clr-white-primary-900);
+
+    @include pxToem(padding, 10, em);
 
     .widget-top-container {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+
         .widget-top-left {
+            display: flex;
+            flex-direction: column;
+
+            .widget-title {
+                @include pxToem(font-size, 20, rem);
+                color: var(--clr-black-white);
+                font-weight: 700;
+            }
+
+            .widget-desc {
+                color: var(--clr-grey);
+                @include pxToem(font-size, 14, rem);
+            }
+        }
+
+        .widget-top-right {
+            display: flex;
+            gap: 1em;
         }
     }
+
+    .widget-table-container {
+        border: 1px solid var(--clr-border-grey);
+        @include pxToem(border-radius, 4, em);
+
+        .widget-table-heading {
+            display: flex;
+            border-bottom: 1px solid var(--clr-border-grey);
+
+            .widget-heading-item {
+                width: 25%;
+                padding: 0.3em;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+
+        .widget-table-content {
+            text-align: center;
+            height: 7.5em;
+            overflow: auto;
+            color: var(--clr-black-white);
+
+            .widget-item-container {
+                display: flex;
+
+                .widget-content-item {
+                    width: 25%;
+                }
+            }
+
+            .widget-item-container:nth-child(odd) {
+                background-color: var(--clr-theme-primary);
+            }
+
+            .widget-item-container:nth-child(even) {
+                background-color: var(--clr-off-white);
+            }
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

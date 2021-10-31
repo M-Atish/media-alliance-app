@@ -17,6 +17,9 @@ import MediumRectanglesAdvertisement from 'components/Layout/Advertisement/Mediu
 import Widget from 'components/Layout/Widgets/Widget'
 // import useFetchWeather from 'hooks/weather/useFetchWeather'
 
+// REMINDER: Remove this section once the widget api comes in
+import { widgetData } from 'global/constants/dummyData'
+
 // const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY || ''
 const Dashboard = () => {
     const advertisementLeaderboardImages = [
@@ -79,17 +82,42 @@ const Dashboard = () => {
                         <article className="share-market-widget">
                             <Widget
                                 widgetTitle="शेयर बजार"
+                                widgetTitleDesc={`${new Date().toLocaleDateString(
+                                    [],
+                                    {
+                                        year: 'numeric',
+                                        month: 'short',
+                                        day: 'numeric',
+                                    }
+                                )} | ${new Date().toLocaleTimeString([], {
+                                    hour: '2-digit',
+                                    minute: '2-digit',
+                                })}`}
+                                widgetPayload={widgetData[0]}
                                 checkBoxSlider={true}
                             />
                         </article>
                         <article className="forex-widget">
-                            <Widget widgetTitle="विदेशी मुद्रा" />
+                            <Widget
+                                widgetTitle="विदेशी मुद्रा"
+                                widgetTitleDesc={`${new Date().toLocaleDateString(
+                                    [],
+                                    {
+                                        year: 'numeric',
+                                        month: 'short',
+                                        day: 'numeric',
+                                    }
+                                )} | ${new Date().toLocaleTimeString([], {
+                                    hour: '2-digit',
+                                    minute: '2-digit',
+                                })}`}
+                                widgetPayload={widgetData[1]}
+                            />
                         </article>
-                        <article className="weather-widget">
-                            {/* <Widget widgetTitle="" /> */}
-                            {/* Needs working here */}
-                            {/* Put the weather section here */}
-                        </article>
+                        {/* <article className="weather-widget">
+                            <Widget widgetTitle="" /> 
+                            Put the weather section here 
+                        </article> */}
                     </div>
                 </section>
                 <section className="video-playlist-section">

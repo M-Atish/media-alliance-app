@@ -54,6 +54,7 @@ const NavItem = (props) => {
     } else {
         return props.urlLink ? (
             <NavLink
+                exact
                 to={props.urlLink}
                 className={classNames({
                     item: props.type === 'text',

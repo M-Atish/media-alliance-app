@@ -1,3 +1,5 @@
+@import 'global/globalCSS/global.scss';
+
 .button-container {
     .button-submit {
         cursor: pointer;
@@ -9,6 +11,17 @@
 
         margin-bottom: 1.25em;
         font-size: 1rem;
+
+        &.text-color-black {
+            color: var(--clr-black);
+        }
+
+        &.extra-small {
+            height: 2em;
+            width: 3.5em;
+            margin: 0;
+            @include pxToem(font-size, 14, rem);
+        }
 
         &.small {
             height: 3em;
@@ -28,6 +41,10 @@
 
         &.grey {
             background-color: var(--clr-primary-900);
+        }
+
+        &.blue {
+            background-color: var(--clr-blue);
         }
     }
 }

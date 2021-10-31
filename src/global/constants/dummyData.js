@@ -684,6 +684,205 @@ const commentData = [
     },
 ]
 
+const widgetData = [
+    {
+        heading: ['Symbol', 'LTP', '%Change', 'Qty'],
+        payload: [
+            {
+                symbol: 'UPCL',
+                first: '300.28',
+                second: '9.36',
+                third: '9,500',
+            },
+            {
+                symbol: 'UPCL',
+                first: '300.28',
+                second: '9.36',
+                third: '9,500',
+            },
+            {
+                symbol: 'UPCL',
+                first: '300.28',
+                second: '9.36',
+                third: '9,500',
+            },
+            {
+                symbol: 'UPCL',
+                first: '300.28',
+                second: '9.36',
+                third: '9,500',
+            },
+            {
+                symbol: 'UPCL',
+                first: '300.28',
+                second: '9.36',
+                third: '9,500',
+            },
+            {
+                symbol: 'UPCL',
+                first: '300.28',
+                second: '9.36',
+                third: '9,500',
+            },
+            {
+                symbol: 'UPCL',
+                first: '300.28',
+                second: '9.36',
+                third: '9,500',
+            },
+            {
+                symbol: 'UPCL',
+                first: '300.28',
+                second: '9.36',
+                third: '9,500',
+            },
+            {
+                symbol: 'UPCL',
+                first: '300.28',
+                second: '9.36',
+                third: '9,500',
+            },
+        ],
+    },
+    {
+        heading: ['मुद्रा', 'कित्ता', 'खरिद दर', 'बिक्री दर'],
+        payload: [
+            {
+                symbol: 'AED',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'AUD',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'BHD',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'CAD',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'CHF',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'CNY',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'DKK',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'EUR',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'GBP',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'HKD',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'INR',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'JPY',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'KRW',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'KWD',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'MYR',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'NEP',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'QAR',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'SAR',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'SEK',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'SGD',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'THB',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+            {
+                symbol: 'USD',
+                first: '1',
+                second: '११७.१८',
+                third: '११७.७८',
+            },
+        ],
+    },
+]
+
 export {
     dummyData,
     countryDetails,
@@ -696,4 +895,5 @@ export {
     ellipseMenuItems,
     nepaliEnglishNumerals,
     commentData,
+    widgetData,
 }
