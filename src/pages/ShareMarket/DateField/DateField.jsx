@@ -1,6 +1,6 @@
 import './dateField.scss'
 
-import { shareMarketCalendarImg } from '../../../assets'
+import { shareMarketCalendarImg } from 'assets'
 
 const DateField = ({ date }) => {
     return (

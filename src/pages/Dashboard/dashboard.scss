@@ -45,4 +45,26 @@
             }
         }
     }
+
+    .short-widget-number-one {
+        background-color: var(--clr-off-white);
+        width: 125%;
+        height: 18.75em;
+        margin-left: -12.5%;
+
+        .short-widget-number-one-container {
+            height: 100%;
+            width: 80%;
+            margin-left: 10%;
+
+            display: flex;
+            gap: 1em;
+
+            .share-market-widget,
+            .forex-widget,
+            .weather-widget {
+                flex: 1;
+            }
+        }
+    }
 }

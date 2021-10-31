@@ -40,7 +40,7 @@ import {
     bookmarkIconImg,
     likeIconDarkImg,
     personImg,
-} from '../../assets'
+} from 'assets'
 
 const dummyData = [
     {

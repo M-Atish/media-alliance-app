@@ -1,39 +1,3 @@
-:root {
-    // Light mode colors, make the entire thing in alphabetical order for the love of God. Please.
-    --clr-black-white: #000;
-    --clr-background: #ffffff;
-    --clr-border-grey: #dadce0;
-    --clr-grey: #9a9a9a;
-    --clr-off-white: #eeeeee;
-    --clr-primary-500: #505565;
-    --clr-primary-900: #1d1d1f;
-    --clr-red-white: #a90000;
-    --clr-theme-primary: #ffffff;
-    --clr-theme-primary-rgb: rgb(180, 184, 198);
-    --clr-theme-red: #a90000;
-    --clr-white: #ffffff;
-    --clr-white-black: #fff;
-
-    --navbar-height: 8.4375em;
-    --navbar-background: #b4b8c6;
-
-    // Font family
-    --font-family-primary: 'Mukta', sans-serif;
-
-    --singlePageWidth: 43.75em;
-}
-
-.dark {
-    //   Dark mode colors
-    --clr-black-white: #ffffff;
-    --clr-off-white: #343538;
-    --clr-primary-500: #eee;
-    --clr-primary-900: #fff;
-    --clr-red-white: #ffffff;
-    --clr-theme-primary: #1d1d1f;
-    --clr-white-black: #000000;
-}
-
 %container {
     text-align: center;
 }
@@ -51,4 +15,8 @@
 .container {
     max-width: 80%;
     margin: 0 auto;
+}
+
+@mixin pxToem($propName, $size, $unit) {
+    #{$propName}: ($size / 16) * 1 + $unit;
 }

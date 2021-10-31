@@ -9,6 +9,45 @@
 //   }
 // }
 
+:root {
+    // Light mode colors, make the entire thing in alphabetical order for the love of God. Please.
+    --clr-background: #ffffff;
+    --clr-black-white: #000;
+    --clr-blue: #4cb3f3;
+    --clr-border-grey: #dadce0;
+    --clr-grey: #9a9a9a;
+    --clr-off-white: #eeeeee;
+    --clr-primary-500: #505565;
+    --clr-primary-900: #1d1d1f;
+    --clr-red-white: #a90000;
+    --clr-theme-primary: #ffffff;
+    --clr-theme-primary-rgb: rgb(180, 184, 198);
+    --clr-theme-red: #a90000;
+    --clr-white: #ffffff;
+    --clr-white-black: #fff;
+    --clr-green: #45a48e;
+    --clr-slider: #e5e5e5;
+
+    --navbar-height: 8.4375em;
+    --navbar-background: #b4b8c6;
+
+    // Font family
+    --font-family-primary: 'Mukta', sans-serif;
+
+    --singlePageWidth: 43.75em;
+}
+
+.dark {
+    //   Dark mode colors
+    --clr-black-white: #ffffff;
+    --clr-off-white: #343538;
+    --clr-primary-500: #eee;
+    --clr-primary-900: #fff;
+    --clr-red-white: #ffffff;
+    --clr-theme-primary: #1d1d1f;
+    --clr-white-black: #000000;
+}
+
 body {
     font-family: var(--font-family-primary);
     background: var(--clr-theme-primary);

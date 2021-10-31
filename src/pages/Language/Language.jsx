@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
-import { USDImg, NEPImg } from '../../assets'
+import { USDImg, NEPImg } from 'assets'
 
 import './language.scss'
 

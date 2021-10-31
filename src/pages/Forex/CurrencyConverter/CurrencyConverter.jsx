@@ -1,14 +1,14 @@
 import './currencyConverter.scss'
-import ReactSelect, { Components } from '../../../components/ReactSelect'
+import ReactSelect, { Components } from 'components/ReactSelect'
 
 import { useState } from 'react'
 
-import { EnglishToNepaliConverter } from '../../../utils/helpers/englishToNepaliConverter/EnglishToNepaliConverter'
+import { EnglishToNepaliConverter } from 'utils/helpers/englishToNepaliConverter/EnglishToNepaliConverter'
 
 // Constants
-import { countryDetails, countryFlags } from '../../../global/constants/dummyData'
-import { NepaliNumberValidator } from '../../../utils/helpers/nepaliNumberValidator/NepaliNumberValidator'
-import { IsItemDuplicate } from '../../../utils/helpers/isItemDuplicate/IsItemDuplicate'
+import { countryDetails, countryFlags } from 'global/constants/dummyData'
+import { NepaliNumberValidator } from 'utils/helpers/nepaliNumberValidator/NepaliNumberValidator'
+import { IsItemDuplicate } from 'utils/helpers/isItemDuplicate/IsItemDuplicate'
 
 const CurrencyConverter = () => {
     // Please do note that the state values will be stored in string data type, so to feed it to the api, you have to convert it to float (number) type.

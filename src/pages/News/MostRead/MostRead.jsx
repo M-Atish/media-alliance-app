@@ -2,12 +2,12 @@ import './mostRead.scss'
 
 import { useState, useRef } from 'react'
 
-import EllipseMenu from '../../../components/Layout/EllipseMenu/EllipseMenuContainer/EllipseMenu'
-import { ClickOutside } from '../../../utils/helpers/clickOutside/ClickOutside'
+import EllipseMenu from 'components/Layout/EllipseMenu/EllipseMenuContainer/EllipseMenu'
+import { ClickOutside } from 'utils/helpers/clickOutside/ClickOutside'
 
-import { EnglishToNepaliConverter } from '../../../utils/helpers/englishToNepaliConverter/EnglishToNepaliConverter'
+import { EnglishToNepaliConverter } from 'utils/helpers/englishToNepaliConverter/EnglishToNepaliConverter'
 
-import { tripleEllipseImg } from '../../../assets'
+import { tripleEllipseImg } from 'assets'
 
 const MostRead = ({ title, newsAgency, newsAgencyIcon, rank }) => {
     const [ellipseClicked, setEllipseClicked] = useState(false)

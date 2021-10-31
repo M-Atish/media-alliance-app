@@ -1,0 +1,12 @@
+@import 'global/globalCSS/global.scss';
+
+.widget-container {
+    @include pxToem(border-radius, 4, em);
+    background-color: var(--clr-white-black);
+
+    .widget-top-container {
+        display: flex;
+        .widget-top-left {
+        }
+    }
+}

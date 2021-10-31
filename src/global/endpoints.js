@@ -11,4 +11,7 @@ export const endpoints = {
     horoscopes: {
         base: 'v1/horoscopes',
     },
+    weather: {
+        base: '/data/2.5/forecast?id=524901&appid={API_key}',
+    },
 }

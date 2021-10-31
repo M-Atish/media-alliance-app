@@ -1,4 +1,4 @@
-import { nepaliEnglishNumerals } from '../../../global/constants/dummyData'
+import { nepaliEnglishNumerals } from 'global/constants/dummyData'
 
 export function EnglishToNepaliConverter(number) {
     // let remainder

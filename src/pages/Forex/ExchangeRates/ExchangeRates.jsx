@@ -2,7 +2,7 @@ import './exchangeRates.scss'
 
 // Constants
 
-import { countryDetails } from '../../../global/constants/dummyData'
+import { countryDetails } from 'global/constants/dummyData'
 
 const ExchangeRates = () => {
     return (

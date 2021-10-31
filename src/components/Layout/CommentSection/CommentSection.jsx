@@ -2,7 +2,7 @@ import Button from '../Button/Button'
 
 import './commentSection.scss'
 
-import { likeIconLightImg } from '../../../assets'
+import { likeIconLightImg } from 'assets'
 import classNames from 'classnames'
 
 import { useState } from 'react'

@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom'
 import './navitem.scss'
 
 import { GoTriangleDown } from 'react-icons/go'
-import { ClickOutside } from './../../../../utils/helpers/clickOutside/ClickOutside'
+import { ClickOutside } from 'utils/helpers/clickOutside/ClickOutside'
 
 const NavItem = (props) => {
     const [open, setOpen] = useState(false)

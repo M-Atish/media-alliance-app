@@ -11,10 +11,13 @@ import {
     advertisementThreeImg,
     advertisementTwoImg,
 } from 'assets/index'
-import HotNewsTab from './../HotNewsTab/HotNewsTab'
+import HotNewsTab from 'pages/HotNewsTab/HotNewsTab'
 import LeaderboardAdvertisement from 'components/Layout/Advertisement/LeaderboardAdvertisement/LeaderboardAdvertisement'
 import MediumRectanglesAdvertisement from 'components/Layout/Advertisement/MediumRectanglesAdvertisement/MediumRectanglesAdvertisement'
+import Widget from 'components/Layout/Widgets/Widget'
+// import useFetchWeather from 'hooks/weather/useFetchWeather'
 
+// const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY || ''
 const Dashboard = () => {
     const advertisementLeaderboardImages = [
         advertisementOneImg,
@@ -72,9 +75,22 @@ const Dashboard = () => {
                     </section>
                 </section>
                 <section className="short-widget-number-one">
-                    <article className="share-market-widget"></article>
-                    <article className="forex-widget"></article>
-                    <article className="weather-widget"></article>
+                    <div className="short-widget-number-one-container">
+                        <article className="share-market-widget">
+                            <Widget
+                                widgetTitle="शेयर बजार"
+                                checkBoxSlider={true}
+                            />
+                        </article>
+                        <article className="forex-widget">
+                            <Widget widgetTitle="विदेशी मुद्रा" />
+                        </article>
+                        <article className="weather-widget">
+                            {/* <Widget widgetTitle="" /> */}
+                            {/* Needs working here */}
+                            {/* Put the weather section here */}
+                        </article>
+                    </div>
                 </section>
                 <section className="video-playlist-section">
                     <div className="video-playlist-container">

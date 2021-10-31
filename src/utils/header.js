@@ -22,24 +22,28 @@ export const getHeader = (headerType) => {
             header = {
                 'Content-Type': 'application/json',
                 Authorization: access_token ? `Bearer ${access_token}` : '',
+                'Access-Control-Allow-Origin': '*',
             }
             break
 
         case 'multipart':
             header = {
                 'Content-Type': 'multipart/form-data',
+                'Access-Control-Allow-Origin': '*',
                 Authorization: access_token ? `Bearer ${access_token}` : '',
             }
             break
 
         case 'default':
             header = {
+                'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
             }
             break
 
         default:
             header = {
+                'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
             }
     }

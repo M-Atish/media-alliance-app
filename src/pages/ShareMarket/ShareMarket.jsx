@@ -2,8 +2,8 @@ import './shareMarket.scss'
 
 import TradeCard from './TradeCard/TradeCard'
 
-import { CurrencyFormatter } from '../../utils/helpers/CurrencyFormatter'
-import { EnglishToNepaliConverter } from '../../utils/helpers/englishToNepaliConverter/EnglishToNepaliConverter'
+import { CurrencyFormatter } from 'utils/helpers/CurrencyFormatter'
+import { EnglishToNepaliConverter } from 'utils/helpers/englishToNepaliConverter/EnglishToNepaliConverter'
 import DateField from './DateField/DateField'
 
 const ShareMarket = () => {

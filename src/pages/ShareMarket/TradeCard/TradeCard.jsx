@@ -1,6 +1,6 @@
 import './tradeCard.scss'
 
-import { shareMarketTriangleImg } from '../../../assets'
+import { shareMarketTriangleImg } from 'assets'
 
 import classNames from 'classnames'
 

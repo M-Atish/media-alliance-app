@@ -1,9 +1,11 @@
+@import 'global/globalCSS/global';
 .item {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 171px;
+    // width: 171px;
+    @include pxToem(width, 171, rem);
     height: 100%;
 
     color: var(--clr-white);

@@ -1,4 +1,4 @@
-import { ellipseMenuItems } from '../../../../global/constants/dummyData'
+import { ellipseMenuItems } from 'global/constants/dummyData'
 import EllipseMenuItem from '../EllipseMenuItem/EllipseMenuItem'
 
 import classNames from 'classnames'

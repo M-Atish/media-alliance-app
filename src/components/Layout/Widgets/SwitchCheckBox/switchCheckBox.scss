@@ -1,0 +1,48 @@
+@import 'global/globalCSS/global.scss';
+
+.switch {
+    position: relative;
+    display: inline-block;
+    @include pxToem(width, 60, em);
+    @include pxToem(height, 34, em);
+    outline: none;
+}
+
+.switch input {
+    visibility: hidden;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--clr-slider);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    @include pxToem(border-radius, 34, em);
+}
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 56%;
+    background-color: var(--clr-green);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: var(--clr-slider);
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--clr-slider);
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: var(--clr-theme-red);
+}
