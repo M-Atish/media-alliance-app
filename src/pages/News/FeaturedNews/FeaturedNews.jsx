@@ -12,8 +12,6 @@ import { NavLink } from 'react-router-dom'
 const FeaturedNews = () => {
     const { status: statusNews, data: newsData } = useFetchNews()
 
-    console.log(newsData?.payload)
-
     return statusNews === 'success' ? (
         <Carousel itemsNumber={1}>
             {newsData?.payload
@@ -88,7 +86,7 @@ const FeaturedNews = () => {
                           </div>
                       </div>
                   ))
-                : 'No video found'}
+                : 'No news found.'}
         </Carousel>
     ) : (
         <Spinner />

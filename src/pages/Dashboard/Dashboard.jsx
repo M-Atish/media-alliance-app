@@ -19,6 +19,7 @@ import Widget from 'components/Layout/Widgets/Widget'
 
 // REMINDER: Remove this section once the widget api comes in
 import { widgetData } from 'global/constants/dummyData'
+import VideosBundle from 'components/Layout/VideosBundle/VideosBundle'
 
 // const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY || ''
 const Dashboard = () => {
@@ -95,6 +96,7 @@ const Dashboard = () => {
                                 })}`}
                                 widgetPayload={widgetData[0]}
                                 checkBoxSlider={true}
+                                urlLink="/share-market"
                             />
                         </article>
                         <article className="forex-widget">
@@ -112,6 +114,7 @@ const Dashboard = () => {
                                     minute: '2-digit',
                                 })}`}
                                 widgetPayload={widgetData[1]}
+                                urlLink="/forex"
                             />
                         </article>
                         {/* <article className="weather-widget">
@@ -127,6 +130,7 @@ const Dashboard = () => {
                             urlLink="/"
                             classTitle="video-playlist"
                         />
+                        <VideosBundle />
                     </div>
                 </section>
                 <section className="horoscopes-section">

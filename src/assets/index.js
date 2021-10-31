@@ -10,7 +10,8 @@ import advertisementTwoImg from './images/advertisements/advertisementTwo.png'
 import advertisementThreeImg from './images/advertisements/advertisementThree.png'
 import advertisementFourImg from './images/advertisements/advertisementFour.png'
 
-// Carousel Images
+// Video assets
+import videoTriangleInnerCircleImg from './images/video/videoTriangle.svg'
 
 // NavBar Images
 import locationTagImg from './images/navigationBar/locationTag.svg'
@@ -148,6 +149,7 @@ export {
     advertisementThreeImg,
     advertisementFourImg,
     // Carousel images export,
+    videoTriangleInnerCircleImg,
     // NavBar images export
     locationTagImg,
     weatherTagImg,

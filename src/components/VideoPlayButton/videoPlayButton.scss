@@ -1,0 +1,18 @@
+@import 'global/globalCSS/global.scss';
+
+.outer-white-circle {
+    padding: 2em;
+    background-color: var(--clr-video-play-button-grey);
+    border-radius: 50%;
+    @include pxToem(height, 42, em);
+    @include pxToem(width, 42, em);
+    position: relative;
+
+    .inner-circle-triangle {
+        position: absolute;
+        @include pxToem(height, 42, em);
+        @include pxToem(width, 42, em);
+        top: 17%;
+        left: 17%;
+    }
+}

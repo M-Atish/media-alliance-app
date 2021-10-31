@@ -1,0 +1,12 @@
+.featured-video-container {
+    .video-link {
+        figure {
+            position: relative;
+
+            .video-play-button {
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+}

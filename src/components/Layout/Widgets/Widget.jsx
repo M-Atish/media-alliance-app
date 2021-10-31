@@ -1,8 +1,10 @@
 import './widget.scss'
 
-import Button from 'components/Layout/Button/Button'
+import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+
+import Button from 'components/Layout/Button/Button'
 import SwitchCheckBox from './SwitchCheckBox/SwitchCheckBox'
 
 const Widget = ({
@@ -16,8 +18,6 @@ const Widget = ({
     const [isChecked, setIsChecked] = useState(false)
 
     const { t } = useTranslation()
-
-    console.log(widgetPayload)
 
     return (
         <div className="widget-container">
@@ -33,12 +33,14 @@ const Widget = ({
                             handleToggle={() => setIsChecked(!isChecked)}
                         />
                     )}
-                    <Button
-                        description={t('more')}
-                        bgColor="blue"
-                        size="extra-small"
-                        color="black"
-                    />
+                    <NavLink exact to={urlLink}>
+                        <Button
+                            description={t('more')}
+                            bgColor="blue"
+                            size="extra-small"
+                            color="black"
+                        />
+                    </NavLink>
                 </div>
             </div>
             <div className="widget-table-container">
@@ -56,7 +58,7 @@ const Widget = ({
                     {widgetPayload?.payload &&
                         Array.isArray(widgetPayload.payload) &&
                         widgetPayload.payload.map((item, index) => (
-                            <div className="widget-item-container">
+                            <div className="widget-item-container" key={index}>
                                 <div className="widget-content-item">
                                     {item.symbol}
                                 </div>
@@ -72,34 +74,6 @@ const Widget = ({
                             </div>
                         ))}
                 </div>
-                {/* <table className="widget-table-container">
-                    <thead className="widget-heading">
-                        <tr className="widget-heading-row">
-                            {widgetPayload?.heading &&
-                                Array.isArray(widgetPayload.heading) &&
-                                widgetPayload.heading.map((heading, index) => (
-                                    <th
-                                        className="widget-heading-row-item"
-                                        key={index}
-                                    >
-                                        {heading}
-                                    </th>
-                                ))}
-                        </tr>
-                    </thead>
-                    <tbody className="widget-content">
-                        {widgetPayload?.payload &&
-                            Array.isArray(widgetPayload.payload) &&
-                            widgetPayload.payload.map((item, index) => (
-                                <tr className="widget-content-row" key={index}>
-                                    <td>{item.symbol}</td>
-                                    <td>{item.first}</td>
-                                    <td>{item.second}</td>
-                                    <td>{item.third}</td>
-                                </tr>
-                            ))}
-                    </tbody>
-                </table> */}
             </div>
         </div>
     )

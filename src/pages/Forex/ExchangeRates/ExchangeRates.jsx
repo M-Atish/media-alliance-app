@@ -18,8 +18,8 @@ const ExchangeRates = () => {
             {/* Exchange rate list section */}
             <tbody>
                 {countryDetails.map((country, index) => (
-                    <tr>
-                        <td className="exchange-rate-body-left" key={index}>
+                    <tr key={index}>
+                        <td className="exchange-rate-body-left">
                             <span
                                 className={`flag flag--${country.ISO3}`}
                             ></span>
