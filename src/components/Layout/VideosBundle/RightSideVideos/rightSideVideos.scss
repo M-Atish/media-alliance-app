@@ -1,0 +1,9 @@
+@import 'global/globalCSS/global.scss';
+
+.right-side-video-container {
+    @include pxToem(height, 738, em);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.3em;
+    overflow: auto;
+}

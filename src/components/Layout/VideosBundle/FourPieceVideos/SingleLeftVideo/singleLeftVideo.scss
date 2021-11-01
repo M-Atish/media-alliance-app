@@ -5,6 +5,12 @@
     position: relative;
     @include pxToem(height, 150, em);
 
+    &:hover {
+        .inner-circle-triangle {
+            background-color: var(--clr-video-play-button-grey);
+        }
+    }
+
     .single-video-link {
         text-decoration: none;
         color: var(--clr-white);

@@ -1,11 +1,10 @@
 import VideoPlayButton from 'components/VideoPlayButton/VideoPlayButton'
-import './singlePieceVideo.scss'
+import './singleLeftVideo.scss'
 import { annapurnaMediaNetworkImg } from 'assets'
 
 import convertToRelativeTime from 'utils/convertToRelativeTime'
 
-const SinglePieceVideo = ({ urlLink, image, title, date }) => {
-    console.log(image)
+const SingleLeftVideo = ({ urlLink, image, title, date }) => {
     return (
         <div className="single-video-container">
             <a
@@ -54,4 +53,4 @@ const SinglePieceVideo = ({ urlLink, image, title, date }) => {
     )
 }
 
-export default SinglePieceVideo
+export default SingleLeftVideo

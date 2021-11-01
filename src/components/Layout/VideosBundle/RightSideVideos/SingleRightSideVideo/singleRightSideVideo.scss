@@ -1,0 +1,90 @@
+@import 'global/globalCSS/global.scss';
+
+.single-right-video-container {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    gap: 1em;
+
+    &:hover .inner-circle-triangle {
+        background-color: var(--clr-video-play-button-grey);
+    }
+
+    .single-right-video-image-link {
+        width: 40%;
+        .single-right-video-image-container {
+            width: 100%;
+            position: relative;
+            @include pxToem(height, 128, em);
+
+            .single-right-video-thumbnail {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 0.25em;
+                @include pxToem(height, 128, em);
+                display: block;
+            }
+
+            .inner-circle-triangle {
+                position: absolute;
+                top: calc(50% - 1em);
+                left: calc(50% - 1em);
+                transition: background-color 0.2s;
+                @include pxToem(padding, 7, em);
+            }
+        }
+    }
+
+    .single-right-video-right-container {
+        width: 60%;
+        .single-right-video-news-agency-date-ellipse-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--clr-grey);
+            position: relative;
+
+            .single-right-video-news-agency-date-container {
+                display: flex;
+                align-items: center;
+                gap: 0.3em;
+
+                .single-right-video-news-agency-icon {
+                    @include pxToem(height, 11, em);
+                    @include pxToem(width, 16, em);
+                }
+            }
+
+            .single-right-video-ellipse {
+                transform: rotate(90deg);
+                cursor: pointer;
+            }
+        }
+
+        .single-right-video-title {
+            color: var(--clr-black-white);
+            text-align: justify;
+            @include pxToem(font-size, 18, rem);
+        }
+
+        .single-right-video-tags-container {
+            color: var(--clr-light-grey);
+            display: flex;
+            line-height: 1;
+            gap: 0.4em;
+
+            .single-right-video-tag-list {
+                display: flex;
+                gap: 0.6em;
+                flex-wrap: wrap;
+                align-items: center;
+                @include pxToem(font-size, 12, rem);
+            }
+        }
+
+        .single-right-video-date {
+            @include pxToem(font-size, 12, rem);
+            color: var(--clr-light-grey);
+        }
+    }
+}

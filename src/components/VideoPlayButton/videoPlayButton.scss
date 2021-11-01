@@ -5,23 +5,24 @@
     @include pxToem(height, 50, em);
     @include pxToem(width, 50, em);
     border-radius: 50%;
-    background-color: var(--clr-video-play-button-grey);
+    transition: background-color 0.3s;
+    background-color: transparent;
 
     &.small {
-        @include pxToem(height, 25, em);
-        @include pxToem(width, 25, em);
-        @include pxToem(padding, 5, em);
+        @include pxToem(height, 40, em);
+        @include pxToem(width, 40, em);
+        // @include pxToem(padding, 10, em);
     }
 
     &.medium {
         @include pxToem(height, 50, em);
         @include pxToem(width, 50, em);
-        @include pxToem(padding, 10, em);
+        // @include pxToem(padding, 10, em);
     }
 
     &.large {
         @include pxToem(height, 75, em);
         @include pxToem(width, 75, em);
-        @include pxToem(padding, 15, em);
+        // @include pxToem(padding, 15, em);
     }
 }

@@ -4,6 +4,13 @@
     border-radius: 0.25em;
     height: 25em;
     position: relative;
+
+    &:hover {
+        .inner-circle-triangle {
+            background-color: var(--clr-video-play-button-grey);
+        }
+    }
+
     .featured-video-link {
         .featured-video-image-container {
             position: relative;
