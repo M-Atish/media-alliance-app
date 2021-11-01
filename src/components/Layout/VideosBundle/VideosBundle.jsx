@@ -5,15 +5,23 @@ import RightSideVideos from './RightSideVideos/RightSideVideos'
 import { useFetchVideos } from 'hooks/videos/useFetchVideos'
 import Spinner from 'components/Spinner/Spinner'
 
+import './videosBundle.scss'
+
 const VideosBundle = () => {
     const { status: statusVideo, data: videosData } = useFetchVideos()
-
-    console.log(videosData)
 
     return statusVideo === 'loading' ? (
         <Spinner />
     ) : (
-        <FeaturedVideo payload={videosData.payload[0]} />
+        <div className="video-bundle-container">
+            <div className="video-bundle-left-side">
+                <FeaturedVideo payload={videosData.payload[0]} />
+                <FourPieceVideos payload={videosData.payload[0]} />
+            </div>
+            <div className="video-bundle-right-side">
+                <RightSideVideos payload={videosData.payload[1]} />
+            </div>
+        </div>
     )
 }
 

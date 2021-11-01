@@ -1,0 +1,8 @@
+@import 'global/globalCSS/global.scss';
+
+.four-piece-video-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    @include pxToem(gap, 16, em);
+}

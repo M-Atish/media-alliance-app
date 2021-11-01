@@ -1,12 +1,11 @@
 @import 'global/globalCSS/global.scss';
 
 .featured-video-container {
-    width: 60%;
     border-radius: 0.25em;
     height: 25em;
     position: relative;
-    .video-link {
-        .video-image-container {
+    .featured-video-link {
+        .featured-video-image-container {
             position: relative;
             border-radius: 0.25em;
             height: 25em;

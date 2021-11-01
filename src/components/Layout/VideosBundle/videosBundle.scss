@@ -1,0 +1,17 @@
+@import 'global/globalCSS/global.scss';
+
+.video-bundle-container {
+    display: flex;
+    @include pxToem(gap, 35, em);
+
+    .video-bundle-left-side {
+        display: flex;
+        flex-direction: column;
+        @include pxToem(gap, 20, em);
+        width: 60%;
+    }
+
+    .video-bundle-right-side {
+        width: 40%;
+    }
+}

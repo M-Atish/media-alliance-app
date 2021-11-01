@@ -1,0 +1,80 @@
+@import 'global/globalCSS/global.scss';
+
+.single-video-container {
+    border-radius: 0.25em;
+    position: relative;
+    @include pxToem(height, 150, em);
+
+    .single-video-link {
+        text-decoration: none;
+        color: var(--clr-white);
+
+        .single-video-image-container {
+            position: relative;
+            border-radius: 0.25em;
+            @include pxToem(height, 150, em);
+
+            .single-video-thumbnail {
+                object-fit: cover;
+                border-radius: 0.25em;
+                height: 100%;
+                width: 100%;
+                display: block;
+            }
+
+            .video-play-button {
+                position: absolute;
+                top: calc(50% - 1.5em);
+                left: calc(50% - 1.5em);
+            }
+        }
+    }
+    // Make this display none until hover of title
+    .single-video-bottom-container {
+        // Make the negative portion of the width always double to the value of the left propoerty
+        width: calc(100% - 2em);
+        position: absolute;
+        bottom: 0.5em;
+        left: 0.8em;
+        color: var(--clr-white);
+
+        .single-video-title {
+            @include pxToem(font-size, 18, rem);
+            text-align: justify;
+        }
+
+        .single-video-news-agency-link {
+            text-decoration: none;
+            color: var(--clr-white);
+
+            .single-video-news-agency-date-container {
+                display: flex;
+                align-items: center;
+                gap: 0.3em;
+                @include pxToem(font-size, 12, rem);
+
+                .single-video-news-agency-icon {
+                    @include pxToem(height, 20, em);
+                    @include pxToem(width, 28, em);
+                }
+
+                .single-video-news-agency-name-span {
+                    margin-right: 0.5em;
+                    .single-video-news-agency-name {
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .single-video-small-circle {
+                    border-radius: 50%;
+                    background-color: white;
+                    @include pxToem(height, 2, em);
+                    @include pxToem(width, 2, em);
+                    margin-right: 0.5em;
+                }
+            }
+        }
+    }
+}

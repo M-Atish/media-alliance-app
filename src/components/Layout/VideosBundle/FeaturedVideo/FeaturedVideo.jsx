@@ -15,9 +15,9 @@ const FeaturedVideo = ({ payload }) => {
                 href={payload.url}
                 target="_blank"
                 rel="noreferrer"
-                className="video-link"
+                className="featured-video-link"
             >
-                <figure className="video-image-container">
+                <figure className="featured-video-image-container">
                     <img
                         src={
                             payload?.image?.imageUrl
