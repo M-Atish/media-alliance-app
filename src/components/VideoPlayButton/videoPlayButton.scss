@@ -1,18 +1,27 @@
 @import 'global/globalCSS/global.scss';
 
-.outer-white-circle {
-    padding: 2em;
-    background-color: var(--clr-video-play-button-grey);
+.inner-circle-triangle {
+    @include pxToem(padding, 10, em);
+    @include pxToem(height, 50, em);
+    @include pxToem(width, 50, em);
     border-radius: 50%;
-    @include pxToem(height, 42, em);
-    @include pxToem(width, 42, em);
-    position: relative;
+    background-color: var(--clr-video-play-button-grey);
 
-    .inner-circle-triangle {
-        position: absolute;
-        @include pxToem(height, 42, em);
-        @include pxToem(width, 42, em);
-        top: 17%;
-        left: 17%;
+    &.small {
+        @include pxToem(height, 25, em);
+        @include pxToem(width, 25, em);
+        @include pxToem(padding, 5, em);
+    }
+
+    &.medium {
+        @include pxToem(height, 50, em);
+        @include pxToem(width, 50, em);
+        @include pxToem(padding, 10, em);
+    }
+
+    &.large {
+        @include pxToem(height, 75, em);
+        @include pxToem(width, 75, em);
+        @include pxToem(padding, 15, em);
     }
 }

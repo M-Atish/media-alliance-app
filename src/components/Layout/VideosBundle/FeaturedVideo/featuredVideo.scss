@@ -1,11 +1,108 @@
+@import 'global/globalCSS/global.scss';
+
 .featured-video-container {
+    width: 60%;
+    border-radius: 0.25em;
+    height: 25em;
+    position: relative;
     .video-link {
-        figure {
+        .video-image-container {
             position: relative;
+            border-radius: 0.25em;
+            height: 25em;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                content: '';
+                background: linear-gradient(
+                        180deg,
+                        rgba(196, 196, 196, 0) 0%,
+                        #000000 100%
+                    ),
+                    linear-gradient(
+                        90deg,
+                        #000000 0%,
+                        rgba(196, 196, 196, 0.2) 20%,
+                        rgba(196, 196, 196, 0) 50%,
+                        rgba(211, 117, 117, 0.2) 80%,
+                        #000000 100%
+                    );
+                opacity: 0.9;
+                border-radius: 0.25em;
+            }
+
+            .featured-video-thumbnail {
+                object-fit: cover;
+                border-radius: 0.25em;
+                height: 100%;
+                width: 100%;
+                display: block;
+            }
 
             .video-play-button {
                 position: absolute;
-                top: 0;
+                top: calc(50% - 2em);
+                left: calc(50% - 2em);
+            }
+        }
+    }
+
+    .featured-video-bottom-container {
+        // Make the negative portion of the width always double to the value of the left propoerty
+        width: calc(100% - 2em);
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+        color: var(--clr-white);
+
+        .featured-video-news-agency-date {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .featured-video-news-agency-container {
+                display: flex;
+                align-items: center;
+                gap: 0.3em;
+
+                text-decoration: none;
+                color: var(--clr-white);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                .featured-video-news-agency-icon {
+                    @include pxToem(height, 20, em);
+                    @include pxToem(width, 28, em);
+                }
+
+                .featured-video-news-agency-name-span {
+                    .featured-video-news-agency-name {
+                        @include pxToem(font-size, 16, rem);
+                    }
+                }
+            }
+        }
+
+        .featured-video-title {
+            @include pxToem(font-size, 25, rem);
+            text-align: justify;
+        }
+
+        .featured-video-tag-container {
+            display: flex;
+            color: var(--clr-grey);
+            align-items: center;
+            gap: 0.3em;
+
+            .featured-video-tag-list {
+                display: flex;
+                gap: 0.5em;
             }
         }
     }

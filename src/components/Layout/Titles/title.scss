@@ -1,3 +1,5 @@
+@import 'global/globalCSS/global.scss';
+
 $names: main-news, video-playlist, horoscopes, quick-navigation;
 
 @each $name in $names {
@@ -7,6 +9,7 @@ $names: main-news, video-playlist, horoscopes, quick-navigation;
         align-items: center;
         width: 100%;
         border-bottom: 0.0625em solid var(--clr-theme-red);
+        @include pxToem(margin-bottom, 30, em);
     }
     .#{$name}-title {
         color: var(--clr-primary-900);

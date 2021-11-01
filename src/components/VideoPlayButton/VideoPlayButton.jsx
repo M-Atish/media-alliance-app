@@ -1,14 +1,20 @@
 import { videoTriangleInnerCircleImg } from 'assets'
 
+import classNames from 'classnames'
+
 import './videoPlayButton.scss'
 
-const VideoPlayButton = () => {
+const VideoPlayButton = ({ size }) => {
     return (
-        <div className="outer-white-circle">
+        <div className="video-play-button">
             <img
                 src={videoTriangleInnerCircleImg}
                 alt="Video playback triangle"
-                className="inner-circle-triangle"
+                className={classNames('inner-circle-triangle', {
+                    small: size === 'small',
+                    medium: size === 'medium',
+                    large: size === 'large',
+                })}
             />
         </div>
     )
