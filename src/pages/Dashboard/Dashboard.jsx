@@ -20,6 +20,7 @@ import Widget from 'components/Layout/Widgets/Widget'
 // REMINDER: Remove this section once the widget api comes in
 import { widgetData } from 'global/constants/dummyData'
 import VideosBundle from 'components/Layout/VideosBundle/VideosBundle'
+import DashboardHoroscope from 'components/Layout/DashboardHoroscope/DashboardHoroscope'
 
 // const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY || ''
 const Dashboard = () => {
@@ -140,7 +141,7 @@ const Dashboard = () => {
                             urlLink="/horoscopes"
                             classTitle="horoscopes"
                         />
-                        {/* <Horoscope /> */}
+                        <DashboardHoroscope />
                     </div>
                 </section>
                 <section className="quick-navigation-section">

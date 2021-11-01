@@ -10,13 +10,21 @@ $names: main-news, video-playlist, horoscopes, quick-navigation;
         width: 100%;
         border-bottom: 0.0625em solid var(--clr-theme-red);
         @include pxToem(margin-bottom, 30, em);
+        @include pxToem(margin-top, 30, em);
     }
     .#{$name}-title {
         color: var(--clr-primary-900);
     }
     .#{$name}-see-all-tag {
+        border-radius: 0.25em;
+        margin-bottom: 0.25em;
+        padding: 0.5em;
         font-size: 0.9em;
         color: var(--clr-red-white);
         text-decoration: none;
+
+        &:hover {
+            background-color: #ededed;
+        }
     }
 }

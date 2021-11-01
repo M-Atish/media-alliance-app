@@ -1,0 +1,26 @@
+@import 'global/globalCSS/global.scss';
+
+.dashboard-single-horoscope-container {
+    border-radius: 0.25em;
+    background-color: var(--clr-dark-blue);
+    @include pxToem(height, 170, em);
+    @include pxToem(width, 170, em);
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+
+    .dashboard-single-horoscope-link {
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--clr-white);
+
+        .dashboard-single-horoscope-image {
+            @include pxToem(height, 120, em);
+            @include pxToem(width, 120, em);
+        }
+
+        .dashboard-single-horoscope-name {
+            @include pxToem(font-size, 16, em);
+        }
+    }
+}

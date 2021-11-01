@@ -1,3 +1,5 @@
+@import 'global/globalCSS/global.scss';
+
 .tabs {
     width: 100%;
     border: 0.0625em solid var(--clr-border-grey);
@@ -7,9 +9,11 @@
         background-color: var(--clr-theme-red);
         text-align: center;
         justify-content: center;
+        align-items: center;
         display: flex;
         border-radius: 0.25em 0.25em 0 0;
         border: 0.0625em 0.0625em 0 0.0625em solid var(--clr-border-grey);
+        @include pxToem(height, 40, em);
 
         & .tab-heading:not(:last-child) {
             &:after {

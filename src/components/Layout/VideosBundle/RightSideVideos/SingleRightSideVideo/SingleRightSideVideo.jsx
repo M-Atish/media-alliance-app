@@ -12,7 +12,7 @@ import './singleRightSideVideo.scss'
 
 // Remove this section once the API comes in
 import { annapurnaMediaNetworkImg } from 'assets'
-import EllipseMenu from './../../../EllipseMenu/EllipseMenuContainer/EllipseMenu'
+import EllipseMenu from 'components/Layout/EllipseMenu/EllipseMenuContainer/EllipseMenu'
 
 const SingleRightSideVideo = ({
     urlLink,

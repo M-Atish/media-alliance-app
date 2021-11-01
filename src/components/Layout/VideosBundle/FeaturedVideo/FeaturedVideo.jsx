@@ -8,7 +8,6 @@ import convertToRelativeTime from 'utils/convertToRelativeTime'
 import { AiFillTags } from 'react-icons/ai'
 
 const FeaturedVideo = ({ payload }) => {
-    console.log(payload)
     return (
         <div className="featured-video-container">
             <a

@@ -2,7 +2,6 @@ import './fourPieceVideos.scss'
 import SingleLeftVideo from './SingleLeftVideo/SingleLeftVideo'
 
 const FourPieceVideos = ({ payload }) => {
-    console.log(payload)
     return (
         <div className="four-piece-video-container">
             <SingleLeftVideo
