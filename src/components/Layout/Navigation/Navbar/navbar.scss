@@ -1,3 +1,5 @@
+@import 'global/globalCSS/global.scss';
+
 .navbar-container {
     display: flex;
     flex-direction: column;
@@ -56,12 +58,12 @@
         display: flex;
         margin: 1em 0;
         align-items: center;
+        justify-content: space-between;
 
         .navbar-logo-container {
             display: flex;
             text-decoration: none;
             color: var(--clr-primary-500);
-            flex: 23%;
             align-items: center;
 
             .navbar-logo {
@@ -110,9 +112,8 @@
             display: flex;
             border-radius: 0.25em;
             align-items: center;
-            justify-content: center;
-            flex: 34%;
-            margin-left: 1em;
+            justify-content: space-around;
+            width: 40%;
 
             .search-box-icon {
                 height: 1.1em;
@@ -136,12 +137,12 @@
                 }
             }
         }
+
         .navbar-settings {
             display: flex;
             align-items: center;
-            flex: 45%;
-            margin-left: 1em;
-            justify-content: space-around;
+            gap: 1em;
+            justify-content: flex-end;
 
             .navbar-unicode-container,
             .navbar-language-container,
@@ -149,6 +150,8 @@
                 cursor: pointer;
                 display: flex;
                 align-items: center;
+                justify-content: flex-end;
+                @include pxToem(width, 109, em);
 
                 .navbar-unicode-icon,
                 .navbar-language-icon,
@@ -170,7 +173,7 @@
                 .navbar-language-text,
                 .navbar-profile-text {
                     font-weight: 600;
-                    width: 3.125em;
+                    // width: 3.125em;
                 }
 
                 &:hover {

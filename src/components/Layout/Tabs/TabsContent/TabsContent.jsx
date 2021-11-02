@@ -1,12 +1,12 @@
 import './tabsContent.scss'
 
+import SingleTabContent from './SingleTabContent/SingleTabContent'
+
 const TabsContent = ({ tab }) => {
     return (
         <div className="tab-content-container">
-            {tab?.map((data, position) => (
-                <p className={`tab-content ${position} `} key={position}>
-                    {data.desc}
-                </p>
+            {tab?.map((data, index) => (
+                <SingleTabContent payload={data} key={index} />
             ))}
         </div>
     )

@@ -1,8 +1,12 @@
 .tab-content-container {
-    .tab-content:nth-child(odd) {
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
+
+    .single-tab-content-link:nth-child(odd) {
         background-color: var(--clr-theme-primary);
     }
-    .tab-content:nth-child(even) {
+    .single-tab-content-link:nth-child(even) {
         background-color: var(--clr-off-white);
     }
 }

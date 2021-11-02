@@ -21,6 +21,7 @@ import Widget from 'components/Layout/Widgets/Widget'
 import { widgetData } from 'global/constants/dummyData'
 import VideosBundle from 'components/Layout/VideosBundle/VideosBundle'
 import DashboardHoroscope from 'components/Layout/DashboardHoroscope/DashboardHoroscope'
+import Footer from 'components/Layout/Footer/Footer'
 
 // const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY || ''
 const Dashboard = () => {
@@ -36,14 +37,14 @@ const Dashboard = () => {
 
     return (
         <>
-            <section className="advertisement-section-one">
-                <div className="advertisement-container-one">
-                    <LeaderboardAdvertisement
-                        payload={advertisementLeaderboardImages}
-                    />
-                </div>
-            </section>
             <main className="container">
+                <section className="advertisement-section-one">
+                    <div className="advertisement-container-one">
+                        <LeaderboardAdvertisement
+                            payload={advertisementLeaderboardImages}
+                        />
+                    </div>
+                </section>
                 <section className="main-news-section">
                     <div className="main-news-container">
                         <Title
@@ -142,14 +143,17 @@ const Dashboard = () => {
                         <DashboardHoroscope />
                     </div>
                 </section>
+                <section className="advertisement-section-three">
+                    <div className="advertisement-container-three">
+                        <LeaderboardAdvertisement
+                            payload={advertisementLeaderboardImages}
+                        />
+                    </div>
+                </section>
             </main>
-            <section className="advertisement-section-one">
-                <div className="advertisement-container-one">
-                    <LeaderboardAdvertisement
-                        payload={advertisementLeaderboardImages}
-                    />
-                </div>
-            </section>
+            <footer className="footer-section">
+                <Footer />
+            </footer>
         </>
     )
 }

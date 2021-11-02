@@ -1,0 +1,77 @@
+@import 'global/globalCSS/global.scss';
+
+.single-tab-content-link {
+    text-decoration: none;
+    .single-tab-content-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5em;
+        padding: 0.7em;
+
+        &:hover .single-tab-content-right-side-img {
+            transform: scale(1.1);
+        }
+
+        .single-tab-content-left-side {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            width: 83%;
+
+            .single-tab-content-title {
+                color: var(--clr-black-white);
+                font-weight: 500;
+                @include pxToem(font-size, 20, rem);
+                display: -webkit-box;
+                max-width: 95%;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .single-tab-content-news-agency-date-container {
+                display: flex;
+                align-items: center;
+                color: var(--clr-grey);
+                @include pxToem(font-size, 12, rem);
+                gap: 0.5em;
+
+                .single-tab-content-news-agency {
+                    display: flex;
+                    align-items: center;
+                    font-weight: 400;
+                    gap: 0.3em;
+
+                    .single-tab-content-news-agency-img {
+                        @include pxToem(width, 20, em);
+                        @include pxToem(height, 13, em);
+                    }
+
+                    .single-tab-content-news-agency-name {
+                        margin-right: 0.5em;
+                    }
+                }
+
+                .single-tab-content-date {
+                }
+            }
+        }
+
+        .single-tab-content-right-side {
+            overflow: hidden;
+            border-radius: 0.25em;
+            @include pxToem(height, 71, em);
+            @include pxToem(width, 71, em);
+
+            .single-tab-content-right-side-img {
+                display: block;
+                border-radius: 0.25em;
+                object-fit: cover;
+                @include pxToem(height, 71, em);
+                @include pxToem(width, 71, em);
+                transition: transform 0.2s ease-in-out;
+            }
+        }
+    }
+}

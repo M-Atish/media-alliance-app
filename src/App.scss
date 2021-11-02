@@ -30,6 +30,7 @@
     --clr-slider: #e5e5e5;
     --clr-white-primary-900: #fff;
     --clr-black: #000;
+    --clr-red-grey: #a90000;
 
     --clr-light-grey: #b4b8c6;
 
@@ -54,16 +55,13 @@
     --clr-theme-primary: #1d1d1f;
     --clr-white-black: #000000;
     --clr-white-primary-900: #1d1d1f;
+    --clr-red-grey: #343538;
 }
 
 body {
     font-family: var(--font-family-primary);
     background: var(--clr-theme-primary);
     color: var(--clr-primary-500);
-}
-
-img {
-    display: block;
 }
 
 .loading-curent {

@@ -118,7 +118,6 @@ const NavBar = ({ dummyData }) => {
                     />
                     <span className="navbar-logo-attached-information">
                         <div className="navbar-today-date">
-                            {/* bold this section, font-weight 500 */}
                             {new Date().toLocaleDateString('en-US', options)}
                         </div>
                         <div className="navbar-location-weather">

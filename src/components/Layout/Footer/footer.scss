@@ -1,0 +1,91 @@
+@import 'global/globalCSS/global.scss';
+
+.footer-container {
+    width: 80%;
+    @include pxToem(height, 626, em);
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    color: var(--clr-white);
+
+    gap: 2em;
+
+    & > * {
+        flex: 1;
+        @include pxToem(height, 353, em);
+    }
+
+    .footer-logo-desc-social-container {
+        border-right: 0.0625em solid var(--clr-border-grey);
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding-right: 1em;
+        cursor: pointer;
+
+        .footer-logo-container {
+            @include pxToem(height, 105, em);
+            @include pxToem(width, 137, em);
+
+            .footer-logo-image {
+                @include pxToem(height, 105, em);
+                @include pxToem(width, 137, em);
+            }
+        }
+        .footer-desc {
+            @include pxToem(width, 376, em);
+            @include pxToem(font-size, 20, em);
+            line-height: 2;
+        }
+        .footer-socials-section {
+            display: flex;
+            gap: 0.5em;
+
+            .footer-social-container {
+                @include pxToem(height, 42, em);
+                @include pxToem(width, 42, em);
+                border-radius: 50%;
+                background-color: var(--clr-white);
+            }
+        }
+    }
+
+    .footer-quick-links-section {
+        border-right: 0.0625em solid var(--clr-border-grey);
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding-right: 1em;
+
+        .footer-quick-links-heading {
+            font-weight: 600;
+            @include pxToem(font-size, 30, rem);
+        }
+        .footer-quick-link-container {
+            cursor: pointer;
+            border-radius: 0.25em;
+            width: 100%;
+            @include pxToem(height, 25, em);
+            background-color: var(--clr-white);
+        }
+    }
+
+    .footer-features-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        .footer-features-heading {
+            font-weight: 600;
+            @include pxToem(font-size, 30, rem);
+        }
+
+        .footer-feature-container {
+            cursor: pointer;
+            border-radius: 0.25em;
+            width: 100%;
+            @include pxToem(height, 25, em);
+            background-color: var(--clr-white);
+        }
+    }
+}

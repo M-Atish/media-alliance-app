@@ -4,6 +4,7 @@ import TabsContent from './TabsContent/TabsContent'
 import './tabs.scss'
 
 import { RiArrowDownSLine } from 'react-icons/ri'
+import classNames from 'classnames'
 
 const Tabs = ({ tabsHeadingContent }) => {
     const [activeTab, setActiveTab] = useState(0)
@@ -17,13 +18,23 @@ const Tabs = ({ tabsHeadingContent }) => {
                         onClick={() => setActiveTab(index)}
                         key={index}
                     >
-                        {heading.name}
+                        <p
+                            className={classNames('tab-heading-text', {
+                                active: activeTab === index,
+                            })}
+                        >
+                            {heading.name}
+                        </p>
                     </div>
                 ))}
             </div>
             <div className="tabs-content">
                 <TabsContent
-                    tab={tabsHeadingContent[activeTab].payload}
+                    tab={
+                        tabsHeadingContent[activeTab]?.payload
+                            ? tabsHeadingContent[activeTab].payload
+                            : null
+                    }
                     index={activeTab}
                 />
             </div>
