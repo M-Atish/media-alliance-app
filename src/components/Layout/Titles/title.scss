@@ -22,6 +22,7 @@ $names: main-news, video-playlist, horoscopes, quick-navigation;
         font-size: 0.9em;
         color: var(--clr-red-white);
         text-decoration: none;
+        transition: background-color 0.15s ease-in-out;
 
         &:hover {
             background-color: #ededed;

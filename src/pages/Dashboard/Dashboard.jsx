@@ -60,9 +60,7 @@ const Dashboard = () => {
                                 </div>
                             </article>
                             <article className="single-news-block-section">
-                                <div className="single-news-block-container">
-                                    <NewsArticleBundle />
-                                </div>
+                                <NewsArticleBundle />
                             </article>
                         </section>
                         <section className="main-news-right-side">
@@ -144,16 +142,14 @@ const Dashboard = () => {
                         <DashboardHoroscope />
                     </div>
                 </section>
-                <section className="quick-navigation-section">
-                    <div className="quick-navigation-container">
-                        <Title
-                            title="छिटो पहुँच"
-                            urlLink="/"
-                            classTitle="quick-navigation"
-                        />
-                    </div>
-                </section>
             </main>
+            <section className="advertisement-section-one">
+                <div className="advertisement-container-one">
+                    <LeaderboardAdvertisement
+                        payload={advertisementLeaderboardImages}
+                    />
+                </div>
+            </section>
         </>
     )
 }

@@ -1,6 +1,7 @@
 .featured-news-container {
     border-radius: 0.25em;
     position: relative;
+    display: block !important;
 
     figure {
         border-radius: 0.25em;
@@ -35,6 +36,7 @@
             border-radius: 0.25em;
             height: 100%;
             width: 100%;
+            display: block;
         }
     }
 

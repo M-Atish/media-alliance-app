@@ -5,7 +5,12 @@
     border: 0.0625em solid var(--clr-border-grey);
     padding: 1em;
     justify-content: space-between;
-    margin-top: 1em;
+
+    &:hover {
+        .news-article-image {
+            transform: scale(1.1);
+        }
+    }
 
     .news-agency-text-container {
         width: 39em;
@@ -86,10 +91,14 @@
 
         .news-image-container {
             border-radius: 0.25em;
+            width: 12.5625em;
+            height: 12em;
+            overflow: hidden;
             .news-article-image {
                 width: 12.5625em;
                 height: 12em;
                 border-radius: 0.25em;
+                transition: transform 0.3s ease-in-out;
             }
         }
     }
